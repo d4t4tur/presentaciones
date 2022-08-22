@@ -1,0 +1,237 @@
+---
+title: "CST-A"
+author:  "Dirección Nacional de Mercados y Estadística"
+output:
+  xaringan::moon_reader:
+    seal: false
+    css: ["footer_header.css","dnmye_theme.css"]
+    nature:
+      slideNumberFormat: "%current%"
+      highlightStyle: github
+      highlightLines: true
+      ratio: 16:9
+      countIncrementalSlides: true
+---
+
+class:inverse, middle
+
+background-image: url(imgs/escudo_mintur_blanco.png)
+background-position: 95% 95%
+background-size: 30%
+
+# CST-A
+### Cuenta Satélite de Turismo de la Argentina
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+### Dirección Nacional de Mercados y Estadística<br>Subsecretaría de Desarrollo Estratégico
+
+
+
+
+
+
+
+
+```{r echo=FALSE, message=FALSE, warning=FALSE, paged.print=FALSE}
+library(xaringanExtra)
+
+# LOGO COLOR EN PAGs INTERNAS
+xaringanExtra::use_logo(image_url = "imgs/escudo_mintur_color.png", 
+                        position = css_position(top = "1em", right = "1em"), 
+                        height = "20%", width = "20%")
+
+# BARRA DE PROGRESO DE PRESENTACION
+xaringanExtra::use_progress_bar(color = comunicacion::dnmye_colores("cian"))
+
+# LAPIZ 
+xaringanExtra::use_scribble()
+
+# EXPLORADOR DE SLIDES
+xaringanExtra::use_tile_view()
+
+# HABILITAR WEBCAM
+xaringanExtra::use_webcam()
+
+
+```
+
+
+
+
+```{r dnmye_theme, include=FALSE, warning=FALSE}
+
+library(xaringanthemer)
+library(comunicacion)
+
+
+style_mono_light(outfile = "dnmye_theme.css", # CSS FILE
+                 # FONTS
+                  header_font_google = google_font('Encode Sans'),
+                  text_font_google   = google_font('Roboto'),
+                  code_font_google   = google_font('IBM Plex Mono'),
+                 # COLORES 
+                 base_color = dnmye_colores("cian"),
+                 code_inline_color = dnmye_colores("rosa"), 
+                 inverse_link_color = "#3B4449",
+                 background_color = "#FFFFFF",
+                 title_slide_background_image = "imgs/escudo_mintur_blanco.png", 
+                 title_slide_background_position = "95% 5%", 
+                 title_slide_background_size = "200px", footnote_color = "#3B4449", link_color = "3B4449",text_slide_number_font_size = "16px"
+                  
+                 )
+
+
+
+
+```
+
+
+
+
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+knitr::opts_chunk$set(
+  fig.width=9, fig.height=3.5, fig.retina=3,
+  out.width = "100%",
+  cache = FALSE,
+  echo = TRUE,
+  message = FALSE, 
+  warning = FALSE,
+  fig.show = TRUE,
+  hiline = TRUE
+)
+```
+
+---
+layout: true
+
+<div class="my-footer"><span>DIRECCIÓN NACIONAL DE MERCADOS Y ESTADÍSTICA <a href="https://yvera.tur.ar/sinta"> - <b>www.yvera.tur.ar/sinta</a></b></span></div> 
+
+---
+
+![](imgs/CST-A-000.png)
+
+---
+
+![](imgs/CST-A-01.png)
+---
+
+![](imgs/CST-A-02.png)
+
+---
+
+![](imgs/CST-A-03.png)
+---
+
+![](imgs/CST-A-04.png)
+
+---
+
+![](imgs/CST-A-05.png)
+---
+
+![](imgs/CST-A-06.png)
+---
+
+![](imgs/CST-A-07.png)
+---
+
+![](imgs/CST-A-08.png)
+---
+
+![](imgs/CST-A-09.png)
+---
+
+![](imgs/CST-A-10.png)
+---
+![](imgs/CST-A-tabla01.png)
+---
+![](imgs/CST-A-tabla02.png)
+---
+![](imgs/CST-A-tabla03.png)
+---
+![](imgs/CST-A-tabla04.png)
+---
+![](imgs/CST-A-tabla05.png)
+---
+
+class: inverse center middle
+
+# Cronograma 
+# 2021-2022
+
+
+---
+
+#### ETAPA 01
+--
+<br>
+Estimación de la base 2004
+--
+
+#### ETAPA 02
+--
+<br>
+Estimación de la serie 2016-2019
+--
+
+#### ETAPA 03 (en proceso)
+--
+<br>
+• Actualización de 2019 (con COU) 
+<br>
+--
+• Estimación provisoria de 2020 y 2021
+--
+
+#### OTRAS LÍNEAS DE TRABAJO
+--
+<br>
+• Estimaciones evolución en cantidades (a precios constantes)
+<br>
+--
+• Estimar el consumo colectivo turístico (AAPP)
+<br>
+--
+• Ampliar la contribución (efectos indirectos e inducidos)
+<br>
+--
+• Elaborar modelos de simulación de impactos de políticas
+<br>
+---
+### PRINCIPALES RESULTADOS SERIE 2004, 2016 A 2019
+#### PARTICIPACIÓN DEL TURISMO EN LA ECONOMÍA. PBI Directo turístico
+<br>
+![](imgs/CST-A-a.png)
+
+---
+### PRINCIPALES RESULTADOS SERIE 2004, 2016 A 2019
+#### VALOR AGREGADO BRUTO DIRECTO TURÍSTICO
+<br>
+![](imgs/CST-A-b.png)
+---
+### PRINCIPALES RESULTADOS SERIE 2004, 2016 A 2019
+#### EMPLEO EN LA INDUSTRIA TURÍSTICA
+<br>
+![](imgs/CST-A-c.png)
+---
+class:  center, middle
+
+# DNMyE
+
+Basado en código y ejemplos de:
+
+[**xaringan**](https://github.com/yihui/xaringan)<br>
+[gadenbuie/xaringanthemer](https://github.com/gadenbuie/xaringanthemer)
+
+[remark.js](https://remarkjs.com), [**knitr**](http://yihui.name/knitr), and [R Markdown](https://rmarkdown.rstudio.com).
