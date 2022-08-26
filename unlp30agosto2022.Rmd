@@ -119,8 +119,11 @@ layout: true
 
 ---
 
-![](imgs/roceta_1.png)
+![](imgs/roseta.png)
 
+---
+
+![](imgs/roceta_1.png)
 ---
 
 ![](imgs/roceta_2.png)
@@ -139,7 +142,7 @@ layout: true
 ---
 class: inverse center middle
 
-.pull-right[
+.pull-center[
 
 ```{r , echo = FALSE}
 knitr::include_graphics("https://tableros.yvera.tur.ar//recursos/logos_institucionales/sinta_blanco.png")
@@ -148,7 +151,7 @@ knitr::include_graphics("https://tableros.yvera.tur.ar//recursos/logos_instituci
 
 ]
 
-.pull-left[
+.pull-center[
 
 # QUÉ ES EL 
 
