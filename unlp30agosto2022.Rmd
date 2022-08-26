@@ -19,10 +19,12 @@ background-image: url(imgs/escudo_mintur_blanco.png)
 background-position: 95% 95%
 background-size: 30%
 
+<br>
+<br>
+<br>
 # SINTA
 ### Sistema de Información Turística de la Argentina
 
-<br>
 <br>
 <br>
 <br>
@@ -142,7 +144,7 @@ class: inverse center middle
 .pull-right[
 
 ```{r , echo = FALSE}
-knitr::include_graphics("https://tableros.yvera.tur.ar/recursos/logo_sinta.png")
+knitr::include_graphics("https://tableros.yvera.tur.ar//recursos/logos_institucionales/sinta_blanco.png")
 ```
 
 
