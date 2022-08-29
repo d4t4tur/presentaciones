@@ -33,7 +33,7 @@ background-size: 30%
 <br>
 <br>
 
-### Dirección Nacional de Mercados y Estadística<br>Subsecretaría de Desarrollo Estratégico
+#### Dirección Nacional de Mercados y Estadística<br>Subsecretaría de Desarrollo Estratégico
 
 
 
@@ -68,7 +68,7 @@ xaringanExtra::use_webcam()
 
 
 
-```{r dnmye_theme, include=FALSE, warning=FALSE}
+```{r dnmye_theme, eval=FALSE, warning=FALSE, include=FALSE}
 
 library(xaringanthemer)
 library(comunicacion)
@@ -176,13 +176,11 @@ class: inverse center middle
 <br>
 .footnote[https://calendario.yvera.tur.ar/]
 ---
-class:  center, middle
+class: inverse center middle
 
-# DNMyE
+```{r echo = FALSE , out.width='60%'}
+knitr::include_graphics("imgs/escudo_mintur_blanco.png")
 
-Basado en código y ejemplos de:
+```
 
-[**xaringan**](https://github.com/yihui/xaringan)<br>
-[gadenbuie/xaringanthemer](https://github.com/gadenbuie/xaringanthemer)
 
-[remark.js](https://remarkjs.com), [**knitr**](http://yihui.name/knitr), and [R Markdown](https://rmarkdown.rstudio.com).

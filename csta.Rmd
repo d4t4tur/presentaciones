@@ -33,7 +33,7 @@ background-size: 30%
 <br>
 <br>
 
-### Dirección Nacional de Mercados y Estadística<br>Subsecretaría de Desarrollo Estratégico
+#### Dirección Nacional de Mercados y Estadística<br>Subsecretaría de Desarrollo Estratégico
 
 
 
@@ -68,7 +68,7 @@ xaringanExtra::use_webcam()
 
 
 
-```{r dnmye_theme, include=FALSE, warning=FALSE}
+```{r dnmye_theme, eval=FALSE, warning=FALSE, include=FALSE}
 
 library(xaringanthemer)
 library(comunicacion)
@@ -154,7 +154,46 @@ layout: true
 
 ![](imgs/CST-A-10.png)
 ---
+
+## CUENTA SATÉLITE DE TURISMO
+
+
+
+_Es la herramienta recomendada por la Organización Mundial del Turismo, y reconocida por la comunidad internacional, para evaluar la importancia económica del turismo, conocer las industrias que se benefician de la llegada de visitantes, cuantificar el valor agregado directo que se genera al satisfacer la demanda turística y la generación de empleo, entre otros._
+
+
+
+--
+
+.pull-left[
+
+ *  **PBIdt**
+
+  
+ *  **VABdt**
+
+
+ *  **VBPdt**
+
+]
+
+--
+
+.pull-right[
+
+ *  **FBKF **
+
+
+ *  **Empleo**
+
+
+ *  **Consumo Colectivo**
+
+]
+
+---
 ![](imgs/CST-A-tabla01.png)
+
 ---
 ![](imgs/CST-A-tabla02.png)
 ---
@@ -197,17 +236,11 @@ Estimación de la serie 2016-2019
 #### OTRAS LÍNEAS DE TRABAJO
 --
 <br>
-• Estimaciones evolución en cantidades (a precios constantes)
-<br>
---
 • Estimar el consumo colectivo turístico (AAPP)
 <br>
 --
 • Ampliar la contribución (efectos indirectos e inducidos)
-<br>
---
-• Elaborar modelos de simulación de impactos de políticas
-<br>
+
 ---
 ### PRINCIPALES RESULTADOS SERIE 2004, 2016 A 2019
 #### PARTICIPACIÓN DEL TURISMO EN LA ECONOMÍA. PBI Directo turístico
@@ -225,13 +258,11 @@ Estimación de la serie 2016-2019
 <br>
 ![](imgs/CST-A-c.png)
 ---
-class:  center, middle
+class: inverse center middle
 
-# DNMyE
+```{r echo = FALSE , out.width='60%'}
+knitr::include_graphics("imgs/escudo_mintur_blanco.png")
 
-Basado en código y ejemplos de:
+```
 
-[**xaringan**](https://github.com/yihui/xaringan)<br>
-[gadenbuie/xaringanthemer](https://github.com/gadenbuie/xaringanthemer)
 
-[remark.js](https://remarkjs.com), [**knitr**](http://yihui.name/knitr), and [R Markdown](https://rmarkdown.rstudio.com).
