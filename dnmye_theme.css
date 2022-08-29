@@ -41,6 +41,7 @@
   --header-h1-font-size: 2.75rem;
   --header-h2-font-size: 2.25rem;
   --header-h3-font-size: 1.75rem;
+  --header-h4-font-size: 1.25rem;
 
   /* Colors */
   --text-color: #2682A5;
@@ -71,7 +72,7 @@ body {
   font-weight: normal;
   color: var(--text-color);
 }
-h1, h2, h3 {
+h1, h2, h3, h4 {
   font-family: var(--header-font-family), var(--header-font-family-fallback);
   font-weight: 600;
   color: var(--header-color);
@@ -91,6 +92,9 @@ h1, h2, h3 {
 }
 .remark-slide-content h3 {
   font-size: var(--header-h3-font-size);
+}
+.remark-slide-content h4 {
+  font-size: var(--header-h4-font-size);
 }
 .remark-code, .remark-inline-code {
   font-family: var(--code-font-family), Menlo, Consolas, Monaco, Liberation Mono, Lucida Console, monospace;
@@ -130,13 +134,13 @@ a, a > code {
   color: var(--inverse-text-color);
   
 }
-.inverse h1, .inverse h2, .inverse h3 {
+.inverse h1, .inverse h2, .inverse h3, .inverse h4 {
   color: var(--inverse-header-color);
 }
 .inverse a, .inverse a > code {
   color: var(--inverse-link-color);
 }
-.title-slide, .title-slide h1, .title-slide h2, .title-slide h3 {
+.title-slide, .title-slide h1, .title-slide h2, .title-slide h3, .title-slide h4 {
   color: var(--title-slide-text-color);
 }
 .title-slide {
@@ -293,4 +297,3 @@ table.dataTable.hover tbody tr:hover, table.dataTable.display tbody tr:hover {
 .bg-black {
   background-color: var(--black);
 }
-
