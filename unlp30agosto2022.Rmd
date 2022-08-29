@@ -311,7 +311,6 @@ Estimación de la serie 2016-2019
 #### OTRAS LÍNEAS DE TRABAJO
 --
 <br>
---
 • Estimar el consumo colectivo turístico (AAPP)
 <br>
 --
@@ -336,13 +335,11 @@ Estimación de la serie 2016-2019
 
 
 ---
-class:inverse, middle
+class: inverse center middle
 
 ```{r echo = FALSE , out.width='60%'}
 knitr::include_graphics("imgs/escudo_mintur_blanco.png")
 
 ```
-
-# Dirección Nacional de Mercados y Estadística
 
 
