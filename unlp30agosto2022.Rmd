@@ -230,15 +230,43 @@ knitr::include_graphics("https://tableros.yvera.tur.ar//recursos/logos_instituci
 
 ![](imgs/CST-A-10.png)
 ---
+
 ## CUENTA SATÉLITE DE TURISMO
-<br>
-<br>
-<br>
-####Es la herramienta recomendada por la Organización Mundial del Turismo, y reconocida por la comunidad internacional, para evaluar la importancia económica del turismo, conocer las industrias que se benefician de la llegada de visitantes, cuantificar el valor agregado directo que se genera al satisfacer la demanda turística y la generación de empleo, entre otros.
-<br>
-<br>
-#### **PBIdt, VABdt, VBPdt,**
-#### **FBKF, Empleo, Consumo Colectivo**
+
+
+
+_Es la herramienta recomendada por la Organización Mundial del Turismo, y reconocida por la comunidad internacional, para evaluar la importancia económica del turismo, conocer las industrias que se benefician de la llegada de visitantes, cuantificar el valor agregado directo que se genera al satisfacer la demanda turística y la generación de empleo, entre otros._
+
+
+
+--
+
+.pull-left[
+
+ *  **PBIdt**
+
+  
+ *  **VABdt**
+
+
+ *  **VBPdt**
+
+]
+
+--
+
+.pull-right[
+
+ *  **FBKF **
+
+
+ *  **Empleo**
+
+
+ *  **Consumo Colectivo**
+
+]
+
 ---
 ![](imgs/CST-A-tabla01.png)
 ---
@@ -310,54 +338,11 @@ Estimación de la serie 2016-2019
 ---
 class:inverse, middle
 
-background-image: url(imgs/escudo_mintur_blanco.png)
-background-position: 95% 95%
-background-size: 30%
-
-
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-
-#### Dirección Nacional de Mercados y Estadística<br>Subsecretaría de Desarrollo Estratégico
-
-
-
-
-
-
-
-
-```{r echo=FALSE, message=FALSE, warning=FALSE, paged.print=FALSE}
-library(xaringanExtra)
-
-# LOGO COLOR EN PAGs INTERNAS
-xaringanExtra::use_logo(image_url = "imgs/escudo_mintur_color.png", 
-                        position = css_position(top = "1em", right = "1em"), 
-                        height = "20%", width = "20%")
-
-# BARRA DE PROGRESO DE PRESENTACION
-xaringanExtra::use_progress_bar(color = comunicacion::dnmye_colores("cian"))
-
-# LAPIZ 
-xaringanExtra::use_scribble()
-
-# EXPLORADOR DE SLIDES
-xaringanExtra::use_tile_view()
-
-# HABILITAR WEBCAM
-xaringanExtra::use_webcam()
-
+```{r echo = FALSE , out.width='60%'}
+knitr::include_graphics("imgs/escudo_mintur_blanco.png")
 
 ```
 
-
-
+# Dirección Nacional de Mercados y Estadística
 
 
