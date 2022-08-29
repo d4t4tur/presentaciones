@@ -19,14 +19,33 @@ background-image: url(imgs/escudo_mintur_blanco.png)
 background-position: 95% 95%
 background-size: 30%
 
+.pull-left[
+####  Universidad Nacional de La Plata
+30 de agosto 2022
 <br>
-# SINTA
-### Sistema de Información Turística de la Argentina
 <br>
 <br>
-### Universidad Nacional de La Plata
-### 30 de agosto 2022
+]
 <br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+
+## Sistema de Información Turística de la Argentina
+
+<br>
+<br>
+<br>
+<br>
+
+
 #### Dirección Nacional de Mercados y Estadística<br>Subsecretaría de Desarrollo Estratégico
 
 
@@ -251,7 +270,7 @@ _Es la herramienta recomendada por la Organización Mundial del Turismo, y recon
 
 .pull-right[
 
- *  **FBKF **
+ *  **FBKF**
 
 
  *  **Empleo**
@@ -281,39 +300,43 @@ class: inverse center middle
 
 ---
 
-#### ETAPA 01
---
-<br>
-Estimación de la base 2004
+# Cronograma  2021-2022
+
+.pull-left[
+
+## ETAPA 1
+
+* Estimación de la base 2004 ✔️
+
+
+
+### ETAPA 2
+
+* Estimación de la serie 2016-2019 ✔️
+
+]
+
 --
 
-#### ETAPA 02
---
-<br>
-Estimación de la serie 2016-2019
---
+.pull-right[
 
-#### ETAPA 03 (en proceso)
---
-<br>
-• Actualización de 2019 (con COU) 
-<br>
---
-• Estimación provisoria de 2020 y 2021
---
+### ETAPA 3 (en proceso)  🚧
 
-#### OTRAS LÍNEAS DE TRABAJO
---
-<br>
-• Estimar el consumo colectivo turístico (AAPP)
-<br>
---
-• Ampliar la contribución (efectos indirectos e inducidos)
+* Actualización de 2019 (con COU) 
+
+* Estimación provisoria de 2020 y 2021
+
+
+### OTRAS LÍNEAS DE TRABAJO  🔎
+
+* Estimar el consumo colectivo turístico (AAPP)
+
+* Ampliar la contribución (efectos indirectos e inducidos)]
 
 ---
 ### PRINCIPALES RESULTADOS SERIE 2004, 2016 A 2019
 #### PARTICIPACIÓN DEL TURISMO EN LA ECONOMÍA. PBI Directo turístico
-<br>
+
 ![](imgs/CST-A-a.png)
 
 ---
@@ -331,9 +354,9 @@ Estimación de la serie 2016-2019
 ---
 class: inverse center middle
 
-```{r echo = FALSE , out.width='60%'}
+```{r echo = FALSE , out.width='50%'}
 knitr::include_graphics("imgs/escudo_mintur_blanco.png")
 
 ```
 
-
+## 🌐 [yvera.tur.ar/_SINTA_](www.yvera.tur.ar/sinta)
