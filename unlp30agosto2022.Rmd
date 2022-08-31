@@ -166,35 +166,35 @@ knitr::include_graphics("https://tableros.yvera.tur.ar//recursos/logos_instituci
 ---
 ![](imgs/sinta1.png)
 <br>
-.footnote[https://www.yvera.tur.ar/sinta/informe]
+.footnote[<span style="background-color: #37bbed">https://www.yvera.tur.ar/sinta/informe</span>]
 ---
 ![](imgs/sinta2.png)
 <br>
-.footnote[https://www.yvera.tur.ar/sinta/informe/info/cuenta-satelite-de-turismo]
+.footnote[<span style="background-color:#37bbed">https://www.yvera.tur.ar/sinta/informe/info/cuenta-satelite-de-turismo</span>]
 ---
 ![](imgs/sinta3.png)
 <br>
-.footnote[https://armonizacion.yvera.tur.ar/]
+.footnote[<span style="background-color: #37bbed">https://armonizacion.yvera.tur.ar/</span>]
 ---
 ![](imgs/sinta4.png)
 <br>
-.footnote[https://datos.yvera.gob.ar/]
+.footnote[<span style="background-color: #37bbed">https://datos.yvera.gob.ar/</span>]
 ---
 ![](imgs/sinta5.png)
 <br>
-.footnote[https://tableros.yvera.tur.ar/]
+.footnote[<span style="background-color: #37bbed">https://tableros.yvera.tur.ar/</span>]
 ---
 ![](imgs/sinta6.png)
 <br>
-.footnote[https://biblioteca.yvera.tur.ar/]
+.footnote[<span style="background-color: #37bbed">https://biblioteca.yvera.tur.ar/</span>]
 ---
 ![](imgs/sinta7.png)
 <br>
-.footnote[https://bitacora.yvera.tur.ar/]
+.footnote[<span style="background-color: #37bbed">https://bitacora.yvera.tur.ar/</span>]
 ---
 ![](imgs/sinta8.png)
 <br>
-.footnote[https://calendario.yvera.tur.ar/]
+.footnote[<span style="background-color: #37bbed">https://calendario.yvera.tur.ar/</span>]
 
 
 
@@ -349,6 +349,31 @@ class: inverse center middle
 #### EMPLEO EN LA INDUSTRIA TURÍSTICA
 <br>
 ![](imgs/CST-A-c.png)
+---
+class: middle
+
+
+
+```{r echo=FALSE, out.width='20%'}
+knitr::include_graphics("imgs/sinta_logo_negro.png")
+```
+
+**BITACORA**
+
+* Publicación de las CST-A  **https://bitacora.yvera.tur.ar/posts/2022-02-01-cuenta-satelite/**
+ 
+* Recorrido por las Tablas de la Cuenta Satélite de Turismo de Argentina (CST -A) **https://bitacora.yvera.tur.ar/posts/2022-05-11-cst-parte2/**
+
+**INFORMES**
+
+* Cuadros **https://www.yvera.tur.ar/sinta/informe/info/cuenta-satelite-de-turismo/cuadros-estadisticos**
+ 
+* Metodología **https://www.yvera.tur.ar/sinta/informe/info/cuenta-satelite-de-turismo/informes-tecnicos**
+
+
+
+### 🌐 [yvera.tur.ar/_SINTA_](www.yvera.tur.ar/sinta)
+
 
 
 ---
@@ -359,4 +384,3 @@ knitr::include_graphics("imgs/escudo_mintur_blanco.png")
 
 ```
 
-## 🌐 [yvera.tur.ar/_SINTA_](www.yvera.tur.ar/sinta)

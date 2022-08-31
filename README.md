@@ -15,9 +15,8 @@ Repositorio que contiene el código fuente y presentaciones de la Dirección Nac
 
 ### Contenidos 🧪
 
-📌 [Sistema de Información Turística de la Argentina (SINTA)](https://d4t4tur.github.io/presentaciones/sinta.html)
+#### 📌 [Sistema de formación Turística de la Argentina (SINTA)](https://d4t4tur.github.io/presentaciones/unlp30agosto2022.html)
 
-📌 [Cuenta Satélite de Turismo de la Argentina (CST-A)](https://d4t4tur.github.io/presentaciones/csta.html)
-
+Universidad Nacional de La Plata (30 de agosto de 2022)
 
 
