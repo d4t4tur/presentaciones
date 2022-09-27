@@ -169,7 +169,7 @@ knitr::include_graphics("https://tableros.yvera.tur.ar//recursos/logos_instituci
 <br>
 .footnote[<span style="background-color: #37bbed">https://www.yvera.tur.ar/sinta/informe</span>]
 ---
-###https://www.yvera.tur.ar/sinta/informe
+###INFORME: https://www.yvera.tur.ar/sinta/informe
 ![](imgs/informe1.png)
 ---
 ![](imgs/informe2.png)
@@ -184,59 +184,59 @@ knitr::include_graphics("https://tableros.yvera.tur.ar//recursos/logos_instituci
 <br>
 .footnote[<span style="background-color: #37bbed">https://armonizacion.yvera.tur.ar/</span>]
 ---
-###https://armonizacion.yvera.tur.ar/
+###ARMONIZACIÓN: https://armonizacion.yvera.tur.ar/
 ![](imgs/armonizacion1.png)
 ---
-###https://armonizacion.yvera.tur.ar/
+###ARMONIZACIÓN: https://armonizacion.yvera.tur.ar/
 ![](imgs/armonizacion2.png)
 ---
-###<dataTUR>
+### <dataTUR>
 ![](imgs/datatur.png)
 ---
 ![](imgs/sinta4.png)
 <br>
 .footnote[<span style="background-color: #37bbed">https://datos.yvera.gob.ar/</span>]
 ---
-###https://datos.yvera.gob.ar/
+###DATOS ABIERTOS: https://datos.yvera.gob.ar/
 ![](imgs/datos1.png)
 ---
-###https://datos.yvera.gob.ar/
+###DATOS ABIERTOS: https://datos.yvera.gob.ar/
 ![](imgs/datos2.png)
 ---
 ![](imgs/sinta5.png)
 <br>
 .footnote[<span style="background-color: #37bbed">https://tableros.yvera.tur.ar/</span>]
 ---
-###https://tableros.yvera.tur.ar/
+###TABLEROS: https://tableros.yvera.tur.ar/
 ![](imgs/tableros1.png)
 ---
 ###https://tableros.yvera.tur.ar/empleo.html
 ![](imgs/tableros2.png)
 ---
-###https://tableros.yvera.tur.ar/
+###TABLEROS: https://tableros.yvera.tur.ar/
 ![](imgs/tableros3.png)
 ---
-###https://tableros.yvera.tur.ar/turismo_internacional/
+###TABLEROS: https://tableros.yvera.tur.ar/turismo_internacional/
 ![](imgs/tableros4.png)
 ---
-###https://tableros.yvera.tur.ar/puna/
+###TABLEROS: https://tableros.yvera.tur.ar/puna/
 ![](imgs/tableros5.png)
 ---
-###https://tableros.yvera.tur.ar/mapeAr/
+###TABLEROS: https://tableros.yvera.tur.ar/mapeAr/
 ![](imgs/tableros6.png)
 ---
 ![](imgs/sinta6.png)
 <br>
 .footnote[<span style="background-color: #37bbed">https://biblioteca.yvera.tur.ar/</span>]
 ---
-###https://biblioteca.yvera.tur.ar/
+###BIBLIOTECA: https://biblioteca.yvera.tur.ar/
 ![](imgs/biblioteca2.png)
 ---
 ![](imgs/sinta7.png)
 <br>
 .footnote[<span style="background-color: #37bbed">https://bitacora.yvera.tur.ar/</span>]
 ---
-###https://bitacora.yvera.tur.ar/
+###BITÁCORA: https://bitacora.yvera.tur.ar/
 ![](imgs/bitacora1.png)
 ---
 ![](imgs/sinta8.png)
@@ -245,7 +245,7 @@ knitr::include_graphics("https://tableros.yvera.tur.ar//recursos/logos_instituci
 
 
 ---
-###https://calendario.yvera.tur.ar/
+###CALENDARIO: https://calendario.yvera.tur.ar/
 ![](imgs/calendario1.png)
 ---
 ![](imgs/sinta9.png)
