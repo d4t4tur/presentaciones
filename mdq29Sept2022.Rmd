@@ -190,7 +190,7 @@ knitr::include_graphics("https://tableros.yvera.tur.ar//recursos/logos_instituci
 ###https://armonizacion.yvera.tur.ar/
 ![](imgs/armonizacion2.png)
 ---
-#<dataTUR>
+###<dataTUR>
 ![](imgs/datatur.png)
 ---
 ![](imgs/sinta4.png)
