@@ -163,7 +163,7 @@ knitr::include_graphics("https://tableros.yvera.tur.ar//recursos/logos_instituci
 
 
 ---
-![](imgs/sinta1.png)
+![](imgs/fit/sinta_1.png)
 <br>
 .footnote[<span style="background-color: #37bbed">https://www.yvera.tur.ar/sinta/informe</span>]
 ---
@@ -172,13 +172,13 @@ knitr::include_graphics("https://tableros.yvera.tur.ar//recursos/logos_instituci
 ---
 ![](imgs/informe2.png)
 ---
-![](imgs/sinta2.png)
+![](imgs/fit/sinta_2.png)
 <br>
 .footnote[<span style="background-color:#37bbed">https://www.yvera.tur.ar/sinta/informe/info/cuenta-satelite-de-turismo</span>]
 ---
 ![](imgs/csta1.png)
 ---
-![](imgs/sinta3.png)
+![](imgs/fit/sinta_3.png)
 <br>
 .footnote[<span style="background-color: #37bbed">https://armonizacion.yvera.tur.ar/</span>]
 ---
@@ -191,7 +191,7 @@ knitr::include_graphics("https://tableros.yvera.tur.ar//recursos/logos_instituci
 ### <dataTUR>
 ![](imgs/datatur.png)
 ---
-![](imgs/sinta4.png)
+![](imgs/fit/sinta_4.png)
 <br>
 .footnote[<span style="background-color: #37bbed">https://datos.yvera.gob.ar/</span>]
 ---
@@ -201,7 +201,7 @@ knitr::include_graphics("https://tableros.yvera.tur.ar//recursos/logos_instituci
 ###DATOS ABIERTOS: https://datos.yvera.gob.ar/
 ![](imgs/datos2.png)
 ---
-![](imgs/sinta5.png)
+![](imgs/fit/sinta_5.png)
 <br>
 .footnote[<span style="background-color: #37bbed">https://tableros.yvera.tur.ar/</span>]
 ---
@@ -223,21 +223,21 @@ knitr::include_graphics("https://tableros.yvera.tur.ar//recursos/logos_instituci
 ###TABLEROS: https://tableros.yvera.tur.ar/mapeAr/
 ![](imgs/tableros6.png)
 ---
-![](imgs/sinta6.png)
+![](imgs/fit/sinta_6.png)
 <br>
 .footnote[<span style="background-color: #37bbed">https://biblioteca.yvera.tur.ar/</span>]
 ---
 ###BIBLIOTECA: https://biblioteca.yvera.tur.ar/
 ![](imgs/biblioteca2.png)
 ---
-![](imgs/sinta7.png)
+![](imgs/fit/sinta_7.png)
 <br>
 .footnote[<span style="background-color: #37bbed">https://bitacora.yvera.tur.ar/</span>]
 ---
 ###BITÁCORA: https://bitacora.yvera.tur.ar/
 ![](imgs/bitacora1.png)
 ---
-![](imgs/sinta8.png)
+![](imgs/fit/sinta_8.png)
 <br>
 .footnote[<span style="background-color: #37bbed">https://calendario.yvera.tur.ar/</span>]
 
@@ -246,7 +246,7 @@ knitr::include_graphics("https://tableros.yvera.tur.ar//recursos/logos_instituci
 ###CALENDARIO: https://calendario.yvera.tur.ar/
 ![](imgs/calendario1.png)
 ---
-![](imgs/sinta9.png)
+![](imgs/fit/sinta_9.png)
 ---
 ![](imgs/sintia1.png)
 ---
