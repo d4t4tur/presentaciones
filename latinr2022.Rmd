@@ -307,6 +307,41 @@ knitr::include_graphics("imgs/dnmye_capacitacion.png")
 
 
 ---
+class:inverse, middle
+
+background-image: url(imgs/escudo_mintur_blanco.png)
+background-position: 95% 95%
+background-size: 30%
+
+##  r-universe
+
+---
+### r-universe
+
+```{r echo=FALSE}
+knitr::include_graphics("imgs/r_universe.png")
+```
+
+
+---
+### r-universe - {herramientas}
+
+```{r echo=FALSE, out.width='70%', fig.align="center"}
+knitr::include_graphics("imgs/r_universe_herramientas.png")
+```
+---
+### r-universe - {comunicacion}
+
+```{r echo=FALSE, out.width='65%', fig.align="center"}
+knitr::include_graphics("imgs/r_universe_comunicacion.png")
+```
+---
+### r-universe - {evyth}
+
+```{r echo=FALSE, out.width='65%', fig.align="center"}
+knitr::include_graphics("imgs/r_universe_evyth.png")
+```
+---
 
 ### Paquetes que permitieron el desarrollo de la DNMyE
 
