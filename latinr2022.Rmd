@@ -4,7 +4,7 @@ author:  "Dirección Nacional de Mercados y Estadística"
 output:
   xaringan::moon_reader:
     seal: false
-    css: ["footer_header.css","dnmye_theme.css"]
+    css: ["footer_header.css","dnmye_theme.css", "col_width.css"]
     nature:
       slideNumberFormat: "%current%"
       highlightStyle: github
@@ -117,17 +117,21 @@ layout: true
 
 # Hoja de Ruta
 
+<br>
+
 - ¿Qué es la **DNMyE**?
+
+<br>
 
 - **Un Proyecto de trabajo (con R bajo el brazo)**: reproducibilidad, apertura (datos y procesos) y trabajo colaborativo
 
+<br>
+
 - **SINTA**: recolectar, procesar, analizar y **comunicar** información estadística
 
+<br>
+
 - **r-universe**: una caja de herramientas a medida:
-  - `{herramientas}`
-  - `{comunicacion}`
-  - `{evyth}`
-  - `{d4t4tur}`
 
 
 ---
@@ -182,19 +186,93 @@ background-size: 25%
 
 ### Reproducibilidad, apertura, trabajo colaborativo
 
-  * Github
-<br>
---
+.pull-left.w30[
 
-  * Rmarkdown
-<br>
---
-  
-  * Manual de procesos
-<br>
---
-  
-  * Capacitación - "Encuentro de los Jueves"
+<br><br>
+<br><br>
+<br><br>
+
+### **Github**
+
+]
+
+.w65.pull-right[
+
+```{r echo=FALSE}
+knitr::include_graphics("imgs/github_dnmye.png")
+```
+
+
+]
+
+---
+
+### Reproducibilidad, apertura, trabajo colaborativo
+
+.pull-left.w30[
+
+<br><br>
+<br><br>
+<br><br>
+
+### **Rmarkdown**
+
+]
+
+.w65.pull-right[
+
+```{r echo=FALSE}
+knitr::include_graphics("imgs/rmarkdown_informes.png")
+```
+
+
+]
+
+---
+
+### Reproducibilidad, apertura, trabajo colaborativo
+
+.pull-left.w30[
+
+<br><br>
+<br><br>
+<br><br>
+
+### **Manual de Procedimientos**
+
+]
+
+.w65.pull-right[
+
+```{r echo=FALSE}
+knitr::include_graphics("imgs/manual_procesos.png")
+```
+
+
+]
+
+---
+
+### Reproducibilidad, apertura, trabajo colaborativo
+
+.pull-left.w30[
+
+<br><br>
+<br><br>
+<br><br>
+
+### **Capacitación:** *"Encuentro de  los Jueves"*
+
+]
+
+.w65.pull-right[
+
+```{r echo=FALSE, out.width='70%'}
+knitr::include_graphics("imgs/dnmye_capacitacion.png")
+```
+
+
+]
 
 
 
@@ -232,6 +310,41 @@ knitr::include_graphics("https://tableros.yvera.tur.ar//recursos/logos_instituci
 ![](imgs/sinta8.png)
 
 
+---
+class:inverse, middle
+
+background-image: url(imgs/escudo_mintur_blanco.png)
+background-position: 95% 95%
+background-size: 30%
+
+##  r-universe
+
+---
+### r-universe
+
+```{r echo=FALSE}
+knitr::include_graphics("imgs/r_universe.png")
+```
+
+
+---
+### r-universe - {herramientas}
+
+```{r echo=FALSE, out.width='70%', fig.align="center"}
+knitr::include_graphics("imgs/r_universe_herramientas.png")
+```
+---
+### r-universe - {comunicacion}
+
+```{r echo=FALSE, out.width='65%', fig.align="center"}
+knitr::include_graphics("imgs/r_universe_comunicacion.png")
+```
+---
+### r-universe - {evyth}
+
+```{r echo=FALSE, out.width='65%', fig.align="center"}
+knitr::include_graphics("imgs/r_universe_evyth.png")
+```
 ---
 
 ### Paquetes que permitieron el desarrollo de la DNMyE
