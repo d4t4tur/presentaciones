@@ -179,13 +179,19 @@ background-size: 30%
 
 ### Reproducibilidad, apertura, trabajo colaborativo
 
-  - Github
+  * Github
+<br>
+--
+
+  * Rmarkdown
+<br>
+--
   
-  - Rmarkdown
+  * Manual de procesos
+<br>
+--
   
-  - Manual de procesos
-  
-  - Capacitación - "Encuentro de los Jueves"
+  * Capacitación - "Encuentro de los Jueves"
 
 
 ---
