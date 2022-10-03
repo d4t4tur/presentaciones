@@ -21,7 +21,7 @@ background-size: 30%
 
 .pull-left[
 ####   FIT 2022
-Martes 4 de octubre
+Lunes 3 de octubre
 <br>
 <br>
 <br>
