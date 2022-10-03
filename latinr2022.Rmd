@@ -330,7 +330,8 @@ knitr::include_graphics("https://tableros.yvera.tur.ar//recursos/logos_instituci
 
 ---
 ![](imgs/sinta8.png)
-
+---
+![](imgs/sinta9.png)
 
 ---
 class:inverse, middle
