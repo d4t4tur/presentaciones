@@ -199,36 +199,27 @@ background-size: 30%
 
 ---
 ![](imgs/sinta1.png)
-<br>
-.footnote[<span style="background-color: #37bbed">https://www.yvera.tur.ar/sinta/informe</span>]
+
 ---
 ![](imgs/sinta2.png)
-<br>
-.footnote[<span style="background-color:#37bbed">https://www.yvera.tur.ar/sinta/informe/info/cuenta-satelite-de-turismo</span>]
+
 ---
 ![](imgs/sinta3.png)
-<br>
-.footnote[<span style="background-color: #37bbed">https://armonizacion.yvera.tur.ar/</span>]
+
 ---
 ![](imgs/sinta4.png)
-<br>
-.footnote[<span style="background-color: #37bbed">https://datos.yvera.gob.ar/</span>]
+
 ---
 ![](imgs/sinta5.png)
-<br>
-.footnote[<span style="background-color: #37bbed">https://tableros.yvera.tur.ar/</span>]
+
 ---
 ![](imgs/sinta6.png)
-<br>
-.footnote[<span style="background-color: #37bbed">https://biblioteca.yvera.tur.ar/</span>]
+
 ---
 ![](imgs/sinta7.png)
-<br>
-.footnote[<span style="background-color: #37bbed">https://bitacora.yvera.tur.ar/</span>]
+
 ---
 ![](imgs/sinta8.png)
-<br>
-.footnote[<span style="background-color: #37bbed">https://calendario.yvera.tur.ar/</span>]
 
 
 ---
