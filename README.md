@@ -33,5 +33,9 @@ Feria Internacional de Turismo, Buenos Aires (3 de octubre de 2022)
 
 Feria Internacional de Turismo, Buenos Aires (4 de octubre de 2022)
 
+#### 📌 [LatinR 2022 - Uso de R para las estadísticas de tuRismo en Argentina](https://d4t4tur.github.io/presentaciones/latinr2022.html)
+
+Feria Internacional de Turismo, Buenos Aires (4 de octubre de 2022)
+
 
 
