@@ -132,27 +132,30 @@ layout: true
 <div class="my-footer"><span>DIRECCIÓN NACIONAL DE MERCADOS Y ESTADÍSTICA <a href="https://yvera.tur.ar/sinta"> - <b>www.yvera.tur.ar/sinta</a></b></span></div> 
 
 ---
-
-![](imgs/roseta.png)
-
----
-
-![](imgs/roceta_1.png)
----
-
-![](imgs/roceta_2.png)
----
-
-![](imgs/roceta_3.png)
+```{r echo=FALSE}
+knitr::include_graphics("imgs/roseta.png")
+```
 
 ---
-
-![](imgs/roceta_4.png)
+```{r echo=FALSE}
+knitr::include_graphics("imgs/roceta_1.png")
+```
 ---
-
-![](imgs/roceta_5.png)
-
-
+```{r echo=FALSE}
+knitr::include_graphics("imgs/roceta_2.png")
+```
+---
+```{r echo=FALSE}
+knitr::include_graphics("imgs/roceta_3.png")
+```
+---
+```{r echo=FALSE}
+knitr::include_graphics("imgs/roceta_4.png")
+```
+---
+```{r echo=FALSE}
+knitr::include_graphics("imgs/roceta_5.png")
+```
 ---
 class: inverse center middle
 
@@ -165,96 +168,180 @@ knitr::include_graphics("https://tableros.yvera.tur.ar//recursos/logos_instituci
 
 
 ---
-![](imgs/sinta1.png)
+```{r echo=FALSE}
+knitr::include_graphics("imgs/fit/sinta_1.png")
+```
+
 <br>
 .footnote[<span style="background-color: #37bbed">https://www.yvera.tur.ar/sinta/informe</span>]
 ---
 ###INFORME: https://www.yvera.tur.ar/sinta/informe
-![](imgs/informe1.png)
+
+```{r echo=FALSE, out.width='65%', fig.align="center"}
+knitr::include_graphics("imgs/informe1.png")
+```
+
 ---
-![](imgs/informe2.png)
+```{r echo=FALSE, out.width='65%', fig.align="center"}
+knitr::include_graphics("imgs/informe2.png")
+```
 ---
-![](imgs/sinta2.png)
+```{r echo=FALSE}
+knitr::include_graphics("imgs/fit/sinta_2.png")
+```
 <br>
 .footnote[<span style="background-color:#37bbed">https://www.yvera.tur.ar/sinta/informe/info/cuenta-satelite-de-turismo</span>]
 ---
-![](imgs/csta1.png)
+```{r echo=FALSE, out.width='65%', fig.align="center"}
+knitr::include_graphics("imgs/csta1.png")
+```
 ---
-![](imgs/sinta3.png)
+```{r echo=FALSE}
+knitr::include_graphics("imgs/fit/sinta_3.png")
+```
 <br>
 .footnote[<span style="background-color: #37bbed">https://armonizacion.yvera.tur.ar/</span>]
 ---
 ###ARMONIZACIÓN: https://armonizacion.yvera.tur.ar/
-![](imgs/armonizacion1.png)
+
+```{r echo=FALSE, out.width='75%', fig.align="center"}
+knitr::include_graphics("imgs/armonizacion1.png")
+```
 ---
 ###ARMONIZACIÓN: https://armonizacion.yvera.tur.ar/
-![](imgs/armonizacion2.png)
+
+```{r echo=FALSE, out.width='75%', fig.align="center"}
+knitr::include_graphics("imgs/armonizacion2.png")
+```
 ---
 ### <dataTUR>
-![](imgs/datatur.png)
+
+```{r echo=FALSE, out.width='65%', fig.align="center"}
+knitr::include_graphics("imgs/datatur.png")
+```
 ---
-![](imgs/sinta4.png)
+```{r echo=FALSE}
+knitr::include_graphics("imgs/fit/sinta_4.png")
+```
 <br>
 .footnote[<span style="background-color: #37bbed">https://datos.yvera.gob.ar/</span>]
 ---
 ###DATOS ABIERTOS: https://datos.yvera.gob.ar/
-![](imgs/datos1.png)
+
+```{r echo=FALSE, out.width='75%', fig.align="center"}
+knitr::include_graphics("imgs/datos1.png")
+```
 ---
 ###DATOS ABIERTOS: https://datos.yvera.gob.ar/
-![](imgs/datos2.png)
+
+```{r echo=FALSE, out.width='75%', fig.align="center"}
+knitr::include_graphics("imgs/datos2.png")
+```
 ---
-![](imgs/sinta5.png)
+```{r echo=FALSE}
+knitr::include_graphics("imgs/fit/sinta_5.png")
+```
 <br>
 .footnote[<span style="background-color: #37bbed">https://tableros.yvera.tur.ar/</span>]
 ---
 ###TABLEROS: https://tableros.yvera.tur.ar/
-![](imgs/tableros1.png)
+
+```{r echo=FALSE, out.width='75%', fig.align="center"}
+knitr::include_graphics("imgs/tableros1.png")
+```
+
 ---
 ###https://tableros.yvera.tur.ar/empleo.html
-![](imgs/tableros2.png)
+
+```{r echo=FALSE, out.width='75%', fig.align="center"}
+knitr::include_graphics("imgs/tableros2.png")
+```
+
 ---
 ###TABLEROS: https://tableros.yvera.tur.ar/
-![](imgs/tableros3.png)
+
+```{r echo=FALSE, out.width='75%', fig.align="center"}
+knitr::include_graphics("imgs/tableros3.png")
+```
+
 ---
 ###TABLEROS: https://tableros.yvera.tur.ar/turismo_internacional/
-![](imgs/tableros4.png)
+
+```{r echo=FALSE, out.width='75%', fig.align="center"}
+knitr::include_graphics("imgs/tableros4.png")
+```
+
 ---
 ###TABLEROS: https://tableros.yvera.tur.ar/puna/
-![](imgs/tableros5.png)
+
+```{r echo=FALSE, out.width='75%', fig.align="center"}
+knitr::include_graphics("imgs/tableros5.png")
+```
+
 ---
 ###TABLEROS: https://tableros.yvera.tur.ar/mapeAr/
-![](imgs/tableros6.png)
+
+```{r echo=FALSE, out.width='75%', fig.align="center"}
+knitr::include_graphics("imgs/tableros6.png")
+```
+
 ---
-![](imgs/sinta6.png)
+```{r echo=FALSE}
+knitr::include_graphics("imgs/fit/sinta_6.png")
+```
 <br>
 .footnote[<span style="background-color: #37bbed">https://biblioteca.yvera.tur.ar/</span>]
 ---
 ###BIBLIOTECA: https://biblioteca.yvera.tur.ar/
-![](imgs/biblioteca2.png)
+
+```{r echo=FALSE, out.width='75%', fig.align="center"}
+knitr::include_graphics("imgs/biblioteca2.png")
+```
+
 ---
-![](imgs/sinta7.png)
+```{r echo=FALSE}
+knitr::include_graphics("imgs/fit/sinta_7.png")
+```
 <br>
 .footnote[<span style="background-color: #37bbed">https://bitacora.yvera.tur.ar/</span>]
 ---
 ###BITÁCORA: https://bitacora.yvera.tur.ar/
-![](imgs/bitacora1.png)
+
+```{r echo=FALSE, out.width='75%', fig.align="center"}
+knitr::include_graphics("imgs/bitacora1.png")
+```
+
 ---
-![](imgs/sinta8.png)
+```{r echo=FALSE}
+knitr::include_graphics("imgs/fit/sinta_8.png")
+```
 <br>
 .footnote[<span style="background-color: #37bbed">https://calendario.yvera.tur.ar/</span>]
 
 
 ---
 ###CALENDARIO: https://calendario.yvera.tur.ar/
-![](imgs/calendario1.png)
+
+```{r echo=FALSE, out.width='75%', fig.align="center"}
+knitr::include_graphics("imgs/calendario1.png")
+```
+
 ---
-![](imgs/sinta9.png)
+```{r echo=FALSE}
+knitr::include_graphics("imgs/fit/sinta_9.png")
+```
 ---
-![](imgs/sintia1.png)
+```{r echo=FALSE, out.width='75%', fig.align="center"}
+knitr::include_graphics("imgs/sintia1.png")
+```
 ---
-![](imgs/sintia2.png)
+```{r echo=FALSE, out.width='75%', fig.align="center"}
+knitr::include_graphics("imgs/sintia2.png")
+```
 ---
-![](imgs/sintia3.png)
+```{r echo=FALSE, out.width='75%', fig.align="center"}
+knitr::include_graphics("imgs/sintia3.png")
+```
 ---
 
 class: middle
