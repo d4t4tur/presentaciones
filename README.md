@@ -36,7 +36,7 @@ Feria Internacional de Turismo, Buenos Aires (4 de octubre de 2022)
 
 Feria Internacional de Turismo, Buenos Aires (4 de octubre de 2022)
 
-#### 📌 [INDEC - Datos Abiertos y Estadística Pública: El Sistema de Información Turística de la Argentina (SINTA)]([https://d4t4tur.github.io/presentaciones/unlp30agosto2022.html](https://d4t4tur.github.io/presentaciones/datos_abiertos_indec.html#1))
+#### 📌 [INDEC - Datos Abiertos y Estadística Pública: El Sistema de Información Turística de la Argentina (SINTA)](https://d4t4tur.github.io/presentaciones/datos_abiertos_indec.html#1))
 
 Virtual (14 de diciembre de 2022)
 
