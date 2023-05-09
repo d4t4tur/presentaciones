@@ -36,9 +36,15 @@ Feria Internacional de Turismo, Buenos Aires (4 de octubre de 2022)
 
 Feria Internacional de Turismo, Buenos Aires (4 de octubre de 2022)
 
-#### 📌 [INDEC - Datos Abiertos y Estadística Pública: El Sistema de Información Turística de la Argentina (SINTA)](https://d4t4tur.github.io/presentaciones/datos_abiertos_indec.html#1))
+#### 📌 [INDEC - Datos Abiertos y Estadística Pública: El Sistema de Información Turística de la Argentina (SINTA)](https://d4t4tur.github.io/presentaciones/datos_abiertos_indec.html#1)
 
 Virtual (14 de diciembre de 2022)
 
+#### 📌 [INDEC - Datos Abiertos y Estadística Pública: El Sistema de Información Turística de la Argentina (SINTA)](https://d4t4tur.github.io/presentaciones/datos_abiertos_indec.html#1)
 
+# 2023
+
+📌 [FAEVYT - Big data para el Turismo - #LaRutaNatural PATAGONIA](https://d4t4tur.github.io/faevyth_big_data_patagonia/#1)
+
+48 Congreso de FAEVYT, San Carlos de Bariloche, Río Negro (4 de mayo de 2023)
 
