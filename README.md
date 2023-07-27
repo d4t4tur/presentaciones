@@ -16,15 +16,19 @@ Repositorio que contiene el código fuente y presentaciones de la Dirección Nac
 
 # 2021
 
-### 📌 [Armonización de las Estadísticas Provinciales de Turismo](https://tableros.yvera.tur.ar/recursos/presentaciones/2021.05.27_armonizacion.pdf)
+#### 📌 [Armonización de las Estadísticas Provinciales de Turismo](https://tableros.yvera.tur.ar/recursos/presentaciones/2021.07.16_armonizacion.pdf)
 
-Xxxxxxxxxxx (27 de mayo de 2021)
+(16 de julio de 2021)
 
 [Nota de prensa](https://www.argentina.gob.ar/noticias/proyecto-federal-de-estadisticas-de-turismo)
 
-### 📌 [Armonización de las Estadísticas Provinciales de Turismo](https://tableros.yvera.tur.ar/recursos/presentaciones/2021.09.17_armonizacion.pdf)
+#### 📌 [Registros Administrativos](https://tableros.yvera.tur.ar/recursos/presentaciones/2021.08.12_presentacion.pdf)
 
-Xxxxxxxxxxx (17 de septiembre de 2021)
+Red de Fortalecimiento de la Gestión Pública (12 de agosto de 2021)
+
+#### 📌 [Gobierno Abierto: Jornada de Datos y Transparencia](https://tableros.yvera.tur.ar/recursos/presentaciones/2021.11.10_datos_y_transparencia.pdf)
+
+Ministerio de Desarrollo Productivo - CEPXXI (10 de noviembre de 2021)
 
 # 2022
 
