@@ -20,6 +20,8 @@ Repositorio que contiene el código fuente y presentaciones de la Dirección Nac
 
 Xxxxxxxxxxx (27 de mayo de 2021)
 
+[Nota de prensa](https://www.argentina.gob.ar/noticias/proyecto-federal-de-estadisticas-de-turismo)
+
 ### 📌 [Armonización de las Estadísticas Provinciales de Turismo](https://tableros.yvera.tur.ar/recursos/presentaciones/2021.09.17_armonizacion.pdf)
 
 Xxxxxxxxxxx (17 de septiembre de 2021)
