@@ -96,6 +96,10 @@ csv,conf,7 (20 de abril de 2023)
 
 Programa de Formación | Destinos Turísticos Inteligentes (11 de mayo de 2023)
 
+### 📌 [Foro Nacional de Turismo 2023](https://d4t4tur.github.io/ppt_cft_ushuaia/cft_ushuaia_dnmye.html#1)
+
+Ushuaia (23 de mayo de 2023)
+
 ### 📌 [La Cocina de las Estadísticas de Turismo en Argentina](https://tableros.yvera.tur.ar/recursos/presentaciones/2023.07.03_udesa.pdf)
 
 Universidad de San Andrés (7 de julio de 2023)
