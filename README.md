@@ -42,7 +42,7 @@ _En el marco de la Ruta Natural, la estrategia de reutilización de big data a p
 
 _La Dirección Nacional de Mercados y Estadísticas (DNMyE) de la Subsecretaría de Desarrollo Estratégico del Ministerio de Turismo y Deportes de la Nación (MTyD), es la responsable de las estadísticas de turismo en el marco del sistema estadístico nacional de Argentina. La presentación cuenta la experiencia de cómo implementamos flujos de trabajo reproducibles y abiertos en un equipo que produce, consolida y analiza estadísticas públicas._
 
-* **Video** https://www.youtube.com/watch?v=dTryKLhyFEk&list=PLg5zZXwt2ZW6FyN4zJnfcU0b-zyZLxgzv&index=27
+* **Video** <https://www.youtube.com/watch?v=dTryKLhyFEk&list=PLg5zZXwt2ZW6FyN4zJnfcU0b-zyZLxgzv&index=27>
 
 ## 📌 [Plataforma Inteligente de Datos Turísticos en la Ruta Natural - SINTA](https://tableros.yvera.tur.ar/recursos/presentaciones/2023.04.13_chascomus.pdf)
 
