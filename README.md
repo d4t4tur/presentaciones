@@ -30,6 +30,10 @@ Red de Fortalecimiento de la Gestión Pública (12 de agosto de 2021)
 
 Ministerio de Desarrollo Productivo - CEPXXI (10 de noviembre de 2021)
 
+#### 📌 [Encuentro Nodos de Datos Abiertos](https://tableros.yvera.tur.ar/recursos/presentaciones/2021.12.16_datos_y_transparencia.pdf)
+
+(16 de diciembre de 2021)
+
 # 2022
 
 #### 📌 [Presentación SINTA en USAL](https://tableros.yvera.tur.ar/recursos/presentaciones/2022.04.11_usal.pdf)
