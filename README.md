@@ -12,16 +12,19 @@ Repositorio que contiene [código fuente](https://github.com/d4t4tur/presentacio
 #### 🌐 Publicado en: https://d4t4tur.github.io/presentaciones/
 
 # 2023
+## 📌 [La Cocina de las Estadísticas de Turismo en Argentina](https://tableros.yvera.tur.ar/recursos/presentaciones/2023.07.03_udesa.pdf)
 
-## 📌 [Plataforma Inteligente de Datos Turísticos en la Ruta Natural - SINTA](https://tableros.yvera.tur.ar/recursos/presentaciones/2023.04.13_chascomus.pdf)
+**Universidad de San Andrés** (7 de julio de 2023)
 
-**Hacia la transformación de Destinos Turísticos Inteligentes en Argentina y América Latina** (13 de abril de 2023)
 
-## 📌 [Abrir los Datos y Procesos de las Estadísticas Públicas de Turismo en Argentina](https://tableros.yvera.tur.ar/recursos/presentaciones/2023.04.13_chascomus.pdf)
+## 📌 [Clasificación de destinosturísticos según nivel de Desarollo](https://d4t4tur.github.io/ppt_cft_ushuaia/cft_ushuaia_dnmye.html#1)
 
-**csv,conf,7** (20 de abril de 2023)
+**Foro Nacional de Turismo - Ushuaia** (23 de mayo de 2023)
 
-_La Dirección Nacional de Mercados y Estadísticas (DNMyE) de la Subsecretaría de Desarrollo Estratégico del Ministerio de Turismo y Deportes de la Nación (MTyD), es la responsable de las estadísticas de turismo en el marco del sistema estadístico nacional de Argentina. La presentación cuenta la experiencia de cómo implementamos flujos de trabajo reproducibles y abiertos en un equipo que produce, consolida y analiza estadísticas públicas._
+## 📌 [El SINTA y los Destinos Turísticos Intelifentes](https://tableros.yvera.tur.ar/recursos/presentaciones/2023.05.11_dti_cfi.pdf)
+
+**Consejo Federal de Inversiones (CFI). Programa de Formación - Destinos Turísticos Inteligentes** (11 de mayo de 2023)
+
 
 ## 📌 [Big data para el Turismo - #LaRutaNatural PATAGONIA](https://d4t4tur.github.io/faevyth_big_data_patagonia/#1)
 
@@ -31,17 +34,18 @@ _La Dirección Nacional de Mercados y Estadísticas (DNMyE) de la Subsecretaría
 
 _En el marco de la Ruta Natural, la estrategia de reutilización de big data a partir de señales de dispositivos móviles nos permite a nosotros y a las agencias poder tener información que hasta ahora no tienen._
 
-## 📌 [El SINTA y los Destinos Turísticos Intelifentes](https://tableros.yvera.tur.ar/recursos/presentaciones/2023.05.11_dti_cfi.pdf)
 
-**Consejo Federal de Inversiones (CFI). Programa de Formación - Destinos Turísticos Inteligentes** (11 de mayo de 2023)
 
-## 📌 [Clasificación de destinosturísticos según nivel de Desarollo](https://d4t4tur.github.io/ppt_cft_ushuaia/cft_ushuaia_dnmye.html#1)
+## 📌 [Abrir los Datos y Procesos de las Estadísticas Públicas de Turismo en Argentina](https://tableros.yvera.tur.ar/recursos/presentaciones/2023.04.13_chascomus.pdf)
 
-**Foro Nacional de Turismo - Ushuaia** (23 de mayo de 2023)
+**csv,conf,7** (20 de abril de 2023)
 
-## 📌 [La Cocina de las Estadísticas de Turismo en Argentina](https://tableros.yvera.tur.ar/recursos/presentaciones/2023.07.03_udesa.pdf)
+_La Dirección Nacional de Mercados y Estadísticas (DNMyE) de la Subsecretaría de Desarrollo Estratégico del Ministerio de Turismo y Deportes de la Nación (MTyD), es la responsable de las estadísticas de turismo en el marco del sistema estadístico nacional de Argentina. La presentación cuenta la experiencia de cómo implementamos flujos de trabajo reproducibles y abiertos en un equipo que produce, consolida y analiza estadísticas públicas._
 
-**Universidad de San Andrés** (7 de julio de 2023)
+## 📌 [Plataforma Inteligente de Datos Turísticos en la Ruta Natural - SINTA](https://tableros.yvera.tur.ar/recursos/presentaciones/2023.04.13_chascomus.pdf)
+
+**Hacia la transformación de Destinos Turísticos Inteligentes en Argentina y América Latina** (13 de abril de 2023)
+
 
 # 2022
 
@@ -52,10 +56,10 @@ _En el marco de la Ruta Natural, la estrategia de reutilización de big data a p
 
 ## 📌 [Uso de R para las estadísticas de tuRismo en Argentina](https://d4t4tur.github.io/presentaciones/latinr2022.html)
 
-**V LatinR 2022| Conferencia Latinoamericana sobre Uso de R en Investigación + Desarrollo, Virtual** (13 de octubre de 2022)
+**V LatinR 2022 - Conferencia Latinoamericana sobre Uso de R en Investigación + Desarrollo, Virtual** (13 de octubre de 2022)
 
-* Video: https://www.youtube.com/watch?v=wh2mxd-_2_U&list=PL9-E3cL2KgKlPuWf_M6dSUB4r_oRhuNjY
-* Repositorio: https://github.com/dnme-minturdep/latinR2022
+* **Video**: <https://www.youtube.com/watch?v=wh2mxd-_2_U&list=PL9-E3cL2KgKlPuWf_M6dSUB4r_oRhuNjY>
+* **Repositorio**: <https://github.com/dnme-minturdep/latinR2022>
 
 
 ## 📌 [Sistema de Información Turística de la Argentina (SINTA)](https://d4t4tur.github.io/presentaciones/SINTA_FIT2022.html)
@@ -150,24 +154,24 @@ _El proyecto busca generar propuestas metodológicas para los sistemas de estad�
 
 _La Armonización de las Estadísticas Provinciales de Turismo, proyecto de la Dirección Nacional de Mercados y Estadística del Ministerio de Turismo y Deportes de la Nación, tuvo su primera presentación virtual en un encuentro donde participaron representantes de todas las provincias del país._
 
-https://www.argentina.gob.ar/noticias/proyecto-federal-de-estadisticas-de-turismo
+<https://www.argentina.gob.ar/noticias/proyecto-federal-de-estadisticas-de-turismo>
 
 ## 2. Sistema de Información Turístico de la Argentina
 
 _El SINTA es el resultado de un trabajo de procesamiento y puesta en valor de fuentes de datos y el desarrollo de herramientas y plataformas para su consulta. Está integrado por una serie de espacio que facilitan el acceso a información turística de diversas formas._
 
-https://www.argentina.gob.ar/noticias/sistema-de-informacion-turistico-de-la-argentina
+<https://www.argentina.gob.ar/noticias/sistema-de-informacion-turistico-de-la-argentina>
 
 ## 3. Tercer encuentro en el marco del proyecto de Armonización de las Estadísticas 
 
 _Se repasaron avances respecto del cronograma planteado inicialmente y el progreso en relación con el desarrollo de un **Sistema Federal de Gestión de Datos de Turismo**, herramienta que facilitará el acopio y gestión de datos producidos por los diferentes organismos de turismo subnacionales._
 
-https://www.argentina.gob.ar/noticias/tercer-encuentro-en-el-marco-del-proyecto-de-armonizacion-de-las-estadisticas
+<https://www.argentina.gob.ar/noticias/tercer-encuentro-en-el-marco-del-proyecto-de-armonizacion-de-las-estadisticas>
 
 
 ## 4. Presentación de avances del proyecto de Armonización 
 
 _Entre las novedades del SINTA se presentaron un conjunto de micrositios, entre ellos el calendario de publicaciones y al bot de la plataforma de mensajería Telegram; la biblioteca donde se publican documentos de trabajo, manuales metodológicos e informes de coyuntura, entre otros; y el tablero de agencias de viajes que comparte información que caracteriza a las agencias con base en el Registro de Agencias de Viajes de la Dirección Nacional de Agencias de Viajes._
 
-https://www.argentina.gob.ar/noticias/presentacion-de-avances-del-proyecto-de-armonizacion
+<https://www.argentina.gob.ar/noticias/presentacion-de-avances-del-proyecto-de-armonizacion>
 
