@@ -111,12 +111,12 @@ _Con el acompañamiento del Ministerio de Turismo y Deportes de la Nación, el I
 
 [Nota de prensa](https://www.argentina.gob.ar/noticias/se-realizo-el-encuentro-nacional-de-turismo-cooperativo-y-mutual)
 
-### 📌 [Cuenta Satélite de Turismo Argentina (CST-A): Metodología y resultados](https://tableros.yvera.tur.ar/recursos/presentaciones/2022.04.13_cst_academia.pdf)
+## 📌 [Cuenta Satélite de Turismo Argentina (CST-A): Metodología y resultados](https://tableros.yvera.tur.ar/recursos/presentaciones/2022.04.13_cst_academia.pdf)
 
 **Encuentro con la Academia Argentina del Turismo** (13 de abril de 2022)
 
 
-### 📌 [Presentación SINTA en USAL](https://tableros.yvera.tur.ar/recursos/presentaciones/2022.04.11_usal.pdf)
+## 📌 [Presentación SINTA en USAL](https://tableros.yvera.tur.ar/recursos/presentaciones/2022.04.11_usal.pdf)
 
 **Universidad del Salvador - USAL** (11 de abril de 2022)
 
