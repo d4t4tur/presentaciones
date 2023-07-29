@@ -55,6 +55,14 @@ _La Dirección Nacional de Mercados y Estadísticas (DNMyE) de la Subsecretaría
 
 **Instituto Nacional de Estadística y Censo (INDEC)** (14 de diciembre de 2022)
 
+
+## 📌 [La experiencia de trabajar con paquetes de R en el estado argentino](https://ropensci.org/es/blog/2022/11/23/r-universe-stars-1-es/)
+
+**rOpenSci - “_Conociendo a las estrellas del universo R”_** (23 de noviembre de 2022)
+
+* **Video**: <https://ropensci.org/es/blog/2022/11/23/r-universe-stars-1-es/#video-de-la-entrevista>
+
+
 ## 📌 [Uso de R para las estadísticas de tuRismo en Argentina](https://d4t4tur.github.io/presentaciones/latinr2022.html)
 
 **V LatinR 2022 - Conferencia Latinoamericana sobre Uso de R en Investigación + Desarrollo, Virtual** (13 de octubre de 2022)
