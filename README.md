@@ -36,7 +36,7 @@ Repositorio que contiene [código fuente](https://github.com/d4t4tur/presentacio
 _En el marco de la Ruta Natural, la estrategia de reutilización de big data a partir de señales de dispositivos móviles nos permite a nosotros y a las agencias poder tener información que hasta ahora no tienen._
 
 
-## 📌 [Abrir los Datos y Procesos de las Estadísticas Públicas de Turismo en Argentina](https://tableros.yvera.tur.ar/recursos/presentaciones/2023.04.13_chascomus.pdf)
+## 📌 [Abrir los Datos y Procesos de las Estadísticas Públicas de Turismo en Argentina](https://zenodo.org/record/7915454)
 
 **csv,conf,7** (20 de abril de 2023)
 
