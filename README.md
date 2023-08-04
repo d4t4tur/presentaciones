@@ -74,9 +74,7 @@ _La Dirección Nacional de Mercados y Estadísticas (DNMyE) de la Subsecretaría
 
 **Feria Internacional de Turismo - FIT, Ciudad Autónoma de Buenos Aires** (4 de octubre de 2022)
 
-## 📌 [Cuenta Satélite de Turismo Argentina (CST-A) ](https://d4t4tur.github.io/presentaciones/fit_CST.html)
-
-**Feria Internacional de Turismo - FIT, Ciudad Autónoma de Buenos Aires** (3 de octubre de 2022)
+[Nota de prensa](https://www.argentina.gob.ar/noticias/mas-de-115-mil-personas-disfrutaron-de-la-fit-2022)
 
 ## 📌 [ANET / CONDET 2022 _"El turismo en un mundo de transformaciones"_](https://d4t4tur.github.io/presentaciones/mdq29Sept2022.html)
 
@@ -115,6 +113,8 @@ _Con el acompañamiento del Ministerio de Turismo y Deportes de la Nación, el I
 
 **Encuentro con la Academia Argentina del Turismo** (13 de abril de 2022)
 
+[Nota de prensa](https://www.argentina.gob.ar/noticias/se-presento-la-cuenta-satelite-la-academia-argentina-del-turismo)
+
 
 ## 📌 [Presentación SINTA en USAL](https://tableros.yvera.tur.ar/recursos/presentaciones/2022.04.11_usal.pdf)
 
@@ -130,6 +130,8 @@ _Con el acompañamiento del Ministerio de Turismo y Deportes de la Nación, el I
 ## 📌 [Gobierno Abierto: Jornada de Datos y Transparencia](https://tableros.yvera.tur.ar/recursos/presentaciones/2021.11.10_datos_y_transparencia.pdf)
 
 **Ministerio de Desarrollo Productivo - CEPXXI** (10 de noviembre de 2021)
+
+[Nota de prensa](https://www.argentina.gob.ar/noticias/desarrollo-productivo-presento-las-principales-acciones-en-materia-de-datos-transparencia-y)
 
 ## 📌 [Registros Administrativos](https://tableros.yvera.tur.ar/recursos/presentaciones/2021.08.12_presentacion.pdf)
 
