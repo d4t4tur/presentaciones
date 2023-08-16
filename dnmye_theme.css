@@ -15,7 +15,7 @@
  *    - xaringan wiki: https://github.com/yihui/xaringan/wiki
  *    - remarkjs wiki: https://github.com/gnab/remark/wiki
  *
- *  Version: 0.4.1
+ *  Version: 0.4.2
  *
  * ------------------------------------------------------- */
 @import url(https://fonts.googleapis.com/css?family=Roboto&display=swap);
@@ -41,10 +41,9 @@
   --header-h1-font-size: 2.75rem;
   --header-h2-font-size: 2.25rem;
   --header-h3-font-size: 1.75rem;
-  --header-h4-font-size: 1.25rem;
 
   /* Colors */
-  --text-color: #000000;
+  --text-color: #2682A5;
   --header-color: #37BBED;
   --background-color: #FFFFFF;
   --link-color: 3B4449;
@@ -72,7 +71,7 @@ body {
   font-weight: normal;
   color: var(--text-color);
 }
-h1, h2, h3, h4 {
+h1, h2, h3 {
   font-family: var(--header-font-family), var(--header-font-family-fallback);
   font-weight: 600;
   color: var(--header-color);
@@ -92,9 +91,6 @@ h1, h2, h3, h4 {
 }
 .remark-slide-content h3 {
   font-size: var(--header-h3-font-size);
-}
-.remark-slide-content h4 {
-  font-size: var(--header-h4-font-size);
 }
 .remark-code, .remark-inline-code {
   font-family: var(--code-font-family), Menlo, Consolas, Monaco, Liberation Mono, Lucida Console, monospace;
@@ -134,18 +130,18 @@ a, a > code {
   color: var(--inverse-text-color);
   
 }
-.inverse h1, .inverse h2, .inverse h3, .inverse h4 {
+.inverse h1, .inverse h2, .inverse h3 {
   color: var(--inverse-header-color);
 }
 .inverse a, .inverse a > code {
   color: var(--inverse-link-color);
 }
-.title-slide, .title-slide h1, .title-slide h2, .title-slide h3, .title-slide h4 {
+.title-slide, .title-slide h1, .title-slide h2, .title-slide h3 {
   color: var(--title-slide-text-color);
 }
 .title-slide {
   background-color: var(--title-slide-background-color);
-  background-image: url("imgs/escudo_mintur_blanco.png");
+  background-image: url("escudo_mintur_blanco.png");
   background-size: 200px;
   background-position: 95% 5%;
 }
@@ -198,7 +194,9 @@ blockquote {
 th, td {
   padding: 5px;
 }
-.remark-slide thead, .remark-slide tfoot, .remark-slide tr:nth-child(even) {
+.remark-slide table:not(.table-unshaded) thead,
+.remark-slide table:not(.table-unshaded) tfoot,
+.remark-slide table:not(.table-unshaded) tr:nth-child(even) {
   background: #D7F1FB;
 }
 table.dataTable tbody {
@@ -297,3 +295,4 @@ table.dataTable.hover tbody tr:hover, table.dataTable.display tbody tr:hover {
 .bg-black {
   background-color: var(--black);
 }
+
