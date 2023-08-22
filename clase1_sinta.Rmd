@@ -172,7 +172,7 @@ knitr::include_graphics("imgs/datos2.png")
 ### EVyTH
 #### Visitantes por trimestre y provincia de destino
 
-```{r}
+```{r fig.align='center'}
 # library(tidyverse)
 # library(glue)
 # library(ggbump)
@@ -271,7 +271,7 @@ knitr::include_graphics("imgs/clases_unlp/evyth_destinos_bump.png")
 ---
 ### EVyTH
 #### Participación según quintil de ingreso
-```{r out.width='60%'}
+```{r out.width='60%', fig.align='center'}
 # quintil <- evyth %>%
 #   filter(anio %in% c(seq(2019,2022))) %>%
 #   mutate(categorias = case_when(quintil_pcf_visitante == 1 ~ "Quintil 1",
@@ -671,14 +671,14 @@ class: inverse center middle
 ```
 
 
-```{r out.width='80%'}
+```{r out.width='80%', fig.align='center'}
 knitr::include_graphics("imgs/clases_unlp/eoh_estacionalidad.png")
 ```
 ---
 
 ### EOH
 
-```{r out.width='80%'}
+```{r out.width='80%', fig.align='center'}
 knitr::include_graphics("imgs/clases_unlp/eoh_destinos_es.png")
 ```
 
@@ -688,7 +688,7 @@ knitr::include_graphics("imgs/clases_unlp/eoh_destinos_es.png")
 
 ### EOH
 
-```{r out.width='80%'}
+```{r out.width='80%', fig.align='center'}
 knitr::include_graphics("imgs/clases_unlp/eoh_origen.png")
 ```
 
@@ -864,7 +864,7 @@ class: inverse center middle
 
 ### APN
 
-```{r}
+```{r fig.align='center'}
 knitr::include_graphics("imgs/clases_unlp/parques_nacionales.png")
 ```
 
@@ -908,7 +908,7 @@ class: inverse center middle
 
 ### Conectividad aérea
 
-```{r out.width='55%'}
+```{r out.width='55%', fig.align='center'}
 knitr::include_graphics("imgs/clases_unlp/serie_anac.png")
 ```
 
@@ -916,7 +916,7 @@ knitr::include_graphics("imgs/clases_unlp/serie_anac.png")
 
 ### Conectividad aérea
 
-```{r out.width='40%'}
+```{r out.width='45%', fig.align='center'}
 knitr::include_graphics("imgs/clases_unlp/tabla_anac.png")
 ```
 
@@ -950,7 +950,9 @@ knitr::include_graphics("imgs/clases_unlp/serie_cruceros.png")
 
 ---
 
-```{r out.width='60%'}
+### Crucerismo
+
+```{r out.width='45%', fig.align='center'}
 knitr::include_graphics("imgs/clases_unlp/cruceristas_origen.png")
 ```
 
@@ -979,3 +981,121 @@ class: inverse center middle
 ```{r}
 knitr::include_graphics("imgs/CST-A-a.png")
 ```
+
+---
+
+### Empleo
+
+- **Fuente**: Centro de Estudios para la Producción (CEP XXI).
+
+- **Resumen**: medición del empleo en ramas turísticas.
+
+- **Indicadores**: puestos de trabajo registrados, empleo por género y empresas.
+
+- **Disponible**: reporte.
+
+---
+
+### Empleo
+
+```{r, out.width='70%'}
+knitr::include_graphics("imgs/clases_unlp/empleo.png")
+```
+
+---
+
+### Empleo
+
+.pull-left[
+```{r}
+knitr::include_graphics("imgs/clases_unlp/serie_empleo_genero.png")
+```
+]
+
+.pull-right[
+```{r}
+knitr::include_graphics("imgs/clases_unlp/serie_empleo_genero_rama.png")
+```
+]
+
+---
+
+### Divisas
+
+- **Fuente**: Mercado Único y Libre de Cambios.
+
+- **Resumen**: transacciones de divisas.
+
+- **Indicadores**: ingresos y egresos, rubros.
+
+- **Disponible**: reporte.
+
+---
+
+### Divisas
+```{r, out.width='70%'}
+knitr::include_graphics("imgs/clases_unlp/serie_mulc.png")
+```
+
+---
+
+### Divisas
+
+.pull-left[
+```{r}
+knitr::include_graphics("imgs/clases_unlp/mulc_ingresos.png")
+```
+]
+
+.pull-right[
+```{r}
+knitr::include_graphics("imgs/clases_unlp/mulc_egresos.png")
+```
+]
+
+---
+class: inverse center middle
+
+# OTROS RECURSOS
+
+---
+
+### Otros recursos
+
+### Datos abiertos
+
+- [Inversiones turísticas](https://datos.yvera.gob.ar/dataset?groups=inversiones-turisticas)
+
+- [Calidad turística](https://datos.yvera.gob.ar/dataset?groups=calidad-turistica)
+
+### [Monitor de provincias](https://provincias.yvera.tur.ar/)
+
+### [Documentos técnicos armonización](https://armonizacion.yvera.tur.ar/)
+
+---
+
+class: inverse center middle
+
+# CONCLUSIONES
+
+---
+
+### ¿Por qué usar datos?
+
+- Complementar un análisis con el enfoque cuantitativo
+
+- Dar contexto a la problemática
+
+- Responder una pregunta
+
+- Construir indicadores
+
+- Tomar decisiones
+
+---
+class: inverse center middle
+
+## Muchas gracias
+## DNMyE
+<br>
+### [`r shiny::icon("linkedin")`](https://www.linkedin.com/in/eli%C3%A1n-soutullo) [Elián Soutullo](https://www.linkedin.com/in/eli%C3%A1n-soutullo)
