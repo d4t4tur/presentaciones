@@ -13,6 +13,16 @@ Repositorio que contiene [código fuente](https://github.com/d4t4tur/presentacio
 
 # 2023
 
+## [Datos abiertos en turismo](https://d4t4tur.github.io/presentaciones/datos_abiertos_unsam.html#1)
+
+**Universidad nacional de San Martin**
+
+## Clases abiertas: datos del SINTA en las aulas de turismo
+
+**Universidad Nacional de La Plata**
+
+- [Clase 1: fuentes e indicadores](https://d4t4tur.github.io/presentaciones/clase1_sinta.html#1)
+
 ## 📌 [La Cocina de las Estadísticas de Turismo en Argentina](https://tableros.yvera.tur.ar/recursos/presentaciones/2023.07.03_udesa.pdf)
 
 **Universidad de San Andrés** (7 de julio de 2023)
