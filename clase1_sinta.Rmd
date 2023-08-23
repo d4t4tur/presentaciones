@@ -902,7 +902,7 @@ class: inverse center middle
 
 - **Indicadores**: vuelos, asientos, pasajeros, clasificación del vuelo, ruta, empresa.
 
-- **Disponible**: reporte y tablero.
+- **Disponible**: datos abiertos, reporte y tablero.
 
 ---
 
@@ -1096,6 +1096,7 @@ class: inverse center middle
 class: inverse center middle
 
 ## Muchas gracias
+## estadisticas@turismo.gob.ar
 ## DNMyE
 <br>
 ### [`r shiny::icon("linkedin")`](https://www.linkedin.com/in/eli%C3%A1n-soutullo) [Elián Soutullo](https://www.linkedin.com/in/eli%C3%A1n-soutullo)
