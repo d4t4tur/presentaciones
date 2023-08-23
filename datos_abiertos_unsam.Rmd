@@ -141,16 +141,16 @@ knitr::include_graphics("https://tableros.yvera.tur.ar//recursos/logos_instituci
 ### Portal de Datos Abiertos - DNMyE
 
 ```{r echo=FALSE, out.width='90%'}
-knitr::include_graphics("imgs/portal_datos_abiertos.png")
+knitr::include_graphics("imgs/portal_datos_abiertos_update.png")
 ```
 
 ---
 
 ### Portal de Datos Abiertos - DNMyE
 
-- 12 datasets
+- 13 datasets
 
-- 126 recursos
+- 132 recursos
 
 - Más de 1000 series de tiempo
 
