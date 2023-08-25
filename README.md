@@ -11,7 +11,23 @@ Repositorio que contiene [código fuente](https://github.com/d4t4tur/presentacio
 
 #### 🌐 Publicado en: <https://d4t4tur.github.io/presentaciones>
 
-# 2023
+# Indíce 
+
+* **Presentaciones Institucionales**
+  - [2023](https://github.com/d4t4tur/presentaciones#2023)
+  - [2022](https://github.com/d4t4tur/presentaciones#2022)
+  - [2021](https://github.com/d4t4tur/presentaciones#2021)
+
+* **Ciclos, cursos y reuniones periódicas**
+  - [Consejo Federal de Turismo](https://github.com/d4t4tur/presentaciones#consejo-federal-de-turismo---comisi%C3%B3n-de-estad%C3%ADsticas-y-big-data---reuniones)
+  - [Clases Abiertas](https://github.com/d4t4tur/presentaciones/#clases-abiertas)
+  - [Armonización Estadística](https://github.com/d4t4tur/presentaciones/#armonizacion) 
+
+# Presentaciones Institucionales 2023
+
+## 📌 [Datos abiertos en turismo](https://d4t4tur.github.io/presentaciones/datos_abiertos_unsam.html#1)
+
+**"Gobierno abierto para la planificación de políticas públicas" - Universidad Nacional de San Martin** (23 de agosto de 2023)
 
 ## 📌 [La Cocina de las Estadísticas de Turismo en Argentina](https://tableros.yvera.tur.ar/recursos/presentaciones/2023.07.03_udesa.pdf)
 
@@ -49,7 +65,7 @@ _La Dirección Nacional de Mercados y Estadísticas (DNMyE) de la Subsecretaría
 **Seminario: _Hacia la transformación de Destinos Turísticos Inteligentes en Argentina y América Latina_, Chascomús, Provincia de Buenos Aires** (13 de abril de 2023)
 
 
-# 2022
+# Presentaciones Institucionales 2022
 
 ## 📌 [Datos Abiertos y Estadística Pública: El Sistema de Información Turística de la Argentina (SINTA)](https://d4t4tur.github.io/presentaciones/datos_abiertos_indec.html#1)
 
@@ -121,7 +137,7 @@ _Con el acompañamiento del Ministerio de Turismo y Deportes de la Nación, el I
 **Universidad del Salvador - USAL** (11 de abril de 2022)
 
 
-# 2021
+# Presentaciones Institucionales 2021
 
 ## 📌 [Datos Abiertos en el SINTA](https://tableros.yvera.tur.ar/recursos/presentaciones/2021.12.16_datos_y_transparencia.pdf)
 
@@ -175,6 +191,63 @@ _Entre las novedades del SINTA se presentaron un conjunto de micrositios, entre 
 * Biblioteca
 * MapeAr
 * `<data>TUR`
+
+# Clases abiertas
+
+## Datos del SINTA en las aulas de turismo
+
+**Universidad Nacional de La Plata**
+
+- [Clase 1: fuentes e indicadores](https://d4t4tur.github.io/presentaciones/clase1_sinta.html#1)
+
+
+# Armonización
+
+## Documento Técnico #1: [Conceptos y elementos básicos para la medición provincial de los turistas](https://armonizacion.yvera.tur.ar/capacitaciones.html#documento-t%C3%A9cnico-1-conceptos-y-elementos-b%C3%A1sicos-para-la-medici%C3%B3n-provincial-de-los-turistas)
+
+📄 Conceptos y Elementos para la Medición Provincial de los Turistas 
+
+📄 Sistema de Estadística de Turismo en la Argentina 
+
+
+
+## Documento Técnico #2: [Propuestas metodológicas para las encuestas de ocupación en alojamientos turísticos](https://armonizacion.yvera.tur.ar/capacitaciones.html#documento-t%C3%A9cnico-2-propuestas-metodol%C3%B3gicas-para-las-encuestas-de-ocupaci%C3%B3n-en-alojamientos-tur%C3%ADsticos)
+
+📄 Encuestas de Ocupación 
+
+📄 Encuesta de Ocupación Hotelera (EOH) 
+
+
+## Documento Técnico #3: [Descripción, análisis y utilización de los Registros Administrativos para la medición del Turismo](https://armonizacion.yvera.tur.ar/capacitaciones.html#documento-t%C3%A9cnico-3-descripci%C3%B3n-an%C3%A1lisis-y-utilizaci%C3%B3n-de-los-registros-administrativos-para-la-medici%C3%B3n-del-turismo)
+
+
+📄 Uso de los Registros Adminsitrativos para la Medición del Turismo 
+
+📄 Parques Nacionales 
+
+📄 Padrón Único de Alojamiento (PUNA) 
+
+📄 Transito Vehícular 
+
+📄 Conectividad Aerocomercial 
+
+📄 Migraciones 
+
+
+## Documento Técnico #4: [Propuestas Metodológicas para las Encuestas de Perfil del Visitante](https://armonizacion.yvera.tur.ar/capacitaciones.html#documento-t%C3%A9cnico-4-propuestas-metodol%C3%B3gicas-para-las-encuestas-de-perfil-del-visitante)
+
+📄 Encuestas de Perfil de Visitante 
+
+📄 Encuesta de Turismo Internacional (ETI) 
+
+
+## Documento Técnico #5: [Medición de la contribución económica del turismo: actividad y empleo](https://armonizacion.yvera.tur.ar/capacitaciones.html#documento-t%C3%A9cnico-5-medici%C3%B3n-de-la-contribuci%C3%B3n-econ%C3%B3mica-del-turismo-actividad-y-empleo)
+
+📄 Medición de la Contribución Económica del Turismo: Actividad y Empleo 
+
+📄 Fuentes de Infomración
+
+## Documento Técnico #6: [Ciencia de Datos para el Turismo](https://armonizacion.yvera.tur.ar/capacitaciones.html#ciencia-de-datos-para-el-turismo)
 
 
 
