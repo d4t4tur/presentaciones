@@ -396,6 +396,10 @@ _Es la herramienta recomendada por la Organización Mundial del Turismo, y recon
 ![](imgs/CST-A-tabla05.png)
 ---
 
+class: inverse center middle
+# PRINCIPALES RESULTADOS
+---
+
 ### PRINCIPALES RESULTADOS SERIE 2004, 2016 A 2019
 #### CONSUMO TURÍSTICO INTERIOR 
 
@@ -461,6 +465,13 @@ knitr::include_graphics("imgs/sinta_logo_negro.png")
 class: inverse center middle
 
 # CONCLUSIONES
+
+
+<br>
+```{r echo = FALSE , out.width='30%'}
+knitr::include_graphics("imgs/clases_unlp/kahoo.png")
+
+```
 
 ---
 class: inverse center middle
