@@ -213,7 +213,7 @@ class: inverse center middle
 <br>
 <br>
 
-```{r , echo = FALSE, out.width='100%', fig.align='left'}
+```{r , echo = FALSE, out.width='90%', fig.align='left'}
 knitr::include_graphics("imgs/clases_unlp/ind_mundial.png")
 ```
 
@@ -279,21 +279,21 @@ class: inverse center middle
 # El turismo en el EMAE
 
 ---
-
-.pull-left[
-```{r,  echo = FALSE, out.width='100%'}
+<br>
+<br>
+<br>
+```{r,  echo = FALSE, out.width='80%'}
 knitr::include_graphics("imgs/clases_unlp/emae_junio.png")
 ```
-]
-
-.pull-right[
-```{r,  echo = FALSE,  out.width='100%'}
-knitr::include_graphics("imgs/clases_unlp/emae_meses.png")
-```
-]
-
 ---
 <br>
+<br>
+<br>
+```{r,  echo = FALSE,  out.width='80%'}
+knitr::include_graphics("imgs/clases_unlp/emae_meses.png")
+```
+
+---
 <br>
 <br>
 <br>
