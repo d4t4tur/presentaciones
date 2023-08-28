@@ -28,7 +28,7 @@ Repositorio que contiene [código fuente](https://github.com/d4t4tur/presentacio
 
 **Universidad Nacional de La Plata - UNLP** (29 de agosto de 2023)
 
-[Nota de prensa]([https://www.argentina.gob.ar/noticias/datos-abiertos-presentacion-del-sinta-en-la-unlp](https://www.econo.unlp.edu.ar/investigaciones_en_turismo/los-datos-del-minturydep-en-las-aulas-de-turismo-de-la-fce-unlp-8935))
+[Nota de prensa](https://www.econo.unlp.edu.ar/investigaciones_en_turismo/los-datos-del-minturydep-en-las-aulas-de-turismo-de-la-fce-unlp-8935)
 
 _Ciclo de clases abiertas para estudiantes de la Licenciatura en Turismo de la Facultad de Ciencias Económicas de la Universidad Nacional de La Plata (UNLP) con el objetivo de brindar una serie de clases sobre la aplicación de datos en Turismo disponibles en Argentina (a través del Sistema de Información Turística de la Argentina - SINTA) en diferentes materias de la carrera. El ciclo fue organizado por el Instituto de Investigaciones en Turismo y el Departamento de Turismo de la FCE UNLP junto con la Dirección Nacional de Mercados y Estadísticas del Ministerio de Turismo y Deportes de la Nación._
 
