@@ -1,0 +1,208 @@
+---
+title: "SINTA"
+author:  "Dirección Nacional de Mercados y Estadística"
+output:
+  xaringan::moon_reader:
+    seal: false
+    css: "dnmye_theme.css"
+    nature:
+      slideNumberFormat: "%current%"
+      highlightStyle: github
+      highlightLines: true
+      ratio: 16:9
+      countIncrementalSlides: true
+---
+
+class:inverse, middle
+
+background-image: url(https://tableros.yvera.tur.ar/recursos/logos_institucionales/escudo_mdtyd_blanco.png)
+background-position: 95% 95%
+background-size: 30%
+
+# Datos aplicados al turismo
+
+## El caso del mercado aerocomercial
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+### Dirección Nacional de Mercados y Estadística<br>Subsecretaría de Desarrollo Estratégico
+
+
+
+
+```{r, echo=FALSE}
+library(xaringanExtra)
+# LOGO COLOR EN PAGs INTERNAS
+xaringanExtra::use_logo(image_url = "https://tableros.yvera.tur.ar/recursos/logos_institucionales/escudo_mdtyd_color.png", 
+                        position = css_position(top = "1em", right = "1em"), 
+                        height = "20%", width = "20%")
+# BARRA DE PROGRESO DE PRESENTACION
+xaringanExtra::use_progress_bar(color = comunicacion::dnmye_colores("cian"))
+# LAPIZ 
+xaringanExtra::use_scribble()
+# EXPLORADOR DE SLIDES
+xaringanExtra::use_tile_view()
+# HABILITAR WEBCAM
+xaringanExtra::use_webcam()
+```
+
+
+```{r dnmye_theme, include=FALSE, warning=FALSE, eval=TRUE}
+library(xaringanthemer) #EVAL FALSE
+library(comunicacion)
+style_mono_light(outfile = "dnmye_theme.css", # CSS FILE
+                 # FONTS
+                  header_font_google = google_font('Encode Sans'),
+                  text_font_google   = google_font('Roboto'),
+                  code_font_google   = google_font('IBM Plex Mono'),
+                 # COLORES 
+                 base_color = dnmye_colores("cian"),
+                 code_inline_color = dnmye_colores("rosa"), 
+                 inverse_link_color = "#3B4449",
+                 background_color = "#FFFFFF",
+                 title_slide_background_image = "escudo_mintur_blanco.png", 
+                 title_slide_background_position = "95% 5%", 
+                 title_slide_background_size = "200px", footnote_color = "#3B4449", link_color = "3B4449",text_slide_number_font_size = "16px"
+                  
+                 )
+```
+
+
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+knitr::opts_chunk$set(
+  fig.width=9, fig.height=3.5, fig.retina=3,
+  out.width = "100%",
+  cache = FALSE,
+  echo = FALSE,
+  message = FALSE, 
+  warning = FALSE,
+  fig.show = TRUE,
+  hiline = TRUE
+)
+```
+
+
+```{css, echo=FALSE}
+div.my-footer {
+    background-color: white;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    height: 40px;
+    width: 100%;
+}
+div.my-footer span {
+    font-size: 16px;
+    color: #3B4449;
+    position: absolute;
+    left: 15px;
+    bottom: 6px;
+}
+
+
+```
+
+
+---
+
+layout: true
+
+<div class="my-footer"><span>DIRECCIÓN NACIONAL DE MERCADOS Y ESTADÍSTICA <a href="https://yvera.tur.ar/sinta"> - <b>www.yvera.tur.ar/sinta</a></b></span></div> 
+
+---
+
+# CONTRIBUCIÓN ECONÓMICA
+
+```{r , echo = FALSE, out.width='100%'}
+knitr::include_graphics("imgs/clases_unlp/ind_arg.png")
+```
+
+---
+
+# Distribución geográfica
+
+![](imgs/utdt/dist_territorial.png)
+
+---
+
+class: inverse center middle
+
+# ¿Qué hacemos en el MINTURyDEP?
+
+---
+
+![](imgs/utdt/roceta.png)
+---
+
+![](imgs/fit/sinta_9.png)
+
+---
+
+![](imgs/sintia2.png)
+
+---
+
+class: inverse center middle
+
+# MOVILIDAD
+---
+
+<br>
+<br>
+<br>
+### + CONECTIVIDAD AÉREA
+<br>
+### + CRUCERISMO
+<br>
+### + CONECTIVIDAD TERRESTRE - *PROXIMAMENTE* -
+
+
+---
+
+# Conectividad aérea
+
+- **Fuente**: Administración Nacional de Aviación Civil (ANAC) & Dirección Nacional de Migraciones.
+
+- **Resumen**: Registros de movimientos aéreos en aeropuertos de todo el país a nivel diario & Ingresos y egresos de personas al país.
+
+- **Indicadores**: Vuelos, asientos, pasajeros, clasificación del vuelo, rutas, empresas.
+
+- **Disponible**: Documento de trabajo, datos abiertos, reporte y tablero.
+
+```{r out.width='55%', fig.align='center'}
+knitr::include_graphics("imgs/utdt/logo_conectividad.png")
+```
+
+---
+
+# Fuente
+
+- Aterrizajes y despegues registrados en todos los aeropuertos del país.
+
+- **Responsable**: ANAC.
+
+- Registros de ingresos y egresos por pasos internacionales. 
+
+- **Responsable**: Migraciones.
+
+```{r fig.align='center'}
+knitr::include_graphics("imgs/utdt/migraciones.PNG")
+```
+
+
+---
+class: inverse center middle
+
+## Muchas gracias
+## DNMyE
+
+## estadisticas@turismo.gob.ar
