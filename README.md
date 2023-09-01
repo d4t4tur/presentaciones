@@ -187,10 +187,6 @@ _Se repasaron avances respecto del cronograma planteado inicialmente y el progre
 
 ## 4. [Nuevos desarrollos del SINTA](https://tableros.yvera.tur.ar/recursos/presentaciones/2022.09.13_presentacion_cft.pdf)
 
-## 5. [SINTA: Armonización y construcción de estadísticas para las políticas turísticas](https://d4t4tur.github.io/presentaciones/presentacion_cft_2023_08_31.html)
-
-_163º Asamblea Ordinaria del Consejo Federal de Turismo, Paraná, Entre Ríos._
-
 **Presentación de avances del proyecto de Armonización** (13 de septiembre de 2022)
 
 _Entre las novedades del SINTA se presentaron un conjunto de micrositios, entre ellos el calendario de publicaciones y al bot de la plataforma de mensajería Telegram; la biblioteca donde se publican documentos de trabajo, manuales metodológicos e informes de coyuntura, entre otros; y el tablero de agencias de viajes que comparte información que caracteriza a las agencias con base en el Registro de Agencias de Viajes de la Dirección Nacional de Agencias de Viajes._
@@ -203,6 +199,10 @@ _Entre las novedades del SINTA se presentaron un conjunto de micrositios, entre 
 * Biblioteca
 * MapeAr
 * `<data>TUR`
+  
+## 5. [SINTA: Armonización y construcción de estadísticas para las políticas turísticas](https://d4t4tur.github.io/presentaciones/presentacion_cft_2023_08_31.html)
+
+_163º Asamblea Ordinaria del Consejo Federal de Turismo, Paraná, Entre Ríos._
 
 # Clases abiertas
 
