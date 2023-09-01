@@ -1,0 +1,708 @@
+---
+title: "SINTA: Armonización y construcción de estadísticas para las políticas turísticas"
+author:  "Dirección Nacional de Mercados y Estadística"
+output:
+  xaringan::moon_reader:
+    seal: false
+    css: "dnmye_theme.css"
+    nature:
+      slideNumberFormat: "%current%"
+      highlightStyle: github
+      highlightLines: true
+      ratio: 16:9
+      countIncrementalSlides: true
+---
+
+class:inverse, middle
+
+background-image: url(https://tableros.yvera.tur.ar/recursos/logos_institucionales/escudo_mdtyd_blanco.png)
+background-position: 95% 95%
+background-size: 30%
+
+####  163º Asamblea Ordinaria del Consejo Federal de Turismo, Paraná, Entre Ríos.
+<br>
+<br>
+<br>
+<br>
+<br>
+
+## SINTA: Armonización y construcción de estadísticas para las políticas turísticas
+
+<br>
+<br>
+<br>
+<br>
+
+#### Dirección Nacional de Mercados y Estadística<br>Subsecretaría de Desarrollo Estratégico
+
+
+
+
+```{r, echo=FALSE,warning=F,message=F}
+library(xaringanExtra)
+# LOGO COLOR EN PAGs INTERNAS
+xaringanExtra::use_logo(image_url = "https://tableros.yvera.tur.ar/recursos/logos_institucionales/escudo_mdtyd_color.png", 
+                        position = css_position(top = "1em", right = "1em"), 
+                        height = "20%", width = "20%")
+# BARRA DE PROGRESO DE PRESENTACION
+xaringanExtra::use_progress_bar(color = comunicacion::dnmye_colores("cian"))
+# LAPIZ 
+xaringanExtra::use_scribble()
+# EXPLORADOR DE SLIDES
+xaringanExtra::use_tile_view()
+# HABILITAR WEBCAM
+xaringanExtra::use_webcam()
+```
+
+
+```{r dnmye_theme, include=FALSE, warning=FALSE, eval=TRUE}
+library(xaringanthemer) #EVAL FALSE
+library(comunicacion)
+library(herramientas)
+library(tidyverse)
+library(sf)
+library(leaflet)
+style_mono_light(outfile = "dnmye_theme.css", # CSS FILE
+                 # FONTS
+                  header_font_google = google_font('Encode Sans'),
+                  text_font_google   = google_font('Roboto'),
+                  code_font_google   = google_font('IBM Plex Mono'),
+                 # COLORES 
+                 base_color = dnmye_colores("cian"),
+                 code_inline_color = dnmye_colores("rosa"), 
+                 inverse_link_color = "#3B4449",
+                 background_color = "#FFFFFF",
+                 title_slide_background_image = "escudo_mintur_blanco.png", 
+                 title_slide_background_position = "95% 5%", 
+                 title_slide_background_size = "200px", footnote_color = "#3B4449", link_color = "3B4449",text_slide_number_font_size = "16px"
+                  
+                 )
+```
+
+
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+knitr::opts_chunk$set(
+  fig.width=9, fig.height=3.5, fig.retina=3,
+  out.width = "100%",
+  cache = FALSE,
+  echo = TRUE,
+  message = FALSE, 
+  warning = FALSE,
+  fig.show = TRUE,
+  hiline = TRUE
+)
+```
+
+
+```{css, echo=FALSE}
+div.my-footer {
+    background-color: white;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    height: 40px;
+    width: 100%;
+}
+div.my-footer span {
+    font-size: 16px;
+    color: #3B4449;
+    position: absolute;
+    left: 15px;
+    bottom: 6px;
+}
+
+
+```
+
+
+---
+
+layout: true
+
+<div class="my-footer"><span>DIRECCIÓN NACIONAL DE MERCADOS Y ESTADÍSTICA <a href="https://yvera.tur.ar/sinta"> - <b>www.yvera.tur.ar/sinta</a></b></span></div> 
+
+---
+
+class: inverse center middle
+
+```{r , echo = FALSE, out.width='40%'}
+knitr::include_graphics("https://tableros.yvera.tur.ar//recursos/logos_institucionales/sinta_blanco.png")
+```
+---
+
+<br>
+
+## Iniciativas del SINTA para la armonización de las estadísticas de turismo
+
+### 1.    Proyecto de armonización: fortalecimiento de los sistemas estadísticos provinciales
+### 2.    Diplomatura en Generación y Análisis de Información en Turismo
+### 3.    Proyecto `<data>TUR`
+### 4.    Cuentas Satélites de turismo provinciales
+---
+class: inverse center middle
+
+```{r, echo = FALSE, out.width='40%'}
+knitr::include_graphics("img/armonizacion.png")
+```
+
+
+---
+
+###ARMONIZACIÓN: https://armonizacion.yvera.tur.ar/
+![](img/armonizacion1.png)
+
+
+
+---
+
+
+###ARMONIZACIÓN: https://armonizacion.yvera.tur.ar/
+![](img/armonizacion2.png)
+
+
+---
+
+class: inverse center middle
+# Diplomatura en Generación y Análisis de Información en Turismo
+
+---
+
+<br>
+
+##Objetivo
+### Formar en asociación con la Universidad Nacional de San Martín a los equipos técnicos de organismos subnacionales en el uso de la ciencia de datos para las estadísticas del turismo.
+
+
+## + de `1000` aplicantes
+## + de `80` becas otorgadas
+
+---
+
+class: inverse center middle
+# El Sistema Federal de Gestión de Datos Turísticos de la Argentina
+# `<data>TUR`
+
+
+---
+class: middle
+
+## Plataforma web modular
+
+## + Módulo DEST
+## + Módulo PUNA
+## + Módulo Destinos Inteligentes
+
+---
+
+# Módulo DEST
+
+--
+
+### Gestión y armonización de datos de temporadas y eventos turísticos
+
+## + de 35 organismos participantes
+## + de 1500 datos relevados para 5 indicadores:
+### Tasa de Ocupación, Plazas ofrecidas, Plazas Ocupadas, Reservas y Estadía Media
+
+---
+
+## Participación organismos locales
+
+```{r, message=FALSE, warning=FALSE, echo = FALSE, out.height="80%", out.width="80%"}
+orgs_locales <- read_file_srv("/datatur/orgs_locales.rds")
+
+orgs_locales %>% 
+  leaflet() %>% 
+    addMarkers() %>% 
+  geoAr::addArgTiles()
+
+```
+
+---
+
+## Participación organismos provinciales
+
+```{r, message=FALSE, warning=FALSE, echo = FALSE, out.height="80%", out.width="80%"}
+orgs_provs <- geoAr::get_geo(geo = "ARGENTINA", level = "provincia") %>% 
+  geoAr::add_geo_codes()
+
+orgs_provs %>% 
+  filter(! name_iso %in% c("Santa Fe", "Formosa", "Río Negro")) %>% 
+  leaflet() %>% 
+  addPolygons() %>% 
+  geoAr::addArgTiles()
+```
+
+---
+class: middle center
+
+## Datos relevados en módulo DEST 
+
+```{r,  message=FALSE, warning=FALSE, echo = FALSE}
+
+dest_datos <- read_file_srv("/datatur/cargaDeEstadisticas.xlsx") %>% 
+  janitor::clean_names()
+
+dest_datos <- dest_datos %>% mutate(prov = unidad_territorial %>% str_split_i(pattern = "\\n", i = 1))
+
+datosxmes <- dest_datos %>% 
+  mutate(fecha_hasta = lubridate::rollback(lubridate::dmy(fecha_hasta),roll_to_first =T )) %>% 
+  group_by(fecha_hasta) %>% summarise(n = n()) %>% ungroup() 
+
+datosxmes %>% 
+  ggplot() + geom_col(aes(x = fecha_hasta, y = n), width = .8) + theme_minimal() +xlab("") +ylab("") +scale_x_date(date_labels = "%b - %Y", date_breaks = "1 month")
+
+```
+
+
+---
+## Experiencias
+
+--
+
+### Temporada Enero: 208 solicitudes | Tasa Respuesta 81%
+### Finde Revolución de Mayo: 179 solicitudes | Tasa Respuesta 63%
+### Finde Largo Belgrano: 182 solicitudes | Tasa Respuesta 54%
+
+---
+
+## Próximos Objetivos
+
+### Alcanzar una Tasa de Respuesta de 80% en todos los eventos
+### Reducir el tiempo de respuesta a 2 días
+### Respuesta de todas las provincias y 49 localidades EOH
+
+
+---
+
+.pull-left[
+
+## Módulo Puna
+<br>
+### Sistema de gestión de registros de alojamientos
+### Control de cambios y actualización del PUNA
+### En etapa de testing
+]
+
+.pull-right[
+## Módulo Destinos Inteligentes
+### Indicadores proxy en tiempo real de demanda e interés en el destino
+### Explotación de datos de interacciones, búsquedas y visitas
+### Integración con otros módulos
+]
+
+
+---
+# Cuentas Satélites de turismo <br>provinciales
+
+### +    Marco: Cuenta Satélite de Turismo de Argentina (CST-A)
+### +    Asesoría técncia
+### +    Financiamiento
+
+---
+class: inverse center middle
+
+# Novedades
+
+```{r , echo = FALSE, out.width='40%'}
+knitr::include_graphics("https://tableros.yvera.tur.ar//recursos/logos_institucionales/sinta_blanco.png")
+```
+
+---
+
+class: inverse center middle
+
+# Big data
+
+`Desarrollo de una fuente de información complementaria a partir de señales emitidas por aplicaciones de dispositivos móviles`
+
+```{r,  message=FALSE, warning=FALSE, echo = FALSE}
+rutas_naturales <- read_file_srv('big_data/presentacion/rutas_naturales.geojson')
+
+rutas_naturales <- rutas_naturales %>% 
+  group_by(name) %>% 
+  mutate(geometry = st_union(geometry))
+
+palrn <- function(x) {
+  
+  case_when(
+                               str_detect(x, "Selva Misionera") ~ "#6aa84f",
+                               str_detect(x, "Iberá") ~ "#f6b26b",
+                               str_detect(x, "Litoral") ~ "#d9ead3",
+                               str_detect(x, "Gran Chaco") ~ "#46bdc6",
+                               str_detect(x, "Puna") ~ "#e9795b",
+                               str_detect(x, "Valles, Quebradas y Yungas") ~ "#34a853",
+                               str_detect(x, "Altos Andes") ~ "#999999",
+                               str_detect(x, "Desiertos y Volcanes") ~ "#ffe599",
+                               str_detect(x, "Sierras Centrales") ~ "#d5a6bd",
+                               str_detect(x, "Llanura") ~ "#e2bcf1",
+                               str_detect(x, "Estepa") ~ "#fce5cd",
+                               str_detect(x, "Patagonia Andina") ~ "#b6d7a8",
+                               str_detect(x, "Patagonia Austral") ~ "#34d7d7",
+                               str_detect(x, "Fin del Mundo") ~ "#cccccc",
+                               str_detect(x, "Mar Patagónico") ~ "#dff2e2",
+                               str_detect(x, "Delta") ~ "#b28fbf",
+                               T ~ NA_character_
+  )
+  
+}
+  
+
+
+rutas_naturales <- rutas_naturales %>% 
+  mutate(color = palrn(name))
+
+rutas_naturales <- rutas_naturales %>% 
+  mutate(color= ifelse(name %in% c("Ruta de la Patagonia Andina",
+                                   "Ruta del Mar Patagónico",
+                                   "Ruta del Fin del Mundo",
+                                   "Ruta de la Patagonia Austral",
+                                   "Ruta de la Estepa"), color, "#AAAAAA"))
+
+```
+
+```{r,  message=FALSE, warning=FALSE, echo = FALSE}
+paises_nombres <- read_csv('https://gist.githubusercontent.com/brenes/1095110/raw/c8f208b03485ba28f97c500ab7271e8bce43b9c6/paises.csv')
+
+renombrar_paises <- function(x) {
+  left_join(x, paises_nombres %>% select(iso2, nombre), 
+            by = c("HomeCountry" = "iso2")) %>% 
+  select(pais = nombre, everything())
+  }
+```
+
+```{r levanta ifas receptivos, message=FALSE, warning=FALSE, echo = FALSE}
+
+# esto queda comentado para evitar levantar todos los datos
+# set.seed(45)
+
+# geo_ifas_ext_sample <- ifas_ext %>% 
+#   slice_sample(n = 10000) 
+
+# esto es una muestra de 10 mil señales
+geo_ifas_ext_sample <- read_file_srv("big_data/presentacion/sample_ifas_receptivo.parquet")
+
+
+geo_ifas_ext_sample <- renombrar_paises(geo_ifas_ext_sample)
+
+geo_ifas_ext_sample <-  geo_ifas_ext_sample %>% 
+  st_as_sf(coords = c("Lon", "Lat"), crs = 4326)
+
+
+
+```
+
+```{r plot-first, warning=FALSE, echo=FALSE, out.height="60%", out.width="90%"}
+
+
+geo_ifas_ext_sample %>% 
+  leaflet() %>% 
+  geoAr::addArgTiles() %>% 
+  addPolygons(data = rutas_naturales, fillColor = ~ color, weight = 0, fillOpacity = 0.7, popup = ~ name) %>% 
+  addCircles(popup = ~ lapply(glue::glue("Fecha: {Date}<br>IFA: {substr(IFA,1,7)}...<br>País: {pais}"),
+                              htmltools::HTML))
+```
+
+---
+
+<br>
+
+
+
+.pull-left[
+
+## Datos geolocalizados
+
+- Residentes
+  -   **6.700 M** de registros (300 GB de información)
+  -   **17 M** de celulares únicos
+  -   12 meses prepandemia
+
+- No residentes
+  -   **16,7 M** de registros
+  -   **592.684** celulares únicos
+  -   12 meses prepandemia
+]
+
+.pull-right[
+
+<br>
+![](img/dt_big_data.PNG)
+![](img/logos_big_data.PNG)
+]
+
+
+---
+
+# Big data: Casos de uso
+
+
+.pull-left[
+
+-   Caracterizar visitantes internacionales para una geografía dada
+
+![](img/mapa_señales_Ruta de la Patagonia Andina.png)
+]
+
+.pull-right[
+
+-   Perfil de visitantes de eventos específicos (fiestas nacionales)
+
+```{r  echo=FALSE,warning=F,out.width="70%"}
+knitr::include_graphics("img/fiestas_entre_.rios.png")
+```
+
+]
+---
+### No residentes: encontrando visitas 
+ 
+- Diferenciar las visitas con alta granularidad geográfica (`Ruta Natural Patagonia Andina`)
+
+- Estimar el origen del visitante aún en donde no hay cobertura de encuestas
+  (cada color es un país de origen diferente).
+
+
+```{r message=FALSE, warning=FALSE, echo = FALSE}
+
+patagonia_andina <-  rutas_naturales %>% filter(name == "Ruta de la Patagonia Andina")
+
+ifas_ext_patagonia_andina <- geo_ifas_ext_sample %>% 
+  st_filter(patagonia_andina)
+
+paisespal <- colorFactor(palette = dnmye_paletas()(length(unique(ifas_ext_patagonia_andina$pais))),
+                        domain = unique(ifas_ext_patagonia_andina$pais))
+
+```
+
+
+```{r message=FALSE, warning=FALSE, echo = FALSE, out.height="60%", out.width="90%"}
+
+ifas_ext_patagonia_andina %>% 
+  leaflet() %>% 
+  geoAr::addArgTiles() %>% 
+  addPolygons(data = patagonia_andina, fillColor = ~ color, weight = 0, fillOpacity = 0.7, popup = ~ name) %>% 
+  setView(lat = -41.137,lng =  -71.304, zoom = 6) %>% 
+  addCircles(color = ~ paisespal(pais), fillOpacity = 1,
+             popup = ~ lapply(glue::glue("Fecha: {Date}<br>IFA: {substr(IFA,1,7)}...<br>País: {pais}"),
+                              htmltools::HTML))
+  # addLegend(pal = factpal, values = unique(geo_ifas_ext_sample$HomeCountry)[1:10], opacity = 1)
+```
+
+---
+
+### Analizar visitas a Imperdibles
+
+- La georeferenciación precisa permite realizar el análisis para cualquier polígono de interés.
+
+```{r message=FALSE, warning=FALSE, echo = FALSE, out.height="60%", out.width="90%"}
+
+imperdibles <- read_file_srv('big_data/presentacion/imperdibles.gpkg')
+
+imperdibles_patagonia_andina <- imperdibles %>% 
+  filter(ruta_natural == "Patagonia Andina")
+
+
+ifas_ext_patagonia_andina %>% 
+  leaflet() %>% 
+  geoAr::addArgTiles() %>% 
+  addPolygons(data = imperdibles_patagonia_andina,
+              fillColor = dnmye_colores("pera"),
+              color = dnmye_colores("pera"), popup = ~ lapply(glue::glue("{nombre_ppal}"),
+                              htmltools::HTML), fillOpacity = 0.7) %>% 
+  setView(lat = -41.137,lng =  -71.304, zoom = 6) %>% 
+  addCircles(color = ~ paisespal(pais), 
+             popup = ~ lapply(glue::glue("Fecha: {Date}<br>IFA: {substr(IFA,1,7)}...<br>País: {pais}"),
+                              htmltools::HTML), fillOpacity = 1)
+  # addLegend(pal = factpal, values = unique(geo_ifas_ext_sample$HomeCountry)[1:10], opacity = 1) 
+
+```
+
+---
+
+```{r echo=FALSE, out.height="60%", out.width="70%"}
+knitr::include_graphics("entradas/top_pais_rn_andina.png")
+```
+
+<!-- --- -->
+
+
+<!-- ```{r echo=FALSE, out.height="60%", out.width="70%"} -->
+<!-- knitr::include_graphics("entradas/ranking_imperdibles_andina.png") -->
+<!-- ``` -->
+
+---
+
+```{r echo=FALSE, out.height="60%", out.width="70%"}
+knitr::include_graphics("entradas/paises_Parque Nacional Nahuel Huapi.png")
+```
+
+---
+
+```{r echo=FALSE, out.height="60%", out.width="70%"}
+knitr::include_graphics("entradas/imperdibles_Patagonia Andina_Brasil.png")
+```
+
+---
+
+## Residentes: fiestas nacionales
+
+#### Perfiles sociodemográficos a partir de la ubicación de origen de los visitantes
+
+```{r echo=FALSE, out.height="30%", out.width="30%"}
+knitr::include_graphics("img/fiestas_entre_.rios.png")
+```
+
+---
+
+
+.pull-left[
+
+## Origen de los visitantes
+```{r echo=FALSE, out.height="90%", out.width="90%"}
+knitr::include_graphics("img/origen_depto_Carnaval del País.png")
+```
+]
+.pull-right[
+
+<br>
+<br>
+
+## Nivel socioeconómico
+```{r echo=FALSE, out.height="80%", out.width="80%"}
+knitr::include_graphics("img/nse_Carnaval del País.png")
+```
+]
+
+
+---
+class: inverse center middle
+
+# Novedades
+
+```{r , echo = FALSE, out.width='40%'}
+knitr::include_graphics("https://tableros.yvera.tur.ar//recursos/logos_institucionales/sinta_blanco.png")
+```
+---
+
+class: inverse center middle
+
+# Documento de clasificación de localidaes
+
+## Múltiples fuentes de datos del SINTA que permiten categorizar los destinos turísticos
+
+---
+
+### Documento de clasifiación de localidaes
+
+#### Múltiples fuentes de datos del SINTA que permiten categorizar los destinos turísticos
+
+.pull-left[
+#### -   Conectividad Aérea (ANAC)
+#### -   Tranporte terrestre (CNRT)
+#### -   Stock de alojamientos (PUNA)
+#### -   Estacionalidad (empleo registrado)
+#### -   Empresas turísticas
+
+
+<br>
+<br>
+
+]
+
+.pull-right[
+
+```{r , echo = FALSE, out.width='85%'}
+knitr::include_graphics("img/clasificacion_localidades.png")
+```
+]
+
+
+---
+
+# Conectividad Aérea (ANAC)
+
+```{r, echo = FALSE, out.width='70%'}
+knitr::include_graphics("img/tablero_conectividad.png")
+```
+
+---
+
+# Transporte terrestre (CNRT)
+
+.pull-left[
+### Datos de viajes en colectivos de media y larga distancia en todo el país desde 2019
+
+```{r, echo = FALSE, out.width='90%',out.height='90%'}
+knitr::include_graphics("img/graph_cnrt.png")
+```
+]
+
+.pull-right[
+```{r, echo = FALSE, out.width='70%',out.height='70%'}
+knitr::include_graphics("img/mapa_cnrt.png")
+```
+]
+---
+
+# PUNA: <br> Padrón Único Nacional de Alojamiento
+
+```{r , echo = FALSE, out.width='100%'}
+knitr::include_graphics("img/mapa_puna.png")
+```
+
+
+---
+
+# Empleo registrado
+
+
+
+.pull-left[
+```{r , echo = FALSE, out.width='100%'}
+knitr::include_graphics("img/estacionalidad_pais.png")
+```
+]
+
+.pull-right[
+```{r , echo = FALSE, out.width='100%'}
+knitr::include_graphics("img/estacionalidad_entre_rios.png")
+```
+]
+---
+
+# Empresas turísticas
+
+```{r , echo = FALSE, out.width='100%'}
+knitr::include_graphics("img/empresas.png")
+```
+
+---
+
+class: inverse center middle
+
+---
+
+![](img/sinta1.png)
+
+---
+
+# LLevamos publicados:
+
+#### -   14 documentos de trabajo
+#### -   8 tableros interactivos
+#### -   13 datasets de *datos abiertos* con 132 recursos y +1000 series de tiempo
+#### -   Cuenta Satélite de Turismo de Argentina (CST-A)
+#### -    Turismo en Argentina Productiva 2030
+#### -    Anuario Estadístico de Turismo (AET)
+#### -   Informes periódicos: Turismo internacional, turismo interno, ocupación hotelera, parques nacionales, conectividad aérea, cruceros, y más...
+
+---
+
+class: inverse center middle
+
+## ¡Muchas gracias!
+
+```{r , echo = FALSE, out.width='40%'}
+knitr::include_graphics("https://tableros.yvera.tur.ar//recursos/logos_institucionales/sinta_blanco.png")
+```

@@ -172,7 +172,7 @@ _La Armonización de las Estadísticas Provinciales de Turismo, proyecto de la D
 
 <https://www.argentina.gob.ar/noticias/proyecto-federal-de-estadisticas-de-turismo>
 
-## 2. Sistema de Información Turístico de la Argentina
+## 2. Sistema de Información Turística de la Argentina
 
 _El SINTA es el resultado de un trabajo de procesamiento y puesta en valor de fuentes de datos y el desarrollo de herramientas y plataformas para su consulta. Está integrado por una serie de espacio que facilitan el acceso a información turística de diversas formas._
 
@@ -199,6 +199,10 @@ _Entre las novedades del SINTA se presentaron un conjunto de micrositios, entre 
 * Biblioteca
 * MapeAr
 * `<data>TUR`
+  
+## 5. [SINTA: Armonización y construcción de estadísticas para las políticas turísticas](https://d4t4tur.github.io/presentaciones/presentacion_cft_2023_08_31.html)
+
+_163º Asamblea Ordinaria del Consejo Federal de Turismo, Paraná, Entre Ríos._
 
 # Clases abiertas
 
