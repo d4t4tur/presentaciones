@@ -1,0 +1,470 @@
+---
+title: "SINTA"
+author:  "Dirección Nacional de Mercados y Estadística"
+output:
+  xaringan::moon_reader:
+    seal: false
+    css: "dnmye_theme.css"
+    nature:
+      slideNumberFormat: "%current%"
+      highlightStyle: github
+      highlightLines: true
+      ratio: 16:9
+      countIncrementalSlides: true
+---
+
+class:inverse, middle
+
+background-image: url(https://tableros.yvera.tur.ar/recursos/logos_institucionales/escudo_mdtyd_blanco.png)
+background-position: 95% 95%
+background-size: 30%
+
+# Fuentes de datos para la elaboración del perfil del turista internacional
+
+<br>
+<br>
+
+## _Estimaciones de turismo internacional y Encuesta de Turismo Internacional_
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+### Dirección Nacional de Mercados y Estadística<br>Subsecretaría de Desarrollo Estratégico
+
+
+
+
+```{r, echo=FALSE}
+library(xaringanExtra)
+# LOGO COLOR EN PAGs INTERNAS
+xaringanExtra::use_logo(image_url = "https://tableros.yvera.tur.ar/recursos/logos_institucionales/escudo_mdtyd_color.png", 
+                        position = css_position(top = "1em", right = "1em"), 
+                        height = "20%", width = "20%")
+# BARRA DE PROGRESO DE PRESENTACION
+xaringanExtra::use_progress_bar(color = comunicacion::dnmye_colores("cian"))
+# LAPIZ 
+xaringanExtra::use_scribble()
+# EXPLORADOR DE SLIDES
+xaringanExtra::use_tile_view()
+# HABILITAR WEBCAM
+xaringanExtra::use_webcam()
+```
+
+
+```{r dnmye_theme, include=FALSE, warning=FALSE, eval=TRUE}
+library(xaringanthemer) #EVAL FALSE
+library(comunicacion)
+style_mono_light(outfile = "dnmye_theme.css", # CSS FILE
+                 # FONTS
+                  header_font_google = google_font('Encode Sans'),
+                  text_font_google   = google_font('Roboto'),
+                  code_font_google   = google_font('IBM Plex Mono'),
+                 # COLORES 
+                 base_color = dnmye_colores("cian"),
+                 code_inline_color = dnmye_colores("rosa"), 
+                 inverse_link_color = "#3B4449",
+                 background_color = "#FFFFFF",
+                 title_slide_background_image = "escudo_mintur_blanco.png", 
+                 title_slide_background_position = "95% 5%", 
+                 title_slide_background_size = "200px", footnote_color = "#3B4449", link_color = "3B4449",text_slide_number_font_size = "16px"
+                  
+                 )
+```
+
+
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+knitr::opts_chunk$set(
+  fig.width=9, fig.height=3.5, fig.retina=3,
+  out.width = "100%",
+  cache = FALSE,
+  echo = FALSE,
+  message = FALSE, 
+  warning = FALSE,
+  fig.show = TRUE,
+  hiline = TRUE
+)
+```
+
+
+```{css, echo=FALSE}
+div.my-footer {
+    background-color: white;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    height: 40px;
+    width: 100%;
+}
+div.my-footer span {
+    font-size: 16px;
+    color: #3B4449;
+    position: absolute;
+    left: 15px;
+    bottom: 6px;
+}
+
+
+```
+
+
+---
+
+layout: true
+
+<div class="my-footer"><span>DIRECCIÓN NACIONAL DE MERCADOS Y ESTADÍSTICA <a href="https://yvera.tur.ar/sinta"> - <b>www.yvera.tur.ar/sinta</a></b></span></div> 
+
+---
+
+![](imgs/roceta_5.png)
+---
+
+![](imgs/fit/sinta_9.png)
+
+---
+
+![](imgs/sintia2.png)
+
+---
+
+
+class: inverse center middle
+
+# ALGUNOS ASPECTOS METODOLÓGICOS
+
+---
+
+## ¿Qué es un visitante?
+
+.pull-left[
+
+- **ENTORNO HABITUAL**: 
+
+1. Distancia recorrida
+2. Traspasar un límite geográfico
+3. Frecuencia de visita en el destino
+
+- **DURACIÓN DE LA ESTADÍA EN EL DESTINO**: 
+
+- Los viajes con estadías en destino superiores a 365 días son considerados **migraciones**.
+
+- **MOTIVO DE VIAJE**: 
+
+- La persona no debe ser empleado por una entidad residente en el destino visitado (tripulante o viajero frecuente)
+
+]
+
+.pull-right[
+
+- ¿Que diferencia a los turistas de los excursionistas? Los visitantes que pernoctan en el destino son **TURISTAS**, que no realizan al menos un pernocte en el destino son **EXCURSIONISTAS**
+
+- ¿Qué es un **visitante internacional**?  Es una persona que viaja a un país **distinto al de su entorno habitual**, por una duración **inferior a un año**,  y cuyo motivo principal de visita no es ser empleada por una unidad residente del país visitado. Es decir, un tripulante, un viajero frecuente, o alguien que temporalmente viene a trabajar al país no es un visitante. 
+
+- **Turismo emisivo**: refiere a los viajes de turistas residentes en la Argentina hacia el exterior.
+- **Turismo receptivo**: refiere a los viajes hacia la Argentina de turistas no residentes en el país. 
+
+]
+
+---
+
+
+```{r out.width = "900px", out.height="600px",fig.align='left'}
+knitr::include_graphics("imgs/clases_unlp/c3_esquema_ti.PNG")
+```
+
+
+---
+
+## CONTABILIZACIÓN DE VISITANTES EN LA ARGENTINA
+
+- La DNM envía bases de datos diarias, son el insumo principal para la estimación de visitantes
+
+- En junio 2023, la base en bruto tuvo 5,3 millones de casos
+
+- Se estimaron **443 mil turistas no residentes y 412 mil turistas residentes**
+
+**¿Qué información de perfil del visitante ofrecen los datos de la DNM?**
+
+1. Género
+2. Edad
+3. Medio de transporte utilizado (vía de ingreso al país)
+4. Paso de ingreso al país
+
+---
+
+background-image: url(imgs/clases_unlp/c3_esquema_dnm.PNG)
+
+---
+
+# Algunos interrogantes
+
+
+- Cuántos turistas viajan a la Argentina por año? 
+- Cuántos turistas residentes en Argentina realizan viajes al exterior? 
+- Es más numeroso el turismo receptivo o emisivo? 
+- Esto siempre fue igual a lo largo de los años? 
+
+
+---
+## Serie anual turismo internacional
+
+```{r out.width = "900px", out.height="500px",fig.align='center'}
+
+knitr::include_graphics("imgs/clases_unlp/ti_serie_anual.png")
+```
+
+---
+  
+## Serie mensual turismo internacional 
+
+
+```{r out.width = "1100px", out.height="500px",fig.align='center'}
+
+knitr::include_graphics("imgs/clases_unlp/ti_serie_mensual.PNG")
+```
+
+
+---
+  
+## Turismo receptivo; año 2023
+
+
+![](imgs/clases_unlp/ti_2023_via_pais.PNG)
+
+---
+  
+## Turismo receptivo; año 2023
+
+
+```{r out.width = "700px", out.height="500px",fig.align='center'}
+
+knitr::include_graphics("imgs/clases_unlp/ti_paisvia.png")
+```
+
+
+---
+
+## Turismo receptivo; año 2023
+
+![](imgs/clases_unlp/ti_pasos.png)
+---
+
+class: inverse center middle
+
+# ENCUESTA DE TURISMO INTERNACIONAL
+
+<br>
+<br>
+
+## ETI
+
+---
+
+
+## Consideraciones generales 
+
+
+- **Objetivo**: Caracterizar el FLUJO y medir el GASTO de los visitantes no residentes durante su permanencia en la Argentina (turismo receptivo) y el de los visitantes residentes en la Argentina durante su permanencia en el exterior (turismo emisivo).
+
+- **Temporalidad**: Operativo mensual continuo (desde el año 2004).
+
+
+- **Método de recolección**: Encuestas cara a cara (**al finalizar el viaje**).
+
+- **Pasos relevados**:
+
+1. Ezeiza y Aeroparque
+2. Aeropuerto Internacional de Córdoba
+3. Puerto de Buenos Aires
+4. Aeropuerto Internacional de Mendoza
+5. Paso internacional Cristo Redentor
+
+
+---
+
+background-image: url(imgs/clases_unlp/mapa_eti.png)
+
+---
+
+## Cobertura temática 
+
+
+* Residencia del viajero (país/región de origen) –ciudad y país-
+* Tamaño del grupo de viaje
+* Motivo del viaje
+* Estadía
+* Tipo de alojamiento utilizado
+* Destinos visitados
+* Tipo de organización del viaje
+* Pernoctes por tipo de alojamiento
+* Gasto durante la estadía (desagregada por rubro)
+* Actividades realizadas en destino
+* Evaluación del país (según rubro)
+* Tiempo de anticipación del viaje
+* Aspectos influyentes a la hora de viajar
+
+---
+
+class: inverse center middle
+
+# MOTIVO DE VIAJE
+
+---
+
+```{r out.width = "900px", out.height="600px",fig.align='center'}
+knitr::include_graphics("imgs/clases_unlp/c3_eti_motivo.png")
+```
+
+---
+
+```{r out.width = "900px", out.height="600px",fig.align='center'}
+knitr::include_graphics("imgs/clases_unlp/c3_eti_motivo_trim.png")
+```
+
+---
+
+```{r out.width = "900px", out.height="600px",fig.align='center'}
+knitr::include_graphics("imgs/clases_unlp/c3_eti_motivo_residencia.png")
+```
+
+---
+
+class: inverse center middle
+
+# TIPO DE ALOJAMIENTO
+
+---
+
+```{r out.width = "900px", out.height="600px",fig.align='center'}
+knitr::include_graphics("imgs/clases_unlp/c3_eti_aloja.png")
+```
+
+---
+
+```{r out.width = "900px", out.height="600px",fig.align='center'}
+knitr::include_graphics("imgs/clases_unlp/c3_eti_aloja_trim.png")
+```
+
+---
+
+
+```{r out.width = "900px", out.height="600px",fig.align='center'}
+knitr::include_graphics("imgs/clases_unlp/c3_eti_aloja_resi.png")
+```
+
+---
+
+class: inverse center middle
+
+# ESTADÍA PROMEDIO
+
+---
+
+```{r out.width = "900px", out.height="600px",fig.align='left'}
+knitr::include_graphics("imgs/clases_unlp/c3_eti_em.png")
+```
+
+---
+
+```{r out.width = "900px", out.height="600px",fig.align='left'}
+knitr::include_graphics("imgs/clases_unlp/c3_eti_em_comparado.png")
+```
+
+---
+
+
+```{r out.width = "900px", out.height="600px",fig.align='left'}
+knitr::include_graphics("imgs/clases_unlp/c3_em_eya.png")
+```
+
+---
+
+class: inverse center middle
+
+# GASTO TURÍSTICO
+
+---
+
+```{r out.width = "900px", out.height="600px",fig.align='left'}
+knitr::include_graphics("imgs/clases_unlp/c3_eti_gasto.png")
+```
+
+---
+
+```{r out.width = "900px", out.height="600px",fig.align='left'}
+knitr::include_graphics("imgs/clases_unlp/c3_eti_gpt.png")
+```
+
+---
+
+
+```{r out.width = "900px", out.height="600px",fig.align='left'}
+knitr::include_graphics("imgs/clases_unlp/c3_eti_gpd.png")
+```
+
+---
+
+```{r out.width = "900px", out.height="600px",fig.align='left'}
+knitr::include_graphics("imgs/clases_unlp/c3_eti_gpt_eya.png")
+```
+---
+
+
+```{r out.width = "900px", out.height="600px",fig.align='left'}
+knitr::include_graphics("imgs/clases_unlp/c3_eti_gpd_eya.png")
+```
+
+---
+
+
+```{r out.width = "900px", out.height="600px",fig.align='left'}
+knitr::include_graphics("imgs/clases_unlp/c3_eti_gpt_comparado.png")
+```
+
+---
+
+```{r out.width = "900px", out.height="600px",fig.align='left'}
+knitr::include_graphics("imgs/clases_unlp/c3_eti_gpd_comparado.png")
+```
+
+---
+class: inverse center middle
+
+# OTRA INFORMACIÓN PUBLICADA
+
+---
+
+```{r out.width = "900px", out.height="600px",fig.align='left'}
+knitr::include_graphics("imgs/clases_unlp/c3_actividades_eti.PNG")
+```
+
+---
+
+
+```{r out.width = "900px", out.height="600px",fig.align='left'}
+knitr::include_graphics("imgs/clases_unlp/c3_calificaciones_eti.PNG")
+```
+
+
+---
+
+```{r out.width = "900px", out.height="600px",fig.align='left'}
+knitr::include_graphics("imgs/clases_unlp/c3_eti_destinos.png")
+```
+
+
+---
+class: inverse center middle
+
+## Muchas gracias
+## estadisticas@turismo.gob.ar
+## DNMyE
+
+
