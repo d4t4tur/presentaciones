@@ -127,13 +127,18 @@ layout: true
 
 ---
 
+![](imgs/sintia2.png)
+
+---
+
+
 class: inverse center middle
 
 # ALGUNOS ASPECTOS METODOLÓGICOS
 
 ---
 
-# ¿QUÉ ES UN VISITANTE?
+## ¿Qué es un visitante?
 
 .pull-left[
 
@@ -149,34 +154,28 @@ class: inverse center middle
 
 - **MOTIVO DE VIAJE**: 
 
-- La persona no debe ser empleado por una entidad residente en el destino visitado.
+- La persona no debe ser empleado por una entidad residente en el destino visitado (tripulante o viajero frecuente)
 
 ]
 
 .pull-right[
 
-**QUÉ DIFERENCIA A UN TURISTA DE UN EXCURSIONISTA?**
+- ¿Que diferencia a los turistas de los excursionistas? Los visitantes que pernoctan en el destino son **TURISTAS**, que no realizan al menos un pernocte en el destino son **EXCURSIONISTAS**
 
-- Los visitantes que pernoctan en el destino son **TURISTAS**
+- ¿Qué es un **visitante internacional**?  Es una persona que viaja a un país **distinto al de su entorno habitual**, por una duración **inferior a un año**,  y cuyo motivo principal de visita no es ser empleada por una unidad residente del país visitado. Es decir, un tripulante, un viajero frecuente, o alguien que temporalmente viene a trabajar al país no es un visitante. 
 
-- Los visitantes que no realizan al menos un pernocte en el destino son **EXCURSIONISTAS**
+- **Turismo emisivo**: refiere a los viajes de turistas residentes en la Argentina hacia el exterior.
+- **Turismo receptivo**: refiere a los viajes hacia la Argentina de turistas no residentes en el país. 
 
 ]
+
 ---
 
 
-# ¿QUÉ ES UN VISITANTE?
-
-
-```{r out.width = "500px", out.height="300px",fig.align='center'}
-knitr::include_graphics("imgs/esquema_ti_1.PNG")
+```{r out.width = "900px", out.height="600px",fig.align='left'}
+knitr::include_graphics("imgs/clases_unlp/c3_esquema_ti.PNG")
 ```
 
-
----
-
-
-background-image: url(imgs/esquema_ti_1.PNG)
 
 ---
 
@@ -188,22 +187,16 @@ background-image: url(imgs/esquema_ti_1.PNG)
 
 - Se estimaron **443 mil turistas no residentes y 412 mil turistas residentes**
 
+**¿Qué información de perfil del visitante ofrecen los datos de la DNM?**
+
+1. Género
+2. Edad
+3. Medio de transporte utilizado (vía de ingreso al país)
+4. Paso de ingreso al país
+
 ---
 
-background-image: url(imgs/clases_unlp/imag_ti2.PNG)
-
----
-  
-# Definiciones iniciales. 
-  
-- ¿Qué es un **visitante internacional**? 
-  
-  Es una persona que viaja a un país **distinto al de su entorno habitual**, por una duración **inferior a un año**,  y cuyo motivo principal de visita no es ser empleada por una unidad residente del país visitado. Es decir, un tripulante, un viajero frecuente, o alguien que temporalmente viene a trabajar al país no es un visitante. 
-
-- Si pernocta en el país se lo considera **turista**. Si no, es **excursionista**.
-
-- **Turismo emisivo**: refiere a los viajes de turistas residentes en la Argentina hacia el exterior.
-- **Turismo receptivo**: refiere a los viajes hacia la Argentina de turistas no residentes en el país. 
+background-image: url(imgs/clases_unlp/c3_esquema_dnm.PNG)
 
 ---
 
@@ -217,36 +210,45 @@ background-image: url(imgs/clases_unlp/imag_ti2.PNG)
 
 
 ---
-# Serie anual turismo internacional
+## Serie anual turismo internacional
 
-```{r}
+```{r out.width = "900px", out.height="500px",fig.align='center'}
+
 knitr::include_graphics("imgs/clases_unlp/ti_serie_anual.png")
 ```
 
 ---
   
-#Serie mensual turismo internacional 
+## Serie mensual turismo internacional 
 
 
-![](imgs/clases_unlp/ti_serie_mensual.PNG)
+```{r out.width = "1100px", out.height="500px",fig.align='center'}
+
+knitr::include_graphics("imgs/clases_unlp/ti_serie_mensual.PNG")
+```
+
 
 ---
   
-# Año 2023. Turismo receptivo
+## Turismo receptivo; año 2023
 
 
 ![](imgs/clases_unlp/ti_2023_via_pais.PNG)
 
 ---
   
-# Año 2023. Turismo receptivo
+## Turismo receptivo; año 2023
 
-![](imgs/clases_unlp/ti_paisvia.png)
+
+```{r out.width = "700px", out.height="500px",fig.align='center'}
+
+knitr::include_graphics("imgs/clases_unlp/ti_paisvia.png")
+```
+
 
 ---
 
-  
-# Año 2023. Turismo receptivo
+## Turismo receptivo; año 2023
 
 ![](imgs/clases_unlp/ti_pasos.png)
 ---
@@ -255,9 +257,6 @@ class: inverse center middle
 
 # ENCUESTA DE TURISMO INTERNACIONAL
 
-<br>
-<br>
-<br>
 <br>
 <br>
 
@@ -308,6 +307,11 @@ background-image: url(imgs/clases_unlp/mapa_eti.png)
 * Tiempo de anticipación del viaje
 * Aspectos influyentes a la hora de viajar
 
+---
+
+class: inverse center middle
+
+# MOTIVO DE VIAJE
 
 ---
 
@@ -315,13 +319,123 @@ background-image: url(imgs/clases_unlp/mapa_eti.png)
 knitr::include_graphics("imgs/clases_unlp/c3_eti_motivo.png")
 ```
 
-
 ---
 
+```{r out.width = "900px", out.height="600px",fig.align='center'}
+knitr::include_graphics("imgs/clases_unlp/c3_eti_motivo_trim.png")
+```
+
+---
 
 ```{r out.width = "900px", out.height="600px",fig.align='center'}
 knitr::include_graphics("imgs/clases_unlp/c3_eti_motivo_residencia.png")
 ```
 
+---
+
+class: inverse center middle
+
+# TIPO DE ALOJAMIENTO
 
 ---
+
+```{r out.width = "900px", out.height="600px",fig.align='center'}
+knitr::include_graphics("imgs/clases_unlp/c3_eti_aloja.png")
+```
+
+---
+
+```{r out.width = "900px", out.height="600px",fig.align='center'}
+knitr::include_graphics("imgs/clases_unlp/c3_eti_aloja_trim.png")
+```
+
+---
+
+
+```{r out.width = "900px", out.height="600px",fig.align='center'}
+knitr::include_graphics("imgs/clases_unlp/c3_eti_aloja_resi.png")
+```
+
+---
+class: inverse center middle
+
+# GASTO TURÍSTICO
+
+---
+
+```{r out.width = "900px", out.height="600px",fig.align='left'}
+knitr::include_graphics("imgs/clases_unlp/c3_eti_gasto.png")
+```
+
+---
+
+```{r out.width = "900px", out.height="600px",fig.align='left'}
+knitr::include_graphics("imgs/clases_unlp/c3_eti_gpt.png")
+```
+
+---
+
+
+```{r out.width = "900px", out.height="600px",fig.align='left'}
+knitr::include_graphics("imgs/clases_unlp/c3_eti_gpd.png")
+```
+
+---
+
+```{r out.width = "900px", out.height="600px",fig.align='left'}
+knitr::include_graphics("imgs/clases_unlp/c3_eti_gpt_eya.png")
+```
+---
+
+
+```{r out.width = "900px", out.height="600px",fig.align='left'}
+knitr::include_graphics("imgs/clases_unlp/c3_eti_gpd_eya.png")
+```
+
+---
+
+
+```{r out.width = "900px", out.height="600px",fig.align='left'}
+knitr::include_graphics("imgs/clases_unlp/c3_eti_gpt_comparado.png")
+```
+
+---
+
+```{r out.width = "900px", out.height="600px",fig.align='left'}
+knitr::include_graphics("imgs/clases_unlp/c3_eti_gpd_comparado.png")
+```
+
+---
+class: inverse center middle
+
+# OTRA INFORMACIÓN PUBLICADA
+
+---
+
+```{r out.width = "900px", out.height="600px",fig.align='left'}
+knitr::include_graphics("imgs/clases_unlp/c3_actividades_eti.PNG")
+```
+
+---
+
+
+```{r out.width = "900px", out.height="600px",fig.align='left'}
+knitr::include_graphics("imgs/clases_unlp/c3_calificaciones_eti.PNG")
+```
+
+
+---
+
+```{r out.width = "900px", out.height="600px",fig.align='left'}
+knitr::include_graphics("imgs/clases_unlp/c3_eti_destinos.png")
+```
+
+
+---
+class: inverse center middle
+
+## Muchas gracias
+## estadisticas@turismo.gob.ar
+## DNMyE
+
+
