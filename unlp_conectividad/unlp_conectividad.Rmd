@@ -13,6 +13,7 @@ output:
       countIncrementalSlides: true
 ---
 
+
 class:inverse, middle
 
 background-image: url(https://tableros.yvera.tur.ar/recursos/logos_institucionales/escudo_mdtyd_blanco.png)
@@ -21,7 +22,18 @@ background-size: 30%
 
 # Datos aplicados al turismo
 
-## El caso del mercado aerocomercial
+## Temas
+### DNMYE / Sinta
+### conectividad:
++ explicacion fuente
++ indicadores de concentracion
+    + Internacional
+    + Cabotaje
+### Puna
++ Explicacion fuente
++ Indicadores de concentracion
+
+## Concentración
 
 <br>
 <br>
@@ -120,51 +132,42 @@ layout: true
 
 ---
 
-# CONTRIBUCIÓN ECONÓMICA
+class: inverse center middle
 
-```{r , echo = FALSE, out.width='100%'}
-knitr::include_graphics("imgs/clases_unlp/ind_arg.png")
+# DNMyE
+---
+
+![](../imgs/utdt/roceta.png)
+
+---
+
+![](../imgs/fit/sinta_9.png)
+
+---
+
+![](../imgs/sintia2.png)
+
+---
+
+# CONTRIBUCIÓN ECONÓMICA DEL TURISMO
+
+```{r, echo = FALSE, out.width='100%'}
+knitr::include_graphics("../imgs/clases_unlp/ind_arg.png")
 ```
 
 ---
 
-# Distribución geográfica
-
-![](imgs/utdt/dist_territorial.png)
-
----
-
 class: inverse center middle
 
-# ¿Qué hacemos en el MINTURyDEP?
+# ¿CÓMO SE DISTRIBUYE LA ACTIVIDAD TURÍSTICA EN EL PAÍS?
 
 ---
 
-![](imgs/utdt/roceta.png)
----
+# FUENTES
 
-![](imgs/fit/sinta_9.png)
++ CONECTIVIDAD
 
----
-
-![](imgs/sintia2.png)
-
----
-
-class: inverse center middle
-
-# MOVILIDAD
----
-
-<br>
-<br>
-<br>
-### + CONECTIVIDAD AÉREA
-<br>
-### + CRUCERISMO
-<br>
-### + CONECTIVIDAD TERRESTRE - *PROXIMAMENTE* -
-
++ PUNA
 
 ---
 
@@ -172,32 +175,118 @@ class: inverse center middle
 
 - **Fuente**: Administración Nacional de Aviación Civil (ANAC) & Dirección Nacional de Migraciones.
 
-- **Resumen**: Registros de movimientos aéreos en aeropuertos de todo el país a nivel diario & Ingresos y egresos de personas al país.
+- **Resumen**: Registros de movimientos aéreos en aeropuertos de todo el país a nivel diario & Ingresos y egresos de personas al país por pasos internacionales.
 
 - **Indicadores**: Vuelos, asientos, pasajeros, clasificación del vuelo, rutas, empresas.
 
 - **Disponible**: Documento de trabajo, datos abiertos, reporte y tablero.
 
 ```{r out.width='55%', fig.align='center'}
-knitr::include_graphics("imgs/utdt/logo_conectividad.png")
+knitr::include_graphics("../imgs/utdt/logo_conectividad.png")
 ```
 
 ---
 
-# Fuente
+MAPA DE RUTAS - Internacional vs cabotaje
 
-- Aterrizajes y despegues registrados en todos los aeropuertos del país.
+---
 
-- **Responsable**: ANAC.
-
-- Registros de ingresos y egresos por pasos internacionales. 
-
-- **Responsable**: Migraciones.
-
-```{r fig.align='center'}
-knitr::include_graphics("imgs/utdt/migraciones.PNG")
+```{r out.width='45%', fig.align='center'}
+knitr::include_graphics("../imgs/utdt/destinos.png")
 ```
 
+---
+
+```{r out.width='55%', fig.align='center'}
+knitr::include_graphics("../imgs/utdt/tabla_provinca.png")
+```
+
+---
+
+class: inverse center middle
+
+# CABOTAJE
+
+---
+
+HERFINDAHL PROVINCIAS - CONCENTRACION PROVINCIAS
+
+---
+
+HERFINDAL AEROLINEAS - CONCENTRACION AEROLINEAS
+
+---
+
+class: inverse center middle
+
+# INTERNACIONAL
+
+---
+
+HERFINDAHL PROVINCIAS - CONCENTRACION PROVINCIAS
+
+---
+
+HERFINDAL AEROLINEAS - CONCENTRACION AEROLINEAS
+
+---
+
+class: inverse center middle
+
+# PUNA
+
+---
+
+### PUNA
+
+- **Fuente**: Padrón Único Nacional de Alojamiento (PUNA).
+
+- **Resumen**: alojamientos turísticos registrados en todo el país (hoteleros, parahoteleros y otros colectivos).
+
+- **Indicadores**: establecimientos, plazas, unidades y habitaciones, ubicación, cadena hotelera, categoría, clasificación y tipo.
+
+- **Disponible**: datos abiertos y tablero.
+
+```{r fig.align='center'}
+knitr::include_graphics("")
+```
+
+---
+
+```{r fig.align='center'}
+knitr::include_graphics("unlp_files/puna_plazas_mapa.PNG")
+```
+
+---
+
+### PUNA
+
+```{r out.width='40%', fig.align='center'}
+knitr::include_graphics("imgs/clases_unlp/tabla_puna_loc.png")
+```
+
+---
+
+### PUNA
+
+```{r out.width='65%', fig.align='center'}
+knitr::include_graphics("imgs/clases_unlp/tabla_gt_puna.png")
+```
+
+[Documento de trabajo PUNA](https://tableros.yvera.tur.ar/recursos/biblioteca/dt10_puna.pdf)
+
+
+---
+
+HERFINDAL PROVINCIAS
+
+HERFINDAL LOCALIDAD
+
+---
+
+# Distribución geográfica
+
+![](imgs/utdt/dist_territorial.png)
 
 ---
 class: inverse center middle
