@@ -460,7 +460,7 @@ rm(gasto,gasto_total)
 
 ################Gastos con insumos de las bases
 
-# Gasto promedio diario 
+# Gasto promedio y estadía media
 
 
 gasto_prom <- eti_e %>%
@@ -473,6 +473,10 @@ gasto_prom <- eti_e %>%
          gasto_diario=round(gasto/pernoctes,0)) %>% 
   filter(p3_3>2015) %>% 
   rename(anio=p3_3)
+
+em <- gasto_prom %>% 
+  select(1,2,6)
+
 
 # Gráfico de gasto promedio diario:
 
@@ -559,6 +563,8 @@ gasto_prom_eya <- eti_e %>%
   filter(p3_3>=2019) %>% 
   rename(anio=p3_3)
 
+em_eya <- gasto_prom_eya %>% select(1,2,6)
+
 # Gráfico de gasto promedio por turista en Ezeiza y Aeroparque:
 
 ggplot(data = gasto_prom_eya, aes(y=gasto_tur,x=orig_eya,label=gasto_tur,fill=orig_eya))+
@@ -636,7 +642,7 @@ gasto_e <- eti_e %>%
   filter(p3_3>=2019) %>% 
   rename(anio=p3_3) %>% 
   mutate(origen="receptivo") %>% 
-  select(anio,origen,gasto_tur,gasto_diario)
+  select(anio,origen,gasto_tur,gasto_diario,estadia)
 
 
 gasto_a <- eti_a %>%
@@ -651,10 +657,11 @@ gasto_a <- eti_a %>%
   filter(p3_3>=2019) %>% 
   rename(anio=p3_3)%>% 
   mutate(origen="emisivo") %>% 
-  select(anio,origen,gasto_tur,gasto_diario)
+  select(anio,origen,gasto_tur,gasto_diario,estadia)
 
 gasto_comparado <- rbind(gasto_e,gasto_a)
 
+estadia_comparada <- gasto_comparado %>% select(anio, origen, estadia)
 
 # Gráfico GPT:
 
@@ -786,8 +793,115 @@ ggplot(data=dest %>% mutate(provincia_de_destino = factor(provincia_de_destino,l
 ggsave("imgs/clases_unlp/c3_eti_destinos.png",width =12 ,height =8 )
 
 
-
 rm(destinos,dest,orden)
+
+########################ESTADÍA PROMEDIO####################
+
+# Gráfico de gasto promedio diario:
+
+ggplot(data = em %>% mutate(paso_final=factor(paso_final,
+                                              levels = c("Ezeiza y Aeroparque",
+                                                         "Aep. Córdoba",
+                                                         "Aep. Mendoza",
+                                                         "Puerto de Buenos Aires",
+                                                         "Cristo Redentor"))), aes(y=estadia,x=anio,label=estadia))+
+  geom_bar(stat='identity',position="dodge", fill=dnmye_colores("purpura"))+
+  geom_label(fill="white",size=4, position=position_dodge(width=0.9),vjust=0.40)+
+  facet_wrap(~paso_final)+
+  labs(title = "Estadía promedio (en noches) de turistas no residentes",
+       subtitle = "Por paso de ingreso. Años 2016-2022.",
+       x = "",
+       y = "",
+       colour="",
+       caption = "Fuente: ETI")+
+  theme(text = element_text(size = 12),
+        plot.caption  = element_text(hjust = 0),
+        plot.subtitle=element_text(colour = dnmye_colores("gris oscuro")),
+        plot.title=element_text(hjust = 0,face = "bold"),
+        legend.title = element_blank(),
+        legend.position = "top",
+        panel.grid.major.y =  element_line (colour = "grey",
+                                            size = 0.1,
+                                            linewidth = 1),
+        panel.grid.major.x =  element_line (colour = "grey",
+                                            size = 0.1,
+                                            linewidth  = 1),
+        panel.background = element_blank())+
+  scale_x_continuous(breaks = seq(from=min(em$anio),to=max(em$anio)))
+ggsave("imgs/clases_unlp/c3_eti_em.png",width =12 ,height =8 )
+
+
+# Estadía comparada
+
+
+ggplot(data = estadia_comparada %>% mutate(origen=factor(origen,
+                                                       levels = c("receptivo",
+                                                                  "emisivo"))),
+       aes(y=estadia,x=origen,label=estadia,fill=origen))+
+  geom_bar(stat='identity',position="dodge")+
+  geom_label(fill="white",size=4, position=position_dodge(width=0.9),vjust=0.40)+
+  facet_wrap(~anio)+
+  coord_flip()+
+  labs(title = "Estadía promedio (en noches) por residencia",
+       subtitle = "Ezeiza y Aeroparque. Años 2019-2022.",
+       x = "",
+       y = "",
+       colour="",
+       caption = "Fuente: ETI")+
+  theme(text = element_text(size = 14),
+        plot.caption  = element_text(hjust = 0),
+        plot.subtitle=element_text(colour = dnmye_colores("gris oscuro")),
+        plot.title=element_text(hjust = 0,face = "bold"),
+        legend.title = element_blank(),
+        legend.position = "",
+        panel.grid.major.y =  element_line (colour = "grey",
+                                            size = 0.1,
+                                            linewidth = 1),
+        panel.grid.major.x =  element_line (colour = "grey",
+                                            size = 0.1,
+                                            linewidth  = 1),
+        panel.background = element_blank(),
+        axis.text.x = element_blank(),
+        axis.ticks.x = element_blank())
+ggsave("imgs/clases_unlp/c3_eti_em_comparado.png",width =12 ,height =8 )
+
+# Gráfico estadía promedio por turista en Ezeiza y Aeroparque:
+
+ggplot(data = em_eya, aes(y=estadia,x=orig_eya,label=estadia,fill=orig_eya))+
+  geom_bar(stat='identity',position="dodge")+
+  geom_label(fill="white",size=4, position=position_dodge(width=0.9),vjust=0.40)+
+  facet_wrap(~anio)+
+  scale_fill_dnmye()+
+  labs(title = "Estadía promedio (en noches) de turistas no residentes, por país de residencia",
+       subtitle = "Ezeiza y Aeroparque. Años 2019-2022.",
+       x = "",
+       y = "",
+       colour="",
+       caption = "Fuente: ETI")+
+  theme(text = element_text(size = 12),
+        plot.caption  = element_text(hjust = 0),
+        plot.subtitle=element_text(colour =dnmye_colores("gris oscuro") ),
+        plot.title=element_text(hjust = 0,face = "bold"),
+        legend.title = element_blank(),
+        legend.position = "",
+        panel.grid.major.y =  element_line (colour = "grey",
+                                            size = 0.1,
+                                            linewidth = 1),
+        panel.grid.major.x =  element_line (colour = "grey",
+                                            size = 0.1,
+                                            linewidth  = 1),
+        panel.background = element_blank(),
+        axis.text.x = element_text (angle=90))
+ggsave("imgs/clases_unlp/c3_em_eya.png",width =12 ,height =8 )
+
+
+rm(em,estadia_comparada,em_eya)
 
 
 rm(eti_a,eti_e)
+
+
+
+
+
+

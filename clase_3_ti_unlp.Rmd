@@ -21,7 +21,10 @@ background-size: 30%
 
 # Fuentes de datos para la elaboración del perfil del turista internacional
 
-## Estimaciones de turismo internacional y Encuesta de Turismo Internacional
+<br>
+<br>
+
+## _Estimaciones de turismo internacional y Encuesta de Turismo Internacional_
 
 <br>
 <br>
@@ -357,6 +360,32 @@ knitr::include_graphics("imgs/clases_unlp/c3_eti_aloja_resi.png")
 ```
 
 ---
+
+class: inverse center middle
+
+# ESTADÍA PROMEDIO
+
+---
+
+```{r out.width = "900px", out.height="600px",fig.align='left'}
+knitr::include_graphics("imgs/clases_unlp/c3_eti_em.png")
+```
+
+---
+
+```{r out.width = "900px", out.height="600px",fig.align='left'}
+knitr::include_graphics("imgs/clases_unlp/c3_eti_em_comparado.png")
+```
+
+---
+
+
+```{r out.width = "900px", out.height="600px",fig.align='left'}
+knitr::include_graphics("imgs/clases_unlp/c3_em_eya.png")
+```
+
+---
+
 class: inverse center middle
 
 # GASTO TURÍSTICO
