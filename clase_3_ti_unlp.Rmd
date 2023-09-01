@@ -233,25 +233,31 @@ knitr::include_graphics("imgs/clases_unlp/ti_serie_mensual.PNG")
 
 ---
   
-## Turismo receptivo; año 2023
+## Turismo receptivo. Año 2023
 
 
 ![](imgs/clases_unlp/ti_2023_via_pais.PNG)
 
+
 ---
   
-## Turismo receptivo; año 2023
+## Turismo receptivo. Año 2023
 
 
 ```{r out.width = "700px", out.height="500px",fig.align='center'}
 
 knitr::include_graphics("imgs/clases_unlp/ti_paisvia.png")
 ```
+---
+
+## Turismo receptivo. Año 2023
+
+![](imgs/clases_unlp/ti_2023_edad_gen.png)
 
 
 ---
 
-## Turismo receptivo; año 2023
+## Turismo receptivo. Año 2023
 
 ![](imgs/clases_unlp/ti_pasos.png)
 ---
