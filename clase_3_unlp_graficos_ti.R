@@ -12,6 +12,52 @@ anio_ref = 2023
 
 base_turistas_ori <- read_file_srv("/srv/DataDNMYE/turismo_internacional/bases_proceso/turismo_internacional_visitantes.rds")
 
+names(base_turistas_ori)
+
+turistas_nr_edad_sexo_anio_ref <- base_turistas_ori %>% 
+  filter(tipo_visitante == "Turistas", anio == anio_ref, 
+         turismo_internac == "Receptivo") %>% 
+  group_by(sexo, grupoetario, pais_agrupado, via) %>% 
+  summarise (casos_ponderados = sum(casos_ponderados))  %>% 
+  ungroup()
+
+turistas_nr_edad_sexo <- turistas_nr_edad_sexo_anio_ref %>% 
+  group_by(sexo, grupoetario) %>% 
+  summarise (casos_ponderados = sum(casos_ponderados))  %>% 
+  ungroup()
+
+#saco notacion cientifica
+options(scipen = 999)
+
+turistas_nr_edad_sexo_porc <- turistas_nr_edad_sexo %>% 
+  group_by(grupoetario) %>%
+  mutate(porc_genero = round(casos_ponderados/sum(casos_ponderados)*100, 1)) %>% 
+  filter(grupoetario != "Sin dato") %>% 
+  ungroup()
+
+
+ggplot(turistas_nr_edad_sexo_porc, aes(grupoetario,casos_ponderados, fill = sexo)) + 
+  geom_col()+ 
+  geom_text (aes(label=paste0(round(porc_genero),"%")), position=position_stack(vjust=0.5))+
+  geom_hline(yintercept = 0, color = "grey", alpha =0.7, linewidth = 0.5) + 
+  scale_fill_dnmye() +
+  scale_y_continuous(labels = scales::number_format(big.mark = ".", decimal.mark = ","))+
+  theme_minimal()+
+  theme(#legend.position = "", #saca referencia en leyenda
+    #legend.title = element_blank(), #saca titulo leyenda
+    axis.text.x =element_text (size =12, vjust = 0.7),
+    axis.text.y = element_text(size = 12),
+    #legend.text = element_blank(),
+    plot.caption =  element_text (size =10, hjust = 1)) +
+  labs(title = "Viajes de turistas no residentes según grupo etario y género. Enero-Junio 2023",
+       y = "", 
+       x = "", 
+       color= "",
+       fill="Género",
+       caption =  "Fuente: DNMyE en base a datos de DNM." )
+
+ggsave("imgs/clases_unlp/ti_2023_edad_gen.png", width = 12, height = 5)
+
 base_turistas <- base_turistas_ori %>% 
   filter(tipo_visitante == "Turistas") %>% 
   select(anio,mes,turismo_internac,casos_ponderados,
@@ -96,7 +142,7 @@ total_anual_sin_pais <- receptivo_completo_sin_pais %>%
   rbind(emisivo_completo_sin_pais) %>% 
   filter(anio <= 2022) %>%  #dejo hasta ultimo año completo
   mutate(anio = ymd(paste(anio, 1, 1, sep = "-")))
-  
+
 
 #Grafico serie historica ####
 
@@ -116,7 +162,7 @@ serie_anual <- ggplot(total_anual_sin_pais, aes(anio,casos_ponderados/1000000, c
        y = "en millones de viajes de turistas", 
        x = "", 
        color= "",
-       caption =  "**Fuente**: DNMyE en base a datos de DNM y ETI." )
+       caption =  "Fuente: DNMyE en base a datos de DNM." )
 
 serie_anual
 
@@ -158,7 +204,7 @@ graf_pais_ti <- ggplot(base_turistas_actual) +
        x = "", 
        color= "",
        fill="",
-       caption =  "Fuente: Dirección Nacional de Mercados y Estadstica, Ministerio de Turismo y Deportes" )
+       caption =  "Fuente: DNMyE en base a datos de DNM." )
 
 graf_pais_ti
 
@@ -181,7 +227,7 @@ ggsave("imgs/clases_unlp/ti_paisvia.png", width = 12, height = 6)
 #       x = "", 
 #       color= "",
 #       fill="",
-#       caption =  "Fuente: Dirección Nacional de Mercados y Estadstica, Ministerio de Turismo y Deportes" )
+#       caption =  "Fuente: DNMyE en base a datos de DNM." )
 #
 #graf_paisvia_ti
 
