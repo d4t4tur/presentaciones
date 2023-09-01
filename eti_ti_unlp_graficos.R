@@ -49,19 +49,19 @@ graf <- eti_motivo %>%
   ungroup()
 
 ggplot(data = graf %>% mutate(motivo=factor(motivo,
-                                              levels = c("Visita flia/amigos",
-                                                         "Vacaciones/ocio/recreación",
-                                                         "Negocios/congreso/conferencia",
-                                                         "Otros")),
-                                paso=factor(paso,
-                                            levels = c("Ezeiza y Aeroparque",
-                                                       "Aep. Córdoba",
-                                                       "Aep. Mendoza",
-                                                       "Puerto de Buenos Aires",
-                                                       "Cristo Redentor")))
+                                            levels = c("Visita flia/amigos",
+                                                       "Vacaciones/ocio/recreación",
+                                                       "Negocios/congreso/conferencia",
+                                                       "Otros")),
+                              paso=factor(paso,
+                                          levels = c("Ezeiza y Aeroparque",
+                                                     "Aep. Córdoba",
+                                                     "Aep. Mendoza",
+                                                     "Puerto de Buenos Aires",
+                                                     "Cristo Redentor")))
        ,aes(x=anio,y=dist,fill=motivo,label=glue("{dist} %")))+
   geom_col()+
-  geom_text(position = position_stack(vjust = .5))+
+  geom_text(position = position_stack(vjust = .5),size=5)+
   facet_wrap(~paso)+
   scale_fill_dnmye()+
   scale_x_continuous(breaks = seq(from=min(graf$anio),to=max(graf$anio)))+
@@ -85,12 +85,9 @@ ggplot(data = graf %>% mutate(motivo=factor(motivo,
                                             size = 0.1,
                                             linewidth  = 1),
         panel.background = element_blank())
-
-
 ggsave("imgs/clases_unlp/c3_eti_motivo.png",width =12 ,height =8 )
 
 
-rm(graf)
 
 #Turistas RESIDENTES por motivo
 
@@ -122,16 +119,18 @@ graf_c <- eti_arg_motivo %>%
   pivot_longer(cols=c(residentes,no_resi),
                names_to = "origen_viajeros",
                values_to="viajeros") %>% 
-  arrange(anio,origen_viajeros,motivo)
+  arrange(anio,origen_viajeros,motivo) %>% 
+  mutate(origen_viajeros=case_when(origen_viajeros=="residentes"~"Residentes",
+                                   origen_viajeros=="no_resi"~"No residentes"))
 
 ggplot(data = graf_c %>% mutate(motivo=factor(motivo,
-                                               levels = c("Visita flia/amigos",
-                                                          "Vacaciones/ocio/recreación",
-                                                          "Negocios/congreso/conferencia",
-                                                          "Otros"))),
+                                              levels = c("Visita flia/amigos",
+                                                         "Vacaciones/ocio/recreación",
+                                                         "Negocios/congreso/conferencia",
+                                                         "Otros"))),
        aes(x=origen_viajeros,y=viajeros,fill=motivo,label=glue("{viajeros} %")))+
   geom_col()+
-  geom_text(position = position_stack(vjust = .5))+
+  geom_text(position = position_stack(vjust = .5),size=5)+
   facet_wrap(~anio)+
   scale_fill_dnmye()+
   scale_y_continuous(labels = function(x) paste0(x,"%"))+
@@ -143,7 +142,7 @@ ggplot(data = graf_c %>% mutate(motivo=factor(motivo,
        caption = "Fuente: ETI")+
   theme(text = element_text(size = 12),
         plot.caption  = element_text(hjust = 0),
-        plot.subtitle=element_text(colour = "dark grey"),
+        plot.subtitle=element_text(colour = dnmye_colores("gris oscuro")),
         plot.title=element_text(hjust = 0,face = "bold"),
         legend.title = element_blank(),
         legend.position = "top",
@@ -176,19 +175,19 @@ graf <- eti_motivo %>%
 
 
 ggplot(data = graf %>% mutate(motivo=factor(motivo,
-                                               levels = c("Visita flia/amigos",
-                                                          "Vacaciones/ocio/recreación",
-                                                          "Negocios/congreso/conferencia",
-                                                          "Otros")),
-                                 paso=factor(paso,
-                                             levels = c("Ezeiza y Aeroparque",
-                                                        "Aep. Córdoba",
-                                                        "Aep. Mendoza",
-                                                        "Puerto de Buenos Aires",
-                                                        "Cristo Redentor")))
+                                            levels = c("Visita flia/amigos",
+                                                       "Vacaciones/ocio/recreación",
+                                                       "Negocios/congreso/conferencia",
+                                                       "Otros")),
+                              paso=factor(paso,
+                                          levels = c("Ezeiza y Aeroparque",
+                                                     "Aep. Córdoba",
+                                                     "Aep. Mendoza",
+                                                     "Puerto de Buenos Aires",
+                                                     "Cristo Redentor")))
        ,aes(x=trim,y=dist,fill=motivo,label=glue("{dist} %")))+
   geom_col()+
-  geom_text(position = position_stack(vjust = .5))+
+  geom_text(position = position_stack(vjust = .5),size=5)+
   facet_wrap(~paso)+
   scale_fill_dnmye()+
   #scale_x_continuous(breaks = seq(from=min(graf_1b$anio),to=max(graf_1b$anio)))+
@@ -201,7 +200,7 @@ ggplot(data = graf %>% mutate(motivo=factor(motivo,
        caption = "Fuente: ETI")+
   theme(text = element_text(size = 12),
         plot.caption  = element_text(hjust = 0),
-        plot.subtitle=element_text(colour = "dark grey"),
+        plot.subtitle=element_text(colour = dnmye_colores("gris oscuro")),
         plot.title=element_text(hjust = 0,face = "bold"),
         legend.title = element_blank(),
         legend.position = "top",
@@ -243,19 +242,19 @@ graf <- eti_aloja %>%
 
 
 ggplot(data = graf %>% mutate(alojamiento=factor(alojamiento,
-                                                       levels = c("Hotel 4 y 5 estrellas",
-                                                                  "Hotel 1,2, y 3 estrellas",
-                                                                  "Casa flia./amigos",
-                                                                  "Otros")),
-                                    paso=factor(paso,
-                                                levels = c("Ezeiza y Aeroparque",
-                                                           "Aep. Córdoba",
-                                                           "Aep. Mendoza",
-                                                           "Puerto de Buenos Aires",
-                                                           "Cristo Redentor")))
+                                                 levels = c("Hotel 4 y 5 estrellas",
+                                                            "Hotel 1,2, y 3 estrellas",
+                                                            "Casa flia./amigos",
+                                                            "Otros")),
+                              paso=factor(paso,
+                                          levels = c("Ezeiza y Aeroparque",
+                                                     "Aep. Córdoba",
+                                                     "Aep. Mendoza",
+                                                     "Puerto de Buenos Aires",
+                                                     "Cristo Redentor")))
        ,aes(x=anio,y=dist,fill=alojamiento,label=glue("{dist} %")))+
   geom_col()+
-  geom_text(position = position_stack(vjust = .5))+
+  geom_text(position = position_stack(vjust = .5),size=5)+
   facet_wrap(~paso)+
   scale_fill_dnmye()+
   scale_x_continuous(breaks = seq(from=min(graf$anio),to=max(graf$anio)))+
@@ -279,8 +278,6 @@ ggplot(data = graf %>% mutate(alojamiento=factor(alojamiento,
                                             size = 0.1,
                                             linewidth  = 1),
         panel.background = element_blank())
-
-
 ggsave("imgs/clases_unlp/c3_eti_aloja.png",width =12 ,height =8 )
 
 
@@ -325,7 +322,7 @@ graf_c <- eti_arg_aloja %>%
 ggplot(data = graf_c,
        aes(x=origen_viajeros,y=viajeros,fill=alojamiento,label=glue("{viajeros} %")))+
   geom_col()+
-  geom_text(position = position_stack(vjust = .5))+
+  geom_text(position = position_stack(vjust = .5),size=5)+
   facet_wrap(~anio)+
   scale_fill_dnmye()+
   scale_y_continuous(labels = function(x) paste0(x,"%"))+
@@ -365,19 +362,19 @@ graf <- eti_aloja %>%
   ungroup()
 
 ggplot(data = graf %>% mutate(alojamiento=factor(alojamiento,
-                                                    levels = c("Hotel 4 y 5 estrellas",
-                                                               "Hotel 1,2, y 3 estrellas",
-                                                               "Casa flia./amigos",
-                                                               "Otros")),
-                                 paso=factor(paso,
-                                             levels = c("Ezeiza y Aeroparque",
-                                                        "Aep. Córdoba",
-                                                        "Aep. Mendoza",
-                                                        "Puerto de Buenos Aires",
-                                                        "Cristo Redentor")))
+                                                 levels = c("Hotel 4 y 5 estrellas",
+                                                            "Hotel 1,2, y 3 estrellas",
+                                                            "Casa flia./amigos",
+                                                            "Otros")),
+                              paso=factor(paso,
+                                          levels = c("Ezeiza y Aeroparque",
+                                                     "Aep. Córdoba",
+                                                     "Aep. Mendoza",
+                                                     "Puerto de Buenos Aires",
+                                                     "Cristo Redentor")))
        ,aes(x=trim,y=dist,fill=alojamiento,label=glue("{dist} %")))+
   geom_col()+
-  geom_text(position = position_stack(vjust = .5))+
+  geom_text(position = position_stack(vjust = .5),size=5)+
   facet_wrap(~paso)+
   scale_fill_dnmye()+
   #scale_x_continuous(breaks = seq(from=min(graf_2$anio),to=max(graf_2$anio)))+
@@ -390,7 +387,7 @@ ggplot(data = graf %>% mutate(alojamiento=factor(alojamiento,
        caption = "Fuente: ETI")+
   theme(text = element_text(size = 12),
         plot.caption  = element_text(hjust = 0),
-        plot.subtitle=element_text(colour = "dark grey"),
+        plot.subtitle=element_text(colour = dnmye_colores("gris oscuro")),
         plot.title=element_text(hjust = 0,face = "bold"),
         legend.title = element_blank(),
         legend.position = "top",
@@ -421,8 +418,8 @@ gasto <- read.csv("/srv//DataDNMYE/eti/recursos/receptivo/gasto_total_promedio_d
 gasto_total <- gasto %>% 
   group_by(anio,paso) %>% 
   summarise(gasto=sum(gasto_total_en_usd_no_residentes,na.rm = TRUE)) %>% 
-  mutate(gasto=round(gasto/100000,1)) %>% 
-  filter(anio !=2020 & anio !=2021)
+  mutate(gasto=round(gasto/100000,0)) %>% 
+  filter(anio!=2023)
 
 
 # Grafico
@@ -434,7 +431,7 @@ ggplot(data = gasto_total %>% mutate(paso=factor(paso,
                                                             "Puerto de Buenos Aires",
                                                             "Cristo Redentor"))), aes(y=gasto,x=anio,label=gasto))+
   geom_bar(stat='identity',position="dodge",color=dnmye_colores("cian"), fill=dnmye_colores("cian"))+
-  geom_label(fill="white",size=2.5, position=position_dodge(width=0.9),vjust=0.25)+
+  geom_label(fill="white",size=4, position=position_dodge(width=0.9),vjust=0.40)+
   facet_wrap(~paso)+
   labs(title = "Gasto total (en millones de dólares) de turistas no residentes",
        subtitle = "Por paso de ingreso. Años 2018,2019,2022.",
@@ -472,8 +469,8 @@ gasto_prom <- eti_e %>%
             pernoctes=sum(totaln*wpf,na.rm = TRUE),
             gasto=sum(gastoest2*wpf,na.rm = TRUE))%>% 
   mutate(estadia=round(pernoctes/viajeros,1),
-         gasto_tur=round(gasto/viajeros,1),
-         gasto_diario=round(gasto/pernoctes,1)) %>% 
+         gasto_tur=round(gasto/viajeros,0),
+         gasto_diario=round(gasto/pernoctes,0)) %>% 
   filter(p3_3>2015) %>% 
   rename(anio=p3_3)
 
@@ -486,7 +483,7 @@ ggplot(data = gasto_prom %>% mutate(paso_final=factor(paso_final,
                                                                  "Puerto de Buenos Aires",
                                                                  "Cristo Redentor"))), aes(y=gasto_diario,x=anio,label=gasto_diario))+
   geom_bar(stat='identity',position="dodge",color=dnmye_colores("rosa"), fill=dnmye_colores("rosa"))+
-  geom_label(fill="white",size=3, position=position_dodge(width=0.9),vjust=0.40)+
+  geom_label(fill="white",size=4, position=position_dodge(width=0.9),vjust=0.40)+
   facet_wrap(~paso_final)+
   labs(title = "Gasto promedio diario (en dólares) de turistas no residentes",
        subtitle = "Por paso de ingreso. Años 2016-2022.",
@@ -522,7 +519,7 @@ ggplot(data = gasto_prom %>% mutate(paso_final=factor(paso_final,
                                                                  "Puerto de Buenos Aires",
                                                                  "Cristo Redentor"))), aes(y=gasto_tur,x=anio,label=gasto_tur))+
   geom_bar(stat='identity',position="dodge",color=dnmye_colores("rosa"), fill=dnmye_colores("rosa"))+
-  geom_label(fill="white",size=3, position=position_dodge(width=0.9),vjust=0.40)+
+  geom_label(fill="white",size=3.5, position=position_dodge(width=0.9),vjust=0.40)+
   facet_wrap(~paso_final)+
   labs(title = "Gasto promedio por turista (en dólares) de turistas no residentes",
        subtitle = "Por paso de ingreso. Años 2016-2022.",
@@ -557,18 +554,19 @@ gasto_prom_eya <- eti_e %>%
             pernoctes=sum(totaln*wpf,na.rm = TRUE),
             gasto=sum(gastoest2*wpf,na.rm = TRUE))%>% 
   mutate(estadia=round(pernoctes/viajeros,1),
-         gasto_tur=round(gasto/viajeros,1),
-         gasto_diario=round(gasto/pernoctes,1)) %>% 
+         gasto_tur=round(gasto/viajeros,0),
+         gasto_diario=round(gasto/pernoctes,0)) %>% 
   filter(p3_3>=2019) %>% 
   rename(anio=p3_3)
 
 # Gráfico de gasto promedio por turista en Ezeiza y Aeroparque:
 
-ggplot(data = gasto_prom_eya, aes(y=gasto_tur,x=orig_eya,label=gasto_tur))+
-  geom_bar(stat='identity',position="dodge",color="sky blue", fill="blue")+
-  geom_label(fill="white",size=3, position=position_dodge(width=0.9),vjust=0.40)+
+ggplot(data = gasto_prom_eya, aes(y=gasto_tur,x=orig_eya,label=gasto_tur,fill=orig_eya))+
+  geom_bar(stat='identity',position="dodge")+
+  geom_label(fill="white",size=4, position=position_dodge(width=0.9),vjust=0.40)+
   facet_wrap(~anio)+
-  labs(title = "Gasto promedio por turista (en dólares) de turistas no residentes por origen",
+  scale_fill_dnmye()+
+  labs(title = "Gasto promedio por turista (en dólares) de turistas no residentes, por país de residencia",
        subtitle = "Ezeiza y Aeroparque. Años 2019-2022.",
        x = "",
        y = "",
@@ -576,10 +574,10 @@ ggplot(data = gasto_prom_eya, aes(y=gasto_tur,x=orig_eya,label=gasto_tur))+
        caption = "Fuente: ETI")+
   theme(text = element_text(size = 12),
         plot.caption  = element_text(hjust = 0),
-        plot.subtitle=element_text(colour = "dark grey"),
+        plot.subtitle=element_text(colour =dnmye_colores("gris oscuro") ),
         plot.title=element_text(hjust = 0,face = "bold"),
         legend.title = element_blank(),
-        legend.position = "top",
+        legend.position = "",
         panel.grid.major.y =  element_line (colour = "grey",
                                             size = 0.1,
                                             linewidth = 1),
@@ -588,6 +586,39 @@ ggplot(data = gasto_prom_eya, aes(y=gasto_tur,x=orig_eya,label=gasto_tur))+
                                             linewidth  = 1),
         panel.background = element_blank(),
         axis.text.x = element_text (angle=90))
+ggsave("imgs/clases_unlp/c3_eti_gpt_eya.png",width =12 ,height =8 )
+
+# Gráfico de gasto promedio por turista en Ezeiza y Aeroparque:
+
+ggplot(data = gasto_prom_eya, aes(y=gasto_diario,x=orig_eya,label=gasto_diario,fill=orig_eya))+
+  geom_bar(stat='identity',position="dodge")+
+  geom_label(fill="white",size=4, position=position_dodge(width=0.9),vjust=0.40)+
+  facet_wrap(~anio)+
+  scale_fill_dnmye()+
+  labs(title = "Gasto promedio por diario (en dólares) de turistas no residentes, por país de residencia",
+       subtitle = "Ezeiza y Aeroparque. Años 2019-2022.",
+       x = "",
+       y = "",
+       colour="",
+       caption = "Fuente: ETI")+
+  theme(text = element_text(size = 12),
+        plot.caption  = element_text(hjust = 0),
+        plot.subtitle=element_text(colour =dnmye_colores("gris oscuro") ),
+        plot.title=element_text(hjust = 0,face = "bold"),
+        legend.title = element_blank(),
+        legend.position = "",
+        panel.grid.major.y =  element_line (colour = "grey",
+                                            size = 0.1,
+                                            linewidth = 1),
+        panel.grid.major.x =  element_line (colour = "grey",
+                                            size = 0.1,
+                                            linewidth  = 1),
+        panel.background = element_blank(),
+        axis.text.x = element_text (angle=90))
+ggsave("imgs/clases_unlp/c3_eti_gpd_eya.png",width =12 ,height =8 )
+
+
+
 
 
 # COMPARACIÓN DE GASTO EMISIVO-RECEPTIVO
@@ -632,8 +663,8 @@ ggplot(data = gasto_comparado %>% mutate(origen=factor(origen,
                                                        levels = c("receptivo",
                                                                   "emisivo"))),
        aes(y=gasto_tur,x=origen,label=gasto_tur,fill=origen))+
-  geom_bar(stat='identity',position="dodge",color="sky blue")+
-  geom_label(fill="white",size=3, position=position_dodge(width=0.9),vjust=0.40)+
+  geom_bar(stat='identity',position="dodge")+
+  geom_label(fill="white",size=4, position=position_dodge(width=0.9),vjust=0.40)+
   facet_wrap(~anio)+
   coord_flip()+
   labs(title = "Gasto promedio por turista (en dólares) por residencia",
@@ -642,9 +673,9 @@ ggplot(data = gasto_comparado %>% mutate(origen=factor(origen,
        y = "",
        colour="",
        caption = "Fuente: ETI")+
-  theme(text = element_text(size = 12),
+  theme(text = element_text(size = 14),
         plot.caption  = element_text(hjust = 0),
-        plot.subtitle=element_text(colour = "dark grey"),
+        plot.subtitle=element_text(colour = dnmye_colores("gris oscuro")),
         plot.title=element_text(hjust = 0,face = "bold"),
         legend.title = element_blank(),
         legend.position = "",
@@ -656,14 +687,13 @@ ggplot(data = gasto_comparado %>% mutate(origen=factor(origen,
                                             linewidth  = 1),
         panel.background = element_blank(),
         axis.text.x = element_blank(),
-        axis.ticks.x = element_blank(),
-        #axis.text.y = element_blank(),
-        #axis.ticks.y = element_blank()
-  )
+        axis.ticks.x = element_blank())
+ggsave("imgs/clases_unlp/c3_eti_gpt_comparado.png",width =12 ,height =8 )
 
 
 
-# Gráfico GPT:
+
+# Gráfico GPD:
 
 
 ggplot(data = gasto_comparado %>% mutate(origen=factor(origen,
@@ -671,7 +701,7 @@ ggplot(data = gasto_comparado %>% mutate(origen=factor(origen,
                                                                   "emisivo"))),
        aes(y=gasto_diario,x=origen,label=gasto_diario,fill=origen))+
   geom_bar(stat='identity',position="dodge",color="sky blue")+
-  geom_label(fill="white",size=3, position=position_dodge(width=0.9),vjust=0.40)+
+  geom_label(fill="white",size=4, position=position_dodge(width=0.9),vjust=0.40)+
   facet_wrap(~anio)+
   coord_flip()+
   labs(title = "Gasto diario por turista (en dólares) por residencia",
@@ -680,9 +710,9 @@ ggplot(data = gasto_comparado %>% mutate(origen=factor(origen,
        y = "",
        colour="",
        caption = "Fuente: ETI")+
-  theme(text = element_text(size = 12),
+  theme(text = element_text(size = 14),
         plot.caption  = element_text(hjust = 0),
-        plot.subtitle=element_text(colour = "dark grey"),
+        plot.subtitle=element_text(colour = dnmye_colores("gris oscuro")),
         plot.title=element_text(hjust = 0,face = "bold"),
         legend.title = element_blank(),
         legend.position = "",
@@ -694,11 +724,11 @@ ggplot(data = gasto_comparado %>% mutate(origen=factor(origen,
                                             linewidth  = 1),
         panel.background = element_blank(),
         axis.text.x = element_blank(),
-        axis.ticks.x = element_blank(),
-        #axis.text.y = element_blank(),
-        #axis.ticks.y = element_blank()
-  )
+        axis.ticks.x = element_blank())
+ggsave("imgs/clases_unlp/c3_eti_gpd_comparado.png",width =12 ,height =8 )
 
+
+rm(gasto_a,gasto_comparado,gasto_e,gasto_prom,gasto_prom_eya)
 
 
 ########DESTINOS VISITADOS
@@ -706,7 +736,7 @@ ggplot(data = gasto_comparado %>% mutate(origen=factor(origen,
 #Insumo:
 
 
-destinos <- read.csv("recursos/receptivo/turistas_pernoctes_por_provincia_segun_destinos_visitados_y_alojamiento_ezeiza_aeroparque_trimestral.csv") %>% 
+destinos <- read.csv("/srv/DataDNMYE/eti/recursos/receptivo/turistas_pernoctes_por_provincia_segun_destinos_visitados_y_alojamiento_ezeiza_aeroparque_trimestral.csv") %>% 
   mutate(anio=year(indice_tiempo),
          trim=case_when(month(indice_tiempo)==1~"trim I",
                         month(indice_tiempo)==4~"trim II",
@@ -718,30 +748,31 @@ dest <- destinos %>%
   group_by(provincia_de_destino) %>%
   filter(destinos_visitados !="Solo resto") %>% 
   summarise(turistas=round(sum(turistas_no_residentes)/1000,1)) %>% 
-  arrange(desc(turistas))
+  arrange(turistas)
 
 #gráfico
 
 
-orden <- (dest$turistas)
+orden <- (dest$provincia_de_destino)
 
-ggplot(data=dest,
+ggplot(data=dest %>% mutate(provincia_de_destino = factor(provincia_de_destino,levels=orden)),
        aes(x=turistas,y=provincia_de_destino,fill=provincia_de_destino,
            label=turistas))+
   geom_col()+ 
-  geom_text(hjust = "inward") +
-  #scale_fill_brewer()+
+  geom_text(hjust = "inward",size=6) +
+  scale_fill_dnmye()+
   theme(legend.position='none')+
   labs(title = "Turistas no residentes (en miles) según provincia visitada.",
        subtitle ="Año 2022.",
        x = "",
        y = "",
        colour="",
-       caption = "ETI.")+
+       caption = "FUENTE: ETI.")+
   theme_minimal()+
   theme(plot.caption  = element_text(hjust = 0),
-        plot.subtitle=element_text(size=8),
-        plot.title=element_text(hjust = 0,face="bold",size=10),
+        text = element_text(size = 14), 
+        plot.subtitle=element_text(size=12,color = dnmye_colores("gris oscuro")),
+        plot.title=element_text(hjust = 0,face="bold",size=14),
         legend.title = element_blank(),
         legend.position = "none",
         panel.grid.major.y = element_line(color = "grey",
@@ -752,7 +783,11 @@ ggplot(data=dest,
         panel.grid.minor.x = element_blank(),
         panel.background = element_blank(),
         axis.text.x=element_blank())
+ggsave("imgs/clases_unlp/c3_eti_destinos.png",width =12 ,height =8 )
 
 
-rm(orden_cruceros)
 
+rm(destinos,dest,orden)
+
+
+rm(eti_a,eti_e)
