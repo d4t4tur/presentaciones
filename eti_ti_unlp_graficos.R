@@ -74,7 +74,7 @@ ggplot(data = graf %>% mutate(motivo=factor(motivo,
        caption = "Fuente: ETI")+
   theme(text = element_text(size = 12),
         plot.caption  = element_text(hjust = 0),
-        plot.subtitle=element_text(colour = "dark grey"),
+        plot.subtitle=element_text(colour = dnmye_colores("gris oscuro")),
         plot.title=element_text(hjust = 0,face = "bold"),
         legend.title = element_blank(),
         legend.position = "top",
@@ -326,7 +326,7 @@ ggplot(data = graf_c,
   facet_wrap(~anio)+
   scale_fill_dnmye()+
   scale_y_continuous(labels = function(x) paste0(x,"%"))+
-  labs(title = "Distribución de los turistas según residencia, por motivo de alojamiento",
+  labs(title = "Distribución de los turistas según residencia, por tipo de alojamiento",
        subtitle = "Ezeiza y Aeroparque. Años 2018-2022. ",
        x = "",
        y = "",
@@ -380,7 +380,7 @@ ggplot(data = graf %>% mutate(alojamiento=factor(alojamiento,
   #scale_x_continuous(breaks = seq(from=min(graf_2$anio),to=max(graf_2$anio)))+
   scale_y_continuous(labels = function(x) paste0(x,"%"))+
   labs(title = "Distribución de los turistas no residentes segun tipo de alojamiento utilizado",
-       subtitle = "Por paso de ingreso. Año 2022.",
+       subtitle = "Por paso de ingreso y trimestre. Año 2019.",
        x = "",
        y = "",
        colour="",
