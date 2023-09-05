@@ -212,6 +212,7 @@ _163º Asamblea Ordinaria del Consejo Federal de Turismo, Paraná, Entre Ríos._
 
 - [Clase 1: fuentes e indicadores](https://d4t4tur.github.io/presentaciones/clase1_sinta.html#1)
 
+- [Clase 3: fuentes de datos para el perfil del turismo internacional](https://d4t4tur.github.io/presentaciones/clase_3_ti_unlp.html#1)
 
 # Armonización
 
