@@ -314,7 +314,7 @@ class: inverse center middle
 <br>
 <br>
 
-## ETI
+## (ETI)
 
 ---
 
@@ -383,9 +383,6 @@ knitr::include_graphics("imgs/clases_unlp/c3_ponderadores.png")
 .pull-right[
 
 * Tipo de organización del viaje
-<br>
-<br>
-* Pernoctes por tipo de alojamiento
 <br>
 <br>
 * Gasto durante la estadía (desagregada por rubro)
