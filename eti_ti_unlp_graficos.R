@@ -319,7 +319,11 @@ graf_c <- eti_arg_aloja %>%
 
 # Gráfico:
 
-ggplot(data = graf_c,
+ggplot(data = graf_c%>% mutate(alojamiento=factor(alojamiento,
+                                                  levels = c("Hotel 4 y 5 estrellas",
+                                                             "Hotel 1,2, y 3 estrellas",
+                                                             "Casa flia./amigos",
+                                                             "Otros"))),
        aes(x=origen_viajeros,y=viajeros,fill=alojamiento,label=glue("{viajeros} %")))+
   geom_col()+
   geom_text(position = position_stack(vjust = .5),size=5)+
