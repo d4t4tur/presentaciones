@@ -32,21 +32,18 @@ eti_a <- readRDS("/srv/DataDNMYE/eti/bases/eti_a_2014_2023.rds")%>%
 
 #Turistas por motivo
 
-eti_motivo <- read.csv("/srv/DataDNMYE/eti/recursos/receptivo/turistas_no_residentes_por_motivo_de_viaje_segun_paso_trimestral.csv") %>% 
-  mutate(anio=year(indice_tiempo),
-         trim=case_when(month(indice_tiempo)==1~"trim I",
-                        month(indice_tiempo)==4~"trim II",
-                        month(indice_tiempo)==7~"trim III",
-                        month(indice_tiempo)==10~"trim IV")) %>% 
-  filter(anio>=2018)
-
-
-graf <- eti_motivo %>%
-  filter(anio<=2022) %>% 
-  group_by(anio,paso,motivo) %>% 
-  summarise(turistas=sum(turistas_no_residentes,na.rm = TRUE)) %>% 
+graf <- eti_e %>%
+  filter(p3_3<=2022 & p3_3>=2018) %>%
+  mutate(motivo=case_when(p17nuev==1 ~"Vacaciones/ocio/recreación",
+                          p17nuev==2 ~"Visita flia/amigos",
+                          p17nuev==3 ~"Negocios/congreso/conferencia",
+                          p17nuev>=4 ~"Otros")) %>% 
+  group_by(p3_3,paso_final,motivo) %>% 
+  summarise(turistas=sum(viajeros*wpf,na.rm = TRUE))%>% 
   mutate(dist=round(prop.table(turistas)*100,1)) %>% 
+  rename(anio=p3_3, paso=paso_final) %>% 
   ungroup()
+
 
 ggplot(data = graf %>% mutate(motivo=factor(motivo,
                                             levels = c("Visita flia/amigos",
@@ -91,30 +88,27 @@ ggsave("imgs/clases_unlp/c3_eti_motivo.png",width =12 ,height =8 )
 
 #Turistas RESIDENTES por motivo
 
-eti_arg_motivo <- read.csv("/srv/DataDNMYE/eti/recursos/emisivo/turistas_residentes_por_motivo_de_viaje_segun_paso_trimestral.csv") %>% 
-  mutate(anio=year(indice_tiempo),
-         trim=case_when(month(indice_tiempo)==1~"trim I",
-                        month(indice_tiempo)==4~"trim II",
-                        month(indice_tiempo)==7~"trim III",
-                        month(indice_tiempo)==10~"trim IV")) %>% 
-  filter(anio>=2018)
-
-
 graf_b <- graf %>% 
   filter(paso=="Ezeiza y Aeroparque") %>% 
   rename(no_resi=dist) %>% 
   select(1,3,5) %>% 
   filter(anio<=2022)
 
-graf_c <- eti_arg_motivo %>% 
-  group_by(anio,paso,motivo) %>% 
-  summarise(turistas=sum(turistas_residentes,na.rm = TRUE)) %>% 
+graf_c <- eti_a %>%
+  filter(p3_3<=2022 & p3_3>=2018) %>%
+  mutate(motivo=case_when(p17nuev==1 ~"Vacaciones/ocio/recreación",
+                          p17nuev==2 ~"Visita flia/amigos",
+                          p17nuev==3 ~"Negocios/congreso/conferencia",
+                          p17nuev>=4 ~"Otros")) %>% 
+  group_by(p3_3,paso_final,motivo) %>% 
+  summarise(turistas=sum(viajeros*wpf,na.rm = TRUE))%>% 
   mutate(dist=round(prop.table(turistas)*100,1)) %>% 
-  ungroup() %>% 
+  rename(anio=p3_3, paso=paso_final)%>% 
   filter(paso=="Ezeiza y Aeroparque") %>% 
   rename(residentes=dist) %>%
-  filter(anio<=2022) %>% 
+  ungroup() %>% 
   select(1,3,5) %>% 
+  filter(anio<=2022) %>% 
   left_join(graf_b) %>% 
   pivot_longer(cols=c(residentes,no_resi),
                names_to = "origen_viajeros",
@@ -122,6 +116,9 @@ graf_c <- eti_arg_motivo %>%
   arrange(anio,origen_viajeros,motivo) %>% 
   mutate(origen_viajeros=case_when(origen_viajeros=="residentes"~"Residentes",
                                    origen_viajeros=="no_resi"~"No residentes"))
+
+
+
 
 ggplot(data = graf_c %>% mutate(motivo=factor(motivo,
                                               levels = c("Visita flia/amigos",
@@ -160,18 +157,26 @@ ggsave("imgs/clases_unlp/c3_eti_motivo_residencia.png",width =12 ,height =8 )
 
 rm(graf_b,graf_c,graf)
 
-rm
 
 ###Motivo por trimestre
 
 # Apertura por trimestre
 
-graf <- eti_motivo %>%
-  filter(anio==2019) %>% 
-  group_by(trim,paso,motivo) %>% 
-  summarise(turistas=sum(turistas_no_residentes,na.rm = TRUE)) %>% 
+graf <- eti_e %>%
+  filter(p3_3==2019) %>%
+  mutate(motivo=case_when(p17nuev==1 ~"Vacaciones/ocio/recreación",
+                          p17nuev==2 ~"Visita flia/amigos",
+                          p17nuev==3 ~"Negocios/congreso/conferencia",
+                          p17nuev>=4 ~"Otros")) %>% 
+  mutate(trim=case_when(trimnue==1~"trim I",
+                        trimnue==2~"trim II",
+                        trimnue==3~"trim III",
+                        trimnue==4~"trim IV")) %>% 
+  group_by(trim,paso_final,motivo) %>% 
+  summarise(turistas=sum(viajeros*wpf,na.rm = TRUE)) %>% 
   mutate(dist=round(prop.table(turistas)*100,1)) %>% 
-  ungroup()
+  ungroup() %>% 
+  rename(paso=paso_final)
 
 
 ggplot(data = graf %>% mutate(motivo=factor(motivo,
@@ -216,7 +221,7 @@ ggplot(data = graf %>% mutate(motivo=factor(motivo,
 ggsave("imgs/clases_unlp/c3_eti_motivo_trim.png",width =12 ,height =8 )
 
 
-rm(eti_motivo,graf,eti_arg_motivo)
+rm(graf)
 
 
 ###############################TIPO DE ALOJAMIENTO##########################3
