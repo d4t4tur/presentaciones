@@ -19,19 +19,12 @@ background-image: url(https://tableros.yvera.tur.ar/recursos/logos_institucional
 background-position: 95% 95%
 background-size: 30%
 
-# Fuentes de datos para la elaboración del perfil del turista internacional
+# Fuentes de datos para la elaboración del perfil del turista internacional:
 
 <br>
-<br>
 
-## _Estimaciones de turismo internacional y Encuesta de Turismo Internacional_
+### _Estimaciones de turismo internacional y Encuesta de Turismo Internacional (ETI)_
 
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
 <br>
 <br>
 <br>
@@ -141,6 +134,49 @@ class: inverse center middle
 
 ---
 
+## Registros administrativos
+
+.pull-left[
+
+_“…todo registro resultante de necesidades fiscales, tributarias u otras, creado con la finalidad de viabilizar la administración de los programas de gobierno o para fiscalizar el cumplimento de obligaciones legales de la sociedad…”_. (CEPAL; 2003).
+
+
+```{r out.width = "400px", out.height="300px",fig.align='center'}
+knitr::include_graphics("imgs/clases_unlp/c3_ra_b.PNG")
+```
+]
+
+
+.pull-right[
+
+* Todos estos **hechos vitales**, deben ser registrados de manera obligatoria en el registro civil. Es por eso que a cada uno de estos acontecimientos de la vida de los ciudadanos le corresponde un R.A. 
+
+* El principal objetivo de los RA es administrativo, pero pueden ser **utilizados para la producción de estadísticas, siempre que se tomen recaudos.**
+
+]
+
+---
+## Registros provenientes de migraciones
+
+
+### Contabilización de visitantes en la Argentina
+
+
+- La **DNM** envía bases de datos diarias: son el insumo principal para la estimación de visitantes
+<br>
+<br>
+- En junio 2023, la base en bruto constó de 5,3 millones de casos
+<br>
+<br>
+- Se estimaron **443 mil turistas no residentes y 412 mil turistas residentes**  
+- Se estimaron **532 mil excursionistas no residentes y 321 mil excursionistas residentes** 
+<br>
+<br>
+
+### _¿Qué criterios se utilizan para depurar los datos e indentificar visitantes?_
+
+---
+
 ## ¿Qué es un visitante?
 
 .pull-left[
@@ -148,7 +184,7 @@ class: inverse center middle
 - **ENTORNO HABITUAL**: 
 
 1. Distancia recorrida
-2. Traspasar un límite geográfico
+2. Traspasar un límite geográfico/administrativo
 3. Frecuencia de visita en el destino
 
 - **DURACIÓN DE LA ESTADÍA EN EL DESTINO**: 
@@ -163,9 +199,9 @@ class: inverse center middle
 
 .pull-right[
 
-- ¿Que diferencia a los turistas de los excursionistas? Los visitantes que pernoctan en el destino son **TURISTAS**, que no realizan al menos un pernocte en el destino son **EXCURSIONISTAS**
-
 - ¿Qué es un **visitante internacional**?  Es una persona que viaja a un país **distinto al de su entorno habitual**, por una duración **inferior a un año**,  y cuyo motivo principal de visita no es ser empleada por una unidad residente del país visitado. Es decir, un tripulante, un viajero frecuente, o alguien que temporalmente viene a trabajar al país no es un visitante. 
+
+- ¿Que diferencia a los turistas de los excursionistas? Los visitantes que pernoctan en el destino son **TURISTAS**. Los que no realizan al menos un pernocte en el destino son **EXCURSIONISTAS**
 
 - **Turismo emisivo**: refiere a los viajes de turistas residentes en la Argentina hacia el exterior.
 - **Turismo receptivo**: refiere a los viajes hacia la Argentina de turistas no residentes en el país. 
@@ -180,22 +216,6 @@ knitr::include_graphics("imgs/clases_unlp/c3_esquema_ti.PNG")
 ```
 
 
----
-
-## CONTABILIZACIÓN DE VISITANTES EN LA ARGENTINA
-
-- La DNM envía bases de datos diarias, son el insumo principal para la estimación de visitantes
-
-- En junio 2023, la base en bruto tuvo 5,3 millones de casos
-
-- Se estimaron **443 mil turistas no residentes y 412 mil turistas residentes**
-
-**¿Qué información de perfil del visitante ofrecen los datos de la DNM?**
-
-1. Género
-2. Edad
-3. Medio de transporte utilizado (vía de ingreso al país)
-4. Paso de ingreso al país
 
 ---
 
@@ -207,12 +227,18 @@ background-image: url(imgs/clases_unlp/c3_esquema_dnm.PNG)
 
 
 - Cuántos turistas viajan a la Argentina por año? 
+<br>
+<br>
 - Cuántos turistas residentes en Argentina realizan viajes al exterior? 
+<br>
+<br>
 - Es más numeroso el turismo receptivo o emisivo? 
+<br>
+<br>
 - Esto siempre fue igual a lo largo de los años? 
 
-
 ---
+
 ## Serie anual turismo internacional
 
 ```{r out.width = "900px", out.height="500px",fig.align='center'}
@@ -221,37 +247,62 @@ knitr::include_graphics("imgs/clases_unlp/ti_serie_anual.png")
 ```
 
 ---
-  
+
 ## Serie mensual turismo internacional 
 
 
-```{r out.width = "1100px", out.height="500px",fig.align='center'}
+```{r out.width = "1000px", out.height="500px",fig.align='center'}
 
 knitr::include_graphics("imgs/clases_unlp/ti_serie_mensual.PNG")
 ```
 
 
 ---
+
+## **Información de perfil ofrecida por la DNM**
+
+1. País de origen
+<br>
+<br>
+2. Género
+<br>
+<br>
+3. Edad
+<br>
+<br>
+4. Medio de transporte utilizado (vía de ingreso al país)
+<br>
+<br>
+5. Paso de ingreso al país
+
+---
   
-## Turismo receptivo; año 2023
+## Turismo internacional. Año 2023
 
 
 ![](imgs/clases_unlp/ti_2023_via_pais.PNG)
 
+
 ---
-  
-## Turismo receptivo; año 2023
+
+## Turismo receptivo. Año 2023
 
 
 ```{r out.width = "700px", out.height="500px",fig.align='center'}
 
 knitr::include_graphics("imgs/clases_unlp/ti_paisvia.png")
+
 ```
+---
+
+## Turismo receptivo. Año 2023
+
+![](imgs/clases_unlp/ti_2023_edad_gen.png)
 
 
 ---
 
-## Turismo receptivo; año 2023
+## Turismo receptivo. Año 2023
 
 ![](imgs/clases_unlp/ti_pasos.png)
 ---
@@ -263,7 +314,7 @@ class: inverse center middle
 <br>
 <br>
 
-## ETI
+## (ETI)
 
 ---
 
@@ -293,22 +344,61 @@ background-image: url(imgs/clases_unlp/mapa_eti.png)
 
 ---
 
+### Marco muestral y ponderación
+
+
+```{r out.width = "800px", out.height="550px",fig.align='center'}
+knitr::include_graphics("imgs/clases_unlp/c3_ponderadores.png")
+```
+
+
+
+---
+
 ## Cobertura temática 
 
+<br>
+<br>
+
+.pull-left[
 
 * Residencia del viajero (país/región de origen) –ciudad y país-
+<br>
+<br>
 * Tamaño del grupo de viaje
+<br>
+<br>
 * Motivo del viaje
+<br>
+<br>
 * Estadía
+<br>
+<br>
 * Tipo de alojamiento utilizado
+<br>
+<br>
 * Destinos visitados
+]
+
+.pull-right[
+
 * Tipo de organización del viaje
-* Pernoctes por tipo de alojamiento
+<br>
+<br>
 * Gasto durante la estadía (desagregada por rubro)
+<br>
+<br>
 * Actividades realizadas en destino
+<br>
+<br>
 * Evaluación del país (según rubro)
+<br>
+<br>
 * Tiempo de anticipación del viaje
+<br>
+<br>
 * Aspectos influyentes a la hora de viajar
+]
 
 ---
 
@@ -319,6 +409,8 @@ class: inverse center middle
 ---
 
 ```{r out.width = "900px", out.height="600px",fig.align='center'}
+
+
 knitr::include_graphics("imgs/clases_unlp/c3_eti_motivo.png")
 ```
 
@@ -437,7 +529,7 @@ knitr::include_graphics("imgs/clases_unlp/c3_eti_gpd_comparado.png")
 ---
 class: inverse center middle
 
-# OTRA INFORMACIÓN PUBLICADA
+# OTROS DATOS DE PERFIL PUBLICADOS
 
 ---
 
@@ -461,9 +553,51 @@ knitr::include_graphics("imgs/clases_unlp/c3_eti_destinos.png")
 
 
 ---
+
 class: inverse center middle
 
-## Muchas gracias
+# INFORMACIÓN DISPONIBLE
+
+---
+
+<br>
+<br>
+
+.pull-left[
+
+```{r out.width = "400px", out.height="200px",fig.align='left'}
+knitr::include_graphics("imgs/clases_unlp/c3_tablero.PNG")
+```
+
+<br>
+<br>
+
+```{r out.width = "400px", out.height="200px",fig.align='left'}
+knitr::include_graphics("imgs/clases_unlp/c3_datos_abiertos.PNG")
+```
+
+]
+
+.pull-right[
+
+```{r out.width = "400px", out.height="200px",fig.align='left'}
+knitr::include_graphics("imgs/clases_unlp/c3_informes.PNG")
+```
+
+<br>
+<br>
+
+```{r out.width = "400px", out.height="200px",fig.align='left'}
+knitr::include_graphics("imgs/clases_unlp/c3_anuario.PNG")
+```
+
+]
+
+---
+
+class: inverse center middle
+
+## Muchas gracias!!!
 ## estadisticas@turismo.gob.ar
 ## DNMyE
 
