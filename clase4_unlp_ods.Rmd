@@ -36,7 +36,7 @@ background-size: 30%
 <br>
 <br>
 
-# Obejtivos de Desarrollo Sostenible y turismo
+# Objetivos de Desarrollo Sostenible y turismo
 
 ## Sistema de Información Turística de la Argentina
 
@@ -166,7 +166,7 @@ class: inverse center middle
 En 2015 los Estados Miembros de las Naciones Unidas (ONU) aprobaron **17 Objetivos (ODS)** como parte de la Agenda 2030 para el Desarrollo Sostenible, la cual establece un plan para alcanzar dichos objetivos en 15 años.
 
 
-```{r , echo = FALSE,  out.width='70%' }
+```{r , echo = FALSE,  out.width='70%', fig.align='center' }
 knitr::include_graphics("imgs/clases_unlp/ods/Imagen1.png")
 ```
 
@@ -210,9 +210,10 @@ class: inverse center middle
 
 #El turismo en los ODS: recursos OMT (II)
 ---
-
-
-```{r , echo = FALSE, out.width='80%'}
+<br>
+<br>
+<br>
+```{r , echo = FALSE, out.width='80%', fig.align='center'}
 knitr::include_graphics("imgs/clases_unlp/ods/Imagen4.png")
 ```
 
@@ -380,7 +381,7 @@ Cantidad de puestos de trabajo en **ramas de actividad características del turi
 Abiertos en tres categorías: **asalariados registrados, asalariados no registrados y no asalariados.**
 
 
-```{r , echo = FALSE,  out.width='50%'}
+```{r , echo = FALSE,  out.width='50%', fig.align='center'}
 knitr::include_graphics("imgs/clases_unlp/ods/Imagen11.png")
 ```
 
@@ -391,7 +392,7 @@ knitr::include_graphics("imgs/clases_unlp/ods/Imagen11.png")
 
 
 
-```{r , echo = FALSE,  out.width='50%'}
+```{r , echo = FALSE,  out.width='50%', fig.align='center'}
 knitr::include_graphics("imgs/clases_unlp/ods/Imagen13.png")
 ```
 ---
@@ -405,7 +406,7 @@ knitr::include_graphics("imgs/clases_unlp/ods/Imagen13.png")
 - Surge de contrastar el **consumo total de los visitantes (turístico interno y receptor) con la producción** del país.
 
 
-```{r , echo = FALSE,  out.width='50%'}
+```{r , echo = FALSE,  out.width='50%', fig.align='center'}
 knitr::include_graphics("imgs/clases_unlp/ods/Imagen14.png")
 ```
 ---
@@ -415,7 +416,7 @@ knitr::include_graphics("imgs/clases_unlp/ods/Imagen14.png")
 
 
 
-```{r , echo = FALSE,  out.width='50%'}
+```{r , echo = FALSE,  out.width='70%', fig.align='center'}
 knitr::include_graphics("imgs/clases_unlp/ods/Imagen15.png")
 ```
 
@@ -427,7 +428,7 @@ knitr::include_graphics("imgs/clases_unlp/ods/Imagen15.png")
 
 
 
-```{r , echo = FALSE,  out.width='50%'}
+```{r , echo = FALSE,  out.width='50%', fig.align='center'}
 knitr::include_graphics("imgs/clases_unlp/ods/Imagen16.png")
 ```
 
@@ -437,7 +438,7 @@ knitr::include_graphics("imgs/clases_unlp/ods/Imagen16.png")
 # Índice de Gini de cantidad de viajes turísticos de ocio
 
 
-```{r , echo = FALSE,  out.width='70%'}
+```{r , echo = FALSE,  out.width='70%', fig.align='center'}
 knitr::include_graphics("imgs/clases_unlp/ods/Imagen17.png")
 ```
 ---
@@ -445,7 +446,7 @@ knitr::include_graphics("imgs/clases_unlp/ods/Imagen17.png")
 <br>
 # Índice de Gini del gasto turístico 
 
-```{r , echo = FALSE,  out.width='70%'}
+```{r , echo = FALSE,  out.width='70%', fig.align='center'}
 knitr::include_graphics("imgs/clases_unlp/ods/Imagen18.png")
 ```
 
