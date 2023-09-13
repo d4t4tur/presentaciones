@@ -37,8 +37,6 @@ background-size: 30%
 ### Dirección Nacional de Mercados y Estadística<br>Subsecretaría de Desarrollo Estratégico
 
 
-
-
 ```{r, echo=FALSE}
 library(xaringanExtra)
 # LOGO COLOR EN PAGs INTERNAS
@@ -109,7 +107,6 @@ div.my-footer span {
     bottom: 6px;
 }
 
-
 ```
 
 
@@ -126,15 +123,15 @@ class: inverse center middle
 # DNMyE
 ---
 
-![](../imgs/utdt/roceta.png)
+![](imgs/utdt/roceta.png)
 
 ---
 
-![](../imgs/fit/sinta_9.png)
+![](imgs/fit/sinta_9.png)
 
 ---
 
-![](../imgs/sintia2.png)
+![](imgs/sintia2.png)
 
 ---
 
@@ -164,7 +161,7 @@ class: inverse center middle
 
 ### CONECTIVIDAD
 
-```{r out.width='55%'}
+```{r out.width='65%'}
 knitr::include_graphics("imgs/utdt/logo_conectividad.png")
 ```
 
@@ -174,7 +171,7 @@ knitr::include_graphics("imgs/utdt/logo_conectividad.png")
 
 ### PUNA
 
-```{r out.width='55%'}
+```{r out.width='65%'}
 knitr::include_graphics("unlp_conectividad/unlp_files/puna.png")
 ```
 
@@ -266,11 +263,11 @@ class: inverse center middle
 
 - **Fuente**: Padrón Único Nacional de Alojamiento (PUNA).
 
-- **Resumen**: alojamientos turísticos registrados en todo el país (hoteleros, parahoteleros y otros colectivos).
+- **Resumen**: Alojamientos turísticos registrados en todo el país (hoteleros, parahoteleros y otros colectivos).
 
-- **Indicadores**: establecimientos, plazas, unidades y habitaciones, ubicación, cadena hotelera, categoría, clasificación y tipo.
+- **Indicadores**: Establecimientos, plazas, unidades y habitaciones, ubicación, cadena hotelera, categoría, clasificación y tipo.
 
-- **Disponible**: datos abiertos y tablero.
+- **Disponible**: Documento de trabajo, datos abiertos y tablero.
 
 ```{r fig.align='center'}
 # knitr::include_graphics("")
@@ -286,7 +283,6 @@ knitr::include_graphics("unlp_conectividad/unlp_files/puna_plazas_mapa.PNG")
 
 ---
 
-
 ```{r out.width='47%', fig.align='center'}
 knitr::include_graphics("imgs/clases_unlp/tabla_puna_loc.png")
 ```
@@ -295,11 +291,13 @@ knitr::include_graphics("imgs/clases_unlp/tabla_puna_loc.png")
 
 ```{r}
 # library(herramientas)
+# library(tidyverse)
+# library(gt)
 # ccc <- read_file_srv("/srv/DataDNMYE/puna/serie_puna.csv")
 # 
 # socoso1 <- internacional %>%
-#   filter(mes_local == 8) %>% 
-#   filter(destino_pais_etiqueta == "Argentina") %>% 
+#   filter(mes_local == 8) %>%
+#   filter(destino_pais_etiqueta == "Argentina") %>%
 #   filter(anio_local >= 2017) %>%
 #   group_by(anio_local, destino_provincia_etiqueta) %>%
 #   summarise(pasajeros = sum(pax_ad, na.rm = T)) %>%
@@ -405,17 +403,17 @@ knitr::include_graphics("unlp_conectividad/unlp_files/herfindal_plazas.png")
 
 ## Demanda
 
-+ El flujo de viajeros se distribuyo de manera más heterogénea ene el último lustro.
++ El flujo de viajeros ha tendido a distribuirse de manera más dispersa.
 
-+ Sin embargo, la demanda mantiene alto nivel de concentración.
++ Sin embargo, existen divergencias según el tipo de vuelo.
 
-+ La Ciudad de Buenos Aires es el principal destino de los viajes.
++ Ciudad de Buenos Aires como el principal destino.
 
 ## Oferta
 
 + La oferta de plazas apenas varió en el último lustro y se encuentra apenas concentrada.
 
-+ La provincia de Buenos Aires es el distrito de mayor n° de plazas disponibles.
++ La PBA es el distrito de mayor n° de plazas disponibles.
 
 + La Ciudad de Buenos Aires es la localidad con más plazas del país.
 
