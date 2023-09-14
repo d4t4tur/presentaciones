@@ -21,7 +21,7 @@ background-size: 30%
 
 .pull-left[
 ####  Universidad Nacional de La Plata
-15 de agosto 2023
+15 de septiembre 2023
 <br>
 <br>
 <br>
@@ -148,10 +148,13 @@ knitr::include_graphics("https://tableros.yvera.tur.ar//recursos/logos_instituci
 
 ---
 ![](imgs/fit/sinta_9.png)
-<br>
-.footnote[<span style="background-color: #37bbed">https://www.yvera.tur.ar/sinta/informe</span>]
 ---
-![](imgs/sintia2.png)
+
+```{r , echo = FALSE,  out.width='50%', fig.align='center' }
+knitr::include_graphics("imgs/sintia2.png")
+```
+
+
 ---
 
 class: inverse center middle
@@ -242,47 +245,6 @@ knitr::include_graphics("imgs/clases_unlp/ods/Imagen6.png")
 ```
 ]
 ---
-
-class: inverse center middle
-
-# Recursos de la DNMyE: tablero interactivo de indicadores ODS
----
-<br>
-<br>
-<br>
-
-.pull-left[
-```{r , echo = FALSE, out.width='50%'}
-knitr::include_graphics("imgs/clases_unlp/ods/Imagen7.png")
-```
-]
-
-
-.pull-right[
-```{r , echo = FALSE, out.width='100%'}
-knitr::include_graphics("imgs/clases_unlp/ods/Imagen8.png")
-```
-]
----
-<br>
-<br>
-<br>
-<br>
-```{r , echo = FALSE}
-knitr::include_graphics("imgs/clases_unlp/ods/Imagen9.png")
-```
-
----
-<br>
-<br>
-<br>
-
-```{r , echo = FALSE}
-knitr::include_graphics("imgs/clases_unlp/ods/Imagen10.png")
-```
-
-
----
 class: inverse center middle
 
 # Indicadores de seguimiento
@@ -308,48 +270,43 @@ class: inverse center middle
 - Encuesta de Viajes y Turismo de los Hogares (EVyTH)
 
 ---
-
-class: inverse center middle
-# Indicadores de seguimiento - Fuentes: CST
----
+# Cuenta Satélite de Turismo
+<br>
+La **Cuenta Satélite de Turismo** (CST) es la herramienta que propone la Organización Mundial del Turismo (OMT) para la medición de la contribución económica del turismo en los países, indicando qué industrias producen para la demanda de visitantes, el valor agregado que generan y el empleo que demandan, entre otros indicadores.
 <br>
 <br>
-<br>
-<br>
-La Cuenta Satélite de Turismo (CST) es la herramienta que propone la Organización Mundial del Turismo (OMT) para la medición de la contribución económica del turismo en los países, indicando qué industrias producen para la demanda de visitantes, el valor agregado que generan y el empleo que demandan, entre otros indicadores.
-<br>
-<br>
-<br>
-
 **Variables utilizadas en el cálculo de los indicadores**
 <br>
-
 - Producto interno bruto directo turístico (PIBDT)
+
 - Empleo de la industria del turismo
+<br>
+<br>
 
+**Recursos disponibles**
+<br>
+
+- Informes **https://www.yvera.tur.ar/sinta/informe/info/cuenta-satelite-de-turismo**
 
 ---
-
-class: inverse center middle
-# Indicadores de seguimiento - Fuentes: EVyTH
----
-
+# Encuesta de Viajes y Turismo de los Hogares
 <br>
-<br>
-<br>
-Mide la evolución de los viajes que realizan los residentes en grandes aglomerados urbanos del país. Además de la cantidad de visitantes, se releva información que permite caracterizar estos viajes (lugares visitados, forma de alojamiento, estadías, actividades realizadas, utilización de paquete turístico, medios de transporte, etc.) asi como algunas características sociodemográficas de los hogares y el gasto realizado.
-
-<br>
-<br>
+La **Encuesta de Viajes y Turismo de los Hogares** (EVyTH) mide la evolución de los viajes que realizan los residentes en grandes aglomerados urbanos del país. Además de la cantidad de visitantes, se releva información que permite caracterizar estos viajes (lugares visitados, forma de alojamiento, estadías, actividades realizadas, utilización de paquete turístico, medios de transporte, etc.) asi como algunas características sociodemográficas de los hogares y el gasto realizado.
 <br>
 
 **Variables utilizadas en el cálculo de los indicadores**
 <br>
 
 - Acceso al turismo
-
 - Gasto turístico
+- Quintil de ingreso 
 
+**Recursos disponibles**
+<br>
+
+- Reporte **https://tableros.yvera.tur.ar/interno.html**
+- Informes **https://www.yvera.tur.ar/sinta/informe/info/encuesta-de-viajes-y-turismo-de-los-hogares-evyth**
+- Datos abiertos **https://datos.yvera.gob.ar/dataset?groups=turismo-interno**
 ---
 class: inverse center middle
 # Indicadores de seguimiento seleccionados
@@ -377,11 +334,11 @@ class: inverse center middle
 
 # Cantidad de puestos de trabajo en la industria turística
 
-Cantidad de puestos de trabajo en **ramas de actividad características del turismo.**
+- Cantidad de puestos de trabajo en **ramas de actividad características del turismo.**
 Abiertos en tres categorías: **asalariados registrados, asalariados no registrados y no asalariados.**
 
 
-```{r , echo = FALSE,  out.width='50%', fig.align='center'}
+```{r , echo = FALSE,  out.width='60%', fig.align='center'}
 knitr::include_graphics("imgs/clases_unlp/ods/Imagen11.png")
 ```
 
@@ -449,6 +406,47 @@ knitr::include_graphics("imgs/clases_unlp/ods/Imagen17.png")
 ```{r , echo = FALSE,  out.width='70%', fig.align='center'}
 knitr::include_graphics("imgs/clases_unlp/ods/Imagen18.png")
 ```
+---
+class: inverse center middle
+
+# Recursos de la DNMyE: tablero interactivo de indicadores ODS
+---
+```{r , echo = FALSE, out.width='60%', fig.align='center' }
+knitr::include_graphics("imgs/clases_unlp/ods/Imagen7a.png")
+```
+---
+```{r , echo = FALSE, out.width='60%', fig.align='center'}
+knitr::include_graphics("imgs/clases_unlp/ods/Imagen7b.png")
+```
+---
+```{r , echo = FALSE, out.width='60%', fig.align='center'}
+knitr::include_graphics("imgs/clases_unlp/ods/Imagen7c.png")
+```
+---
+<br>
+<br>
+<br>
+<br>
+```{r , echo = FALSE, out.width='100%'}
+knitr::include_graphics("imgs/clases_unlp/ods/Imagen8.png")
+```
+---
+<br>
+<br>
+<br>
+<br>
+```{r , echo = FALSE, out.width='100%'}
+knitr::include_graphics("imgs/clases_unlp/ods/Imagen9.png")
+```
+
+---
+<br>
+<br>
+<br>
+<br>
+```{r , echo = FALSE, out.width='100%'}
+knitr::include_graphics("imgs/clases_unlp/ods/Imagen10.png")
+```
 
 ---
 class: middle
@@ -457,16 +455,23 @@ class: middle
 knitr::include_graphics("imgs/sinta_logo_negro.png")
 ```
 
+
+**TABLERO**
+
+
+* Tablero Interactivo Indicadores ODS **https://tableros.yvera.tur.ar/tablero_ODS/**
+
+
 **BITACORA**
 
-* El turismo en los Objetivos de Desarrollo Sostenible: https://bitacora.yvera.tur.ar/posts/2023-08-17-ods-turismo/
+* El turismo en los Objetivos de Desarrollo Sostenible **https://bitacora.yvera.tur.ar/posts/2023-08-17-ods-turismo/**
   
 
 
 **BIBLIOTECA**
 
 
-* Documento de Trabajo N°12: El turismo en los Objetivos de Desarrollo Sostenible: https://tableros.yvera.tur.ar/recursos/biblioteca/dt_turismo_ods.pdf
+* Documento de Trabajo N°12: El turismo en los Objetivos de Desarrollo Sostenible **https://tableros.yvera.tur.ar/recursos/biblioteca/dt_turismo_ods.pdf**
 
 
 ### 🌐 [yvera.tur.ar/_SINTA_](www.yvera.tur.ar/sinta)
@@ -486,7 +491,7 @@ class: inverse center middle
 <br>
 ### [`r shiny::icon("linkedin")`](https://www.linkedin.com/in/eli%C3%A1n-soutullo) [Elián Soutullo](https://www.linkedin.com/in/eli%C3%A1n-soutullo)
 <br>
-### [`r shiny::icon("linkedin")`](https://www.linkedin.com/in/eli%C3%A1n-soutullo) [Micaela A. Spinelli](https://www.linkedin.com/in/micaela-abigail-spinelli-143386120/)
+### [`r shiny::icon("linkedin")`](https://www.linkedin.com/in/micaela-abigail-spinelli-143386120/) [Micaela A. Spinelli](https://www.linkedin.com/in/micaela-abigail-spinelli-143386120/)
 <br>
 ```{r echo = FALSE , out.width='30%'}
 knitr::include_graphics("imgs/escudo_mintur_blanco.png")
