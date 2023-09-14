@@ -343,7 +343,7 @@ knitr::include_graphics("imgs/clases_unlp/ods/Imagen11.png")
 ```
 
 ---
-# Tasa de informalidad del empleo asalariado en la industria turística
+# Tasa de informalidad del empleo <br> asalariado en la industria turística
 
 - Proporción del **empleo asalariado que no está registrado** (PTANR) respecto del total del **empleo asalariado** (PTAR)
 
@@ -363,7 +363,7 @@ knitr::include_graphics("imgs/clases_unlp/ods/Imagen13.png")
 - Surge de contrastar el **consumo total de los visitantes (turístico interno y receptor) con la producción** del país.
 
 
-```{r , echo = FALSE,  out.width='50%', fig.align='center'}
+```{r , echo = FALSE,  out.width='40%', fig.align='center'}
 knitr::include_graphics("imgs/clases_unlp/ods/Imagen14.png")
 ```
 ---
@@ -378,7 +378,7 @@ knitr::include_graphics("imgs/clases_unlp/ods/Imagen15.png")
 ```
 
 ---
-# Índice de Gini de cantidad de viajes turísticos totales
+# Índice de Gini de cantidad de viajes <br>turísticos totales
 
 - Permite analizar la distribución de la cantidad de viajes de acuerdo al quintil de ingreso al que pertenecen los hogares. 
 - Es una medida posible de la desigualdad en la demanda turística.
