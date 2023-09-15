@@ -143,6 +143,12 @@ knitr::include_graphics("imgs/clases_unlp/ind_arg.png")
 
 ---
 
+```{r, echo = FALSE, out.width='80%', fig.align='center'}
+knitr::include_graphics("unlp_conectividad/unlp_files/empleo_tur.PNG")
+```
+
+---
+
 class: inverse center middle
 
 # ¿CÓMO SE DISTRIBUYE LA ACTIVIDAD TURÍSTICA EN EL PAÍS?
@@ -236,6 +242,13 @@ knitr::include_graphics("unlp_conectividad/unlp_files/herfindahl_aero.PNG")
 class: inverse center middle
 
 # INTERNACIONAL
+
+
+---
+
+```{r out.width='65%', fig.align='center'}
+knitr::include_graphics("unlp_conectividad/unlp_files/rutas_int.PNG")
+```
 
 ---
 
@@ -426,6 +439,15 @@ knitr::include_graphics("unlp_conectividad/unlp_files/herfindal_plazas.png")
 + ¿El flujo de los turistas se mantiene igual a lo largo del año? ¿Cambia el sentido?
 
 + ¿Cómo podemos lograr un desarrollo más federal?
+
+---
+
+<br>
+<br>
+
+```{r out.width='75%', fig.align='center'}
+knitr::include_graphics("unlp_conectividad/unlp_files/flucturaciones.PNG")
+```
 
 ---
 
