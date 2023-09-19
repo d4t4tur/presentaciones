@@ -440,14 +440,35 @@ knitr::include_graphics("unlp_conectividad/unlp_files/herfindal_plazas.png")
 
 + ¿Cómo podemos lograr un desarrollo más federal?
 
----
+.pull-left[
 
-<br>
-<br>
-
-```{r out.width='75%', fig.align='center'}
+```{r out.width='130%', fig.align='center'}
 knitr::include_graphics("unlp_conectividad/unlp_files/flucturaciones.PNG")
 ```
+
+]
+
+.pull-right[
+
+
+```{r out.width='110%', fig.align='center'}
+knitr::include_graphics("unlp_conectividad/unlp_files/pasajeros.png")
+```
+
+
+]
+
+
+---
+
+# RECURSOS
+
+
+**SINTA**: https://www.yvera.tur.ar/sinta/
+
+**CONECTIVIDAD**: https://tableros.yvera.tur.ar/conectividad/
+
+**PUNA**: https://tableros.yvera.tur.ar/puna/
 
 ---
 
