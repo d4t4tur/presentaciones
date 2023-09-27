@@ -1,0 +1,905 @@
+---
+title: "Índice Turístico en localidades"
+subtitle: "Un instrumento de diagnóstico para la acción estatal en materia de turismo"
+author:  "Dirección Nacional de Mercados y Estadística"
+output:
+  xaringan::moon_reader:
+    self_contained: true
+    seal: false
+    css: "dnmye_theme.css"
+    nature:
+      slideNumberFormat: "%current%"
+      highlightStyle: github
+      highlightLines: true
+      ratio: 16:9
+      countIncrementalSlides: true
+---
+
+class:inverse, middle
+
+background-image: url(https://tableros.yvera.tur.ar/recursos/logos_institucionales/escudo_mdtyd_blanco.png)
+background-position: 95% 95%
+background-size: 30%
+
+## Índice Turístico en localidades
+### Un instrumento de diagnóstico para la acción estatal en materia de turismo
+
+<br>
+<br>
+
+### CONDET 2023
+
+#### La Plata, 28 de septiembre de 2023
+
+#### DIRECCIÓN NACIONAL DE MERCADOS Y ESTADÍSTICA
+
+#### SUBSECRETARÍA DE DESARROLLO ESTRATÉGICO
+
+<br>
+<br>
+<br>
+<br>
+
+
+```{r, echo=FALSE, warning=FALSE}
+library(xaringanExtra) # Extras and Extensions for 'xaringan' Slides, CRAN v0.7.0
+# LOGO COLOR EN PAGs INTERNAS
+xaringanExtra::use_logo(image_url = "https://tableros.yvera.tur.ar/recursos/logos_institucionales/escudo_mdtyd_color.png", 
+                        position = css_position(top = "1em", right = "1em"), 
+                        height = "20%", width = "20%")
+# BARRA DE PROGRESO DE PRESENTACION
+xaringanExtra::use_progress_bar(color = comunicacion::dnmye_colores("cian"))
+# LAPIZ 
+xaringanExtra::use_scribble()
+# EXPLORADOR DE SLIDES
+xaringanExtra::use_tile_view()
+# HABILITAR WEBCAM
+xaringanExtra::use_webcam()
+```
+
+
+```{r dnmye_theme, include=FALSE, warning=FALSE, eval=TRUE}
+library(xaringanthemer) #EVAL FALSE
+library(comunicacion)
+library(herramientas)
+library(tidyverse)
+library(sf)
+library(leaflet)
+library(geoAr)
+library(glue)
+library(htmltools)
+#library(gt)
+
+style_mono_light(outfile = "dnmye_theme.css", # CSS FILE
+                 # FONTS
+                  header_font_google = google_font('Encode Sans'),
+                  text_font_google   = google_font('Roboto'),
+                  code_font_google   = google_font('IBM Plex Mono'),
+                 # COLORES 
+                 base_color = dnmye_colores("cian"),
+                 code_inline_color = dnmye_colores("rosa"), 
+                 inverse_link_color = "#3B4449",
+                 background_color = "#FFFFFF",
+                 title_slide_background_image = "escudo_mintur_blanco.png", 
+                 title_slide_background_position = "95% 5%", 
+                 title_slide_background_size = "200px", footnote_color = "#3B4449", link_color = "3B4449",text_slide_number_font_size = "16px"
+                  
+                 )
+```
+
+
+```{r setup, include=FALSE, eval = TRUE}
+options(htmltools.dir.version = FALSE)
+knitr::opts_chunk$set(
+  fig.width=9, fig.height=3.5, fig.retina=3,
+  # out.width = "100%",
+  # out.height = "90%",
+  cache = FALSE,
+  echo = FALSE,
+  message = FALSE, 
+  warning = FALSE,
+  fig.show = TRUE,
+  hiline = TRUE
+)
+```
+
+
+```{css, echo=FALSE}
+div.my-footer {
+    background-color: white;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    height: 40px;
+    width: 100%;
+}
+div.my-footer span {
+    font-size: 16px;
+    color: #3B4449;
+    position: absolute;
+    left: 15px;
+    bottom: 6px;
+}
+
+
+```
+
+```{r source scripts, include=FALSE}
+
+source(here::here("codigo", "compilacion_fuentes.R"))
+
+
+```
+
+
+---
+layout: true
+
+<div class="my-footer"><span>DIRECCIÓN NACIONAL DE MERCADOS Y ESTADÍSTICA <a href="https://yvera.tur.ar/sinta"> - <b>www.yvera.tur.ar/sinta</a></b></span></div> 
+
+
+---
+
+
+class: middle
+
+
+background-position: 80% 50%
+background-size: 25%
+
+### Juan Gabriel Juara
+
+Coordinador del área de Datos
+
+####  Dirección Nacional de Mercados y Estadística 
+
+#### Ministerio de Turismo y Deportes de la Nación
+
+Sociólogo -  Universidad de Buenos Aires
+
+jgjuara@turismo.gob.ar
+
+---
+
+class: middle, inverse
+
+## Índice Turístico en localidades
+
+### Un instrumento de diagnóstico para la acción estatal en materia de turismo
+
+
+---
+
+```{r}
+knitr::include_graphics(here::here("graficos", "roceta.png"))
+```
+
+---
+
+
+```{r}
+knitr::include_graphics("https://tableros.yvera.tur.ar/recursos/sinta1.png")
+```
+
+---
+
+background-image: url(https://raw.githubusercontent.com/dnme-minturdep/blog/master/_posts/2022-09-08-sintia/sintIA.png)
+background-position: 80% 70%
+background-size: 35%
+
+
+
+<br>
+
+.pull-left[.center[
+## `r emojifont::emoji("robot")` SintIA
+##El bot del Sistema de Información Turística de la Argentina (SINTA)
+]]
+
+---
+
+## ¿Por qué?
+
+<br>
+<br>
+
+--
+
+#### - Elaboración de políticas basadas en evidencia
+
+#### - Transparencia en la toma de decisiones
+
+#### - Continuidad en el tiempo de los criterios de gestión
+
+---
+
+## Ejemplos
+
+<br>
+<br>
+
+--
+
+#### Conocer la cantidad y perfil de turismo interno
+
+#### Conocer la cantidad y estacionalidad del turismo receptivo
+
+#### `Comparar la situación en dos ciudades del país en materia de turismo`
+
+#### `Hacer el seguimiento a algunas ciudades del país en materia de turismo`
+
+
+---
+
+## Operativos estadísticos
+
+<br>
+<br>
+
+#### - Encuesta de Ocupación Hotelera (MinTurDep - INDEC)
+
+#### - Encuesta de Turismo Internacional (MinTurDep - INDEC)
+
+#### - Encuesta de Viajes y Turismo de los Hogares (MinTurDep)
+
+---
+## Encuesta de Ocupación Hotelera
+
+<br>
+
+- Periodicidad: **Mensual**
+- Cobertura geográfica: **49 Ciudades(*)** y **7 Regiones**: Buenos Aires, CABA, Córdoba, Cuyo, Litoral, Norte y Patagonia
+
+*1. Ciudad de Buenos Aires 2. Mar del Plata 3. Bahía Blanca 4. Pinamar 5. Tandil 6. Villa Gesell 7. Ciudad de Córdoba 8. La Falda 9. Mar Chiquita 10. Mina Clavero 11. Río Cuarto 12. Villa Carlos Paz 13. Villa General Belgrano 14. Ciudad de La Rioja 15. Ciudad de Mendoza 16. Malargüe 17. San Rafael 18. Ciudad de San Juan 19. Ciudad de San Luis 20. Villa de Merlo 21. Valle de Uco 22. Ciudad de Santa Fe 23. Gualeguaychú 24. Paraná 25. Posadas 26. Puerto Iguazú 27. Rafaela 28. Rosario 29. Formosa 30. Corrientes 31. Resistencia 32. Cafayate 33. Ciudad de Catamarca 34. Ciudad de Jujuy 35. Ciudad de Salta 36. Ciudad de Santiago del Estero 37. Ciudad de Tucumán 38. Termas de Río Hondo 39. Neuquén 40. El Calafate 41. Las Grutas 42. Puerto Madryn 43. Río Gallegos 44. San Carlos de Bariloche 45. San Martín de los Andes 46. Ushuaia 47. Villa La Angostura 48. Viedma 49. Santa Rosa
+
+#### Conocé más en: https://tableros.yvera.tur.ar/eoh.html 
+
+---
+## Encuesta de Ocupación Hotelera
+
+```{r, out.width='55%', fig.align='center'}
+knitr::include_graphics(here::here("graficos", "eoh_julio23.png"))
+```
+
+---
+
+## Encuesta de Turismo Internacional
+
+<br>
+
+- **Temporalidad**: Operativo mensual continuo (desde el año 2004).
+
+- **Pasos relevados**:
+
+1. Ezeiza y Aeroparque
+2. Aeropuerto Internacional de Córdoba
+3. Puerto de Buenos Aires
+4. Aeropuerto Internacional de Mendoza
+5. Paso internacional Cristo Redentor
+
+Conocé más en https://tableros.yvera.tur.ar/internacional.html
+
+---
+### Encuesta de Turismo Internacional
+
+```{r out.width="40%"}
+eti <- read_file_srv("/srv/DataDNMYE/prueba/ti_eti.xlsx", skip = 1)
+
+eti %>% 
+  filter(`Provincia visitada` != "En viaje") %>% 
+  select(Año, `Provincia visitada`, `Ciudad visitada`, "Turisas no residentes" = `Turistas no residentes*`, "Casos muestrales*" =`Casos Muestrales***`) %>% 
+  mutate(Año = as.character(Año), across(where(is.numeric), as.integer)) %>%
+  head(10) %>% 
+  gt::gt() %>%
+  comunicacion::gt_theme_dnmye()
+
+
+```
+*Si la columna casos muestrales arroja menos de 50 casos, se sugiere reducir la cantidad de variables consideradas, ampliar el periodo temporal, o agrupar localidades/provincias.
+
+
+
+---
+class: middle
+
+## ETI 
+
+### Cantidad de ciudades de destino según rango de casos muestrales
+
+```{r out.width="120%", fig.align='center'}
+eti %>% 
+  janitor::clean_names() %>% 
+  ggplot() +
+  geom_histogram(aes(casos_muestrales), bins = 50) +
+  scale_x_log10() +
+  ggthemes::theme_economist_white(gray_bg = F) +
+  # labs(title = "Cantidad de ciudades según los casos muestrales recoletados") +
+  xlab("Casos muestrales") + ylab("Cantidad de ciudades")
+```
+
+---
+### Encuesta de Viajes y Turismo de los Hogares
+
+<br>
+<br>
+
+#### - Trimestral
+#### - Encuesta a hogares de grandes aglomerados urbanos definidos en la EPH del INDEC
+#### - Estimaciones a nivel `regional` y `nacional`
+
+---
+
+<br>
+<br>
+<br>
+<br>
+
+```{r fig.align='center'}
+knitr::include_graphics(here::here("graficos", "evyth_destinos_bump.png"))
+```
+
+---
+
+## 1° Trimestre 2023
+
+```{r fig.align='center', out.width="60%"}
+knitr::include_graphics(here::here("graficos", "evyth_transporte.png"))
+```
+
+---
+
+## EVyTH 2019 - Informe Anual
+
+<br>
+<br>
+
+#### Porcentaje de turistas por región de destino (negro) y Coeficiente de Variación (rojo) para cada estimación.
+```{r}
+knitr::include_graphics(here::here("graficos", "evyth_anual_2019.png"))
+
+```
+
+Ver en https://www.yvera.tur.ar/sinta/informe/info/encuesta-de-viajes-y-turismo-de-los-hogares-evyth/informes-tecnicos 
+
+---
+class: middle
+
+#### `Comparar la situación en dos ciudades del país en materia de turismo`
+
+#### `Hacer el seguimiento a algunas ciudades del país en materia de turismo`
+
+#### Más en general
+
+## ¿Cómo ver qué sucede y dónde sucede lo que está fuera de las principales ciudades del país?
+
+---
+
+## Un índice turístico a nivel de localidades
+
+<br>
+<br>
+
+- **Granularidad** a nivel de localidades
+
+- Actualización **anual**
+
+- Metodología de **cálculo formal**
+
+
+---
+
+## Un índice turístico a nivel de localidades
+
+<br>
+<br>
+
+#### - Vacancia de indicadores a bajos niveles de **desagregación geográfica**
+
+--
+
+#### - La otra cara del SINTA: los registros administrativos
+
+--
+
+##### - Fuentes de información **diversas**
+
+##### - **Armonización** en un único instrumento
+
+---
+
+## Registros Administrativos en el SINTA
+
+<br>
+<br>
+
+--
+
+#### - Padrón Único Nacional de Alojamientos
+
+#### - Administración Nacional de Aviación Civil
+
+#### - Comisión Nacional de Regulación del Transporte
+
+#### - AFIP / SIPA (vía Centro de Estudios de la Producción - Min. de Eco.)
+
+---
+
+## Registros Administrativos en el SINTA
+
+<br>
+<br>
+
+#### - Alojamientos
+
+#### - Conectividad Áerea
+
+#### - Transporte Terrestre en Micros de Media y Larga Distancia
+
+#### - Empleo Registrado
+
+---
+
+## Padrón Único Nacional de Alojamientos
+
+<br>
+<br>
+
+#### Registros municipales y provinciales de alojamientos + Padrón Encuesta Ocupación Hotelera
+
+#### Anual
+
+#### Plazas, establecimientos, tipos de establecimientos
+
+#### Alojamientos colectivos
+
+---
+
+## Padrón Único Nacional de Alojamientos
+
+### Pasos
+
+#### 1) Comparación interanual de los registros entregados
+
+#### 2) Limpieza y consolidación de nombres de localidades y departamentos
+
+#### 3) Consistencia entre diferentes registros que cubren misma geografía
+
+--
+
+**Más de 20.000 registros que comprenden 1270 localidades (PUNA 2022)**
+
+
+---
+
+## Padrón Único Nacional de Alojamientos
+
+
+```{r out.width="100%", fig.align='center'}
+knitr::include_graphics(here::here("graficos", "puna_tablero.png"))
+```
+
+---
+
+## Padrón Único Nacional de Alojamientos
+
+<br>
+<br>
+
+#### - Permite tener un indicador importante de localidades no cubiertas por la EOH
+
+#### - No conlleva errores muestrales
+(Aunque puede tener sesgos o problemas de subregistro)
+
+#### - ¿Pero dónde están espacialmente esas localidades?
+
+---
+
+## Padrón Único Nacional de Alojamientos
+
+### Pasos
+
+#### 1) Comparación interanual de los registros entregados
+
+#### 2) Limpieza y consolidación de nombres de localidades y departamentos
+
+#### 3) Consistencia entre diferentes registros que cubren misma geografía
+
+--
+
+#### `4) Geolocalizando el PUNA: Correspondencia entre PUNA y la Base de Asentamientos Humanos de la República Argentina`
+
+---
+## Padrón Único Nacional de Alojamientos
+
+**1173 localidades geolocalizadas con BAHRA**
+
+```{r leaflet puna, out.height="60%", out.width="80%", fig.align='center'}
+
+palPzas <- colorNumeric(palette = "viridis", domain = log(puna$plazas+1))
+
+puna %>% 
+  select(localidad, plazas, establecimientos, geom) %>%
+  filter(! st_is_empty(geom)) %>% 
+  mutate(lon = unlist(map(geom,1)),
+           lat = unlist(map(geom,2))) %>% 
+  mutate(etiqueta  = glue("<b>{toupper(localidad)}</b><br>Plazas: {plazas}<br>Establecimientos:{establecimientos}")) %>% 
+  st_drop_geometry() %>% 
+  leaflet() %>% 
+  addArgTiles() %>% 
+  addCircles(color = ~ palPzas(log(plazas+1)),
+             label = ~ lapply(etiqueta, HTML),
+             popup = ~ lapply(etiqueta, HTML), opacity = 1)
+
+```
+
+---
+
+## Clasificación de localidades según cantidad <br>de plazas de alojamiento (PUNA)
+
+#### Marzo 2023
+
+--
+
+.pull-left[
+
+- Única fuente (PUNA)
+
+- Unidimensional
+
+- Enfocado en la oferta
+
+]
+    
+.pull-right[
+  <img src="graficos/dt8.png" style="width: 90%" />
+<br>
+https://biblioteca.yvera.tur.ar/
+
+]
+
+---
+
+```{r out.width="40%", fig.align='center'}
+knitr::include_graphics(here::here("graficos", "mapita.png"))
+```
+
+
+---
+
+## Conectividad Aérea
+
+<br>
+<br>
+
+--
+
+#### Registros de movimientos de despegues y aterrizajes de la Administración Nacional de Aviación Civil a partir de Sistema Integrado de Aviación Civil
+
+#### Mensual
+
+#### Pasajeros, asientos y movimientos por origen y destino a nivel diario
+
+---
+
+## Conectividad Aérea
+
+### Pasos
+
+1) Selección de registros de movimientos aerocomerciales civiles de empresas de transporte de pasajeros de relevancia turística
+
+2) Corrección de inconsistencias: movimientos sin pasajeros o con más pasajeros que asientos.
+
+3) Geolocalización de aeropuertos en Argentina
+
+---
+## Conectividad Aérea - Análisis por aeropuertos
+
+```{r leaflet aeropuertos, out.height="60%", out.width="80%", fig.align='center'}
+
+aeropuertos <- read_file_srv("/srv/DataDNMYE/prueba/puna_aeropuertos_osrm.rds")
+
+aeropuertos <- aeropuertos %>% 
+  distinct(aeropuerto_etiqueta_anac, rutas_cabotaje, rutas_int, media_pax_cabotaje, media_pax_internacional, geometry) 
+
+aeropuertos %>% st_as_sf(sf_column_name = "geometry") %>%  
+   mutate(lon = unlist(map(geometry,1)),
+           lat = unlist(map(geometry,2))) %>% 
+  mutate(etiqueta  = glue("<b>{toupper(aeropuerto_etiqueta_anac)}</b><br>Rutas Cabotaje: {lbl_int(rutas_cabotaje)}<br>Media Pax Cabotaje:{lbl_int(media_pax_cabotaje)}<br>Rutas Internacionales: {lbl_int(rutas_int)}<br>Media Pax Internacional:{lbl_int(media_pax_internacional)}")) %>% 
+  mutate(size  = sqrt(media_pax_cabotaje+media_pax_internacional)*100) %>% 
+  st_drop_geometry() %>% 
+  leaflet() %>% 
+  addArgTiles() %>% 
+    addCircles(label = ~ lapply(etiqueta, HTML), popup = ~ lapply(etiqueta, HTML), radius = ~ size)
+  
+
+```
+
+---
+## Cruce datos ANAC - PUNA
+
+<br>
+<br>
+
+1) Matriz de distancias lineales 1173 localidades x 41 aeropuertos
+
+2) Seleccionamos los 3 aeropuertos más cercanos a cada localidad
+
+3) Estimamos distancia de viaje en auto y nos quedamos con los dos aeropuertos que estuvieran a menos 300 km
+
+--
+
+4) Calculamos un indice de conectividad aérea de cabotaje y uno de conectividad aérea internacional para cada localidad
+
+
+$$rescale(1/2*((1-rescale(log(tiempo_1)))*rescale(log(mediapasajeros_1*medianarutas_1))+$$  $$(1-rescale(log(tiempo_2)))*rescale(log(mediapasajeros_2*medianarutas_2))))$$
+
+
+---
+### Indice de conectividad aérea de localidades 
+
+```{r out.height="60%", out.width="80%", fig.align='center'}
+
+palIndiceAero <- colorNumeric(palette = "viridis", domain = 0:1)
+
+puna_union %>% 
+  mutate(indice_aereo = (cabotaje+internacional)/2,
+         etiqueta  = glue("<b>{toupper(localidad)}</b><br>Indice Cabotaje: {lbl_int(cabotaje*100)}<br>Indice Internacional:{lbl_int(internacional*100)}")) %>% 
+   filter(!st_is_empty(geom))  %>% 
+   mutate(lon = unlist(map(geom,1)),
+           lat = unlist(map(geom,2))) %>% 
+  st_drop_geometry() %>% 
+  leaflet() %>% 
+  addArgTiles() %>% 
+    addCircles(label = ~ lapply(etiqueta, HTML),
+               popup = ~ lapply(etiqueta, HTML),
+               color = ~ palIndiceAero(cabotaje))
+
+```
+
+
+
+---
+
+## Transporte Terrestre
+
+### Micros de Media y Larga Distancia (Insumo nuevo!)
+
+--
+
+#### Registros de cantidad de pasajeros por par origen-destino para cada servicio registrado ante la Comisión Nacional de Regulación del Transporte
+
+#### Mensual
+
+#### Pasajeros, asientos y movimientos por origen y destino a nivel diario
+
+---
+
+## Transporte Terrestre
+
+### Pasos
+
+#### 1) Eliminación de duplicaciones
+
+#### 2) Corrección de inconsistencias: movimientos sin pasajeros o con más pasajeros que asientos.
+
+#### 3) Limpieza de nombres de lugar de origen y destino (el dato venía como texto libre!). Ej. "San martin", "gral san martin, "sn mrtin", "cordoba", "cba", "Capital (Córdoba), "cordob", etc.
+
+--
+
+Antes de la limpieza:  3801 nombres de lugares diferentes
+Después de la limpieza: 2342 nombres de lugares diferentes
+
+--
+
+#### 4) Geocodificación de los nombres de lugares CNRT
+
+---
+
+## Transporte Terrestre
+
+<br>
+```{r out.height="60%", out.width="80%", fig.align='center'}
+
+cnrt_osm <- read_file_srv("/srv/DataDNMYE/capas_sig/dict_cnrt_osm.rds")
+
+palPaxCnrt <- colorNumeric(palette = "viridis", domain = cnrt_osm$pax)
+
+cnrt_osm %>% 
+  mutate(
+   etiqueta  = glue("<b>{toupper(loc_clean)}</b><br>Pax: {lbl_int(pax)}")) %>% 
+   filter(!is.na(lat))  %>% 
+  st_drop_geometry() %>% 
+  leaflet() %>% 
+  addArgTiles() %>% 
+    addCircles(label = ~ lapply(etiqueta, HTML),
+               popup = ~ lapply(etiqueta, HTML),
+               radius = ~ sqrt(pax)*10)
+```
+
+---
+
+
+## Transporte Terrestre
+
+### Pasos
+
+#### 1) Eliminación de duplicaciones
+
+#### 2) Corrección de inconsistencias: movimientos sin pasajeros o con más pasajeros que asientos.
+
+#### 3) Limpieza de nombres de lugar de origen y destino (el dato venía como texto libre!). Ej. "San martin", "gral san martin, "sn mrtin", "cordoba", "cba", "Capital (Córdoba), "cordob", etc.
+
+--
+
+Antes de la limpieza:  3801 nombres de lugares diferentes
+Después de la limpieza: 2342 nombres de lugares diferentes
+
+--
+
+#### 4) Geocodificación de los nombres de lugares CNRT
+
+**5) Se asignó a cada localidad las terminales de CNRT que estuvieran a menos de 15 km lineales del centroide de la localidad**
+
+---
+## Empleo Registrado
+
+<b>
+
+#### Dato preprocesado por CEP XXI a partir de AFIP y SIPA
+
+#### Mensual
+
+#### A nivel departamento y CLAE a 2 dígitos
+
+#### Puestos de trabajo
+
+--
+
+- **Se tomaron solamente los puestos de trabajo correspondiente a los CLAE de gastronomía, servicios de alojamiento y agencias de viaje**
+
+
+- **Se usó el dato a nivel departamento asignando igual valor a todas las localidades dentro del departamento**
+
+---
+
+## Indice e indicadores por dimensión
+
+<b>
+
+- **Las variables de plazas, establecimientos y pasajeros de micros de media y larga distancia se transformaron a escala logarítmica**
+
+- **Todas las variables se re-escalaron por min-max entre 0 y 1.**
+
+- **Se calculó un indice general como el promedio del puntaje de las dimensiones:**
+-- Alojamiento: plazas/2+establecimientos/2
+-- Transporte Terrestre: Pax CNRT
+-- Transporte Aereo: Indice Cabotaje/2 + Indice Internacional/2
+-- Empleo Registrado: Puestos RCT/2 + Prorción de Puestos RCT/2
+
+- **Facilidad de lectura, igual peso a todas las dimensiones, interpretación sencilla de la descomposición en dimensiones**
+
+
+$$indiceturismo = (plazas/2 + establecimientos/2 + paxCnrt + cabotaje/2  + $$ 
+$$internacional/2 + puestosRCTprop/2+puestosRCT/2)/4$$
+
+---
+
+## Indice e indicadores por dimensión
+
+<br>
+
+```{r out.height="60%", out.width="80%", fig.align='center'}
+
+palindices <- colorNumeric(palette = "viridis", domain = 0:1)
+
+puna_union %>% 
+  ungroup() %>% 
+  mutate(
+   etiqueta  = glue("<b>{toupper(localidad)}</b><br>Indice Total: {lbl_percent(indice_turismo)}<br>Alojamiento: {lbl_percent((plazas+establecimientos)/2)}<br>Terrestre: {lbl_percent(pax_cnrt)}<br>Aéreo: {lbl_percent((cabotaje+internacional)/2)}<br>Empleo: {lbl_percent((puestos_rct_prop+puestos_rct)/2)}")) %>% 
+  filter(!st_is_empty(geom)) %>% 
+   mutate(lon = unlist(map(geom,1)),
+           lat = unlist(map(geom,2))) %>% 
+   filter(!is.na(lat))  %>% 
+  st_drop_geometry() %>% 
+  leaflet() %>% 
+  addArgTiles() %>% 
+    addCircles(label = ~ lapply(etiqueta, HTML),
+               popup = ~ lapply(etiqueta, HTML),
+               color = ~ palindices(indice_turismo), group = "Total") %>% 
+      addCircles(label = ~ lapply(etiqueta, HTML),
+               popup = ~ lapply(etiqueta, HTML),
+               color = ~ palindices((plazas+establecimientos)/2),
+               group =  "Alojamiento") %>% 
+      addCircles(label = ~ lapply(etiqueta, HTML),
+               popup = ~ lapply(etiqueta, HTML),
+               color = ~ palindices(pax_cnrt),
+               group =  "Terrestre") %>% 
+        addCircles(label = ~ lapply(etiqueta, HTML),
+               popup = ~ lapply(etiqueta, HTML),
+               color = ~ palindices((cabotaje+internacional)/2),
+               group =  "Aéreo") %>% 
+  addCircles(label = ~ lapply(etiqueta, HTML),
+               popup = ~ lapply(etiqueta, HTML),
+               color = ~ palindices((puestos_rct_prop+puestos_rct)/2),
+               group =  "Empleo") %>% 
+  addLayersControl(
+    baseGroups = c("Total", "Alojamiento", "Terrestre", "Aéreo", "Empleo"),
+    options = layersControlOptions(collapsed = FALSE)
+  )
+  
+  
+
+```
+
+---
+
+## Limitaciones 
+
+<br>
+<br>
+
+- **Efecto del tamaño de población**
+
+- **Influencia de falacia ecológica en grandes aglomerados urbanos**
+
+- **Dimensiones e indicadores acotados a la disponibilidad de datos** (por ejemplo, no contempla el transporte automóvil)
+
+- **Definiciones y unidades de análisis de las fuentes** (un pasajero no equivale a un turista)
+
+---
+
+### ¿Cómo seguimos?
+
+<br>
+<br>
+
+Índice sujeto a revisiones y actualizaciones metodológicas:
+<br>
+
+- Sumar dimensiones e indicadores: oferta de atractivos turísticos, calidad turística, etc.
+
+- Incorporar indicadores "no turísticos" (ej: calidad del agua, infraestructura en salud, etc.)
+
+- Nuevas fuentes de datos (censo, *big data*)
+
+---
+
+class:  center, middle, inverse
+
+# ¡Muchas gracias!
+
+##[**`yvera.tur.ar/sinta`**](https://www.yvera.tur.ar/sinta/)
+
+---
+
+## Anexo: correlación entre plazas e índice
+
+<br>
+```{r fig.align='center', out.width="80%"}
+
+ggplot(data = puna_union, aes(plazas, indice_turismo)) +
+  geom_point(color = comunicacion::dnmye_colores("gris medio"),
+             alpha = 0.8, size = 1.5) +
+  geom_smooth() +
+  labs(x = "Plazas", y = "Indice turistico") +
+  theme_minimal()
+```
+
+```{r out.width="80%", include=FALSE}
+# data <- puna_union %>% select(plazas, establecimientos, pax_cnrt, cabotaje, internacional, puestos_rct_prop, puestos_rct) %>% st_drop_geometry()
+# 
+# cor_graph <- pairs(data,
+#        labels = colnames(data),  # Nombres de las variables
+#       pch = 21,                 # Símbolo pch
+#       bg = comunicacion::dnmye_colores("purpura"),  # Color de fondo del símbolo
+#       col = comunicacion::dnmye_colores("purpura"), # Color de borde del símbolo
+#       main = "Indicadores",            # Título del gráfico
+#       row1attop = TRUE,         # Si FALSE, cambia la dirección de la diagonal
+#       gap = 1,                  # Distancia entre subplots
+#       cex.labels = NULL,        # Tamaño del texto de la diagonal
+#       font.labels = 1, panel = panel.smooth)
+# 
+# ggsave(cor_graph, filename = "graficos/cor_graph.png", width = 12, height = 10)
+```
+
+---
