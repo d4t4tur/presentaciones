@@ -133,6 +133,28 @@ layout: true
 - *Software* basado en código abierto, libre y gratuito aplicado a la gestión pública.
 
 ---
+## Funcionamiento
+
+<br>
+
+- Carga de archivos .pdf y .xlsx: póliza, declaración jurada y registro interno
+
+- Identificación de campos claves
+
+- Comparación de campos
+
+- Notificación al user
+
+- Exploración de los campos
+
+---
+
+## Interfaz
+
+![](imgs/app_polizas1.png)
+
+---
+
 class:inverse, middle
 
 # Shiny App: Módulos
@@ -148,8 +170,13 @@ class:inverse, middle
 ```
 fileInput(inputId = ns("poliza"), label = "Poliza", accept = ".pdf")
 ```
+--
 
 2) Identificar la aseguradora
+
+ - Existen múltiples aseguradoras con distintos formatos de registro por lo que se realizaron módulos específicos para las más importantes.
+ 
+--
 
 3) Ejecutar el módulo *ad hoc*
 
@@ -222,13 +249,18 @@ return(df_poliza)
 ```
 fileInput(inputId = ns("djc"), label = "Declaracion Jurada C", accept = ".pdf")
 ```
+--
 
 2) Ejecutar único módulo
 
  - Identificar local virtual vs físico
  - Identificar persona jurídica vs física
 
+--
+
 3) Extraer campos de control: regex
+
+--
 
 4) Armar tabla de salida (+30 campos)
 
@@ -236,15 +268,18 @@ fileInput(inputId = ns("djc"), label = "Declaracion Jurada C", accept = ".pdf")
 
 ## RLM
 
-<br>
+*RLM: Registro Legajo Multipropósito
 
 1) Levantar excel de registro
 
 ```
 fileInput(inputId = ns("rlm"), label = "RLM", accept = c(".xlsx",".xls"))
 ```
+--
 
 2) Filtrar agencia y seleccionar campos
+
+--
 
 3) Armar tabla de salida
 ```
@@ -283,7 +318,29 @@ rlm_df <- reactive({
 #Ejemplo de chequeo
 check_legajo <- df_poliza()$legajo == df_djc()$legajo
 ```
+
 ---
+
+## Póliza vs Declaración Jurada
+
+![](imgs/app_polizas2.png)
+
+---
+## RLM vs Declaración Jurada
+
+![](imgs/app_polizas4.png)
+---
+
+<br>
+
+Además de los chequeos se ofrecen tablas interactivas para explorar los campos
+
+<br>
+
+![](imgs/app_polizas3.png)
+
+---
+
 class:inverse, middle
 
 #¡La app funciona!
@@ -316,20 +373,24 @@ class:inverse, middle
 
 #### - Encapsulamiento: [DesktopDeployR](https://github.com/wleepang/DesktopDeployR)
 
-##### - No requiere instalaciones (R portable)
+ ##### - No requiere instalaciones (R portable)
 
-##### - Se comparte un archivo .zip
+ ##### - Se comparte un archivo .zip
+
+--
 
 #### - Acceso directo
 
-##### - El user solo hace doble *click*
+ ##### - El user solo hace doble *click*
+
+--
 
 #### - Funciona en *Windows*
 
 ---
 class:inverse, middle
 
-**La app resultó en un proceso mucho más eficiente que el flujo de trabajo manual, reduciendo en tres meses el periódo de procesamiento.**
+## La app resultó en un proceso mucho más eficiente que el flujo de trabajo manual, reduciendo en tres meses el período de procesamiento.
 
 ---
 

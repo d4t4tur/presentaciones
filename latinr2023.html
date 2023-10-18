@@ -126,8 +126,6 @@ layout: true
 
 ## App
 
-&lt;br&gt;
-
 ### Problemática
 
 - La Dirección Nacional de Agencias de Viajes tiene como función principal registrar y controlar la actividad de las agencias de viajes. El trabajo manual genera demoras excesivas haciendo ineficiente el seguimiento y administración de los trámites.
@@ -141,9 +139,31 @@ layout: true
 - *Software* basado en código abierto, libre y gratuito aplicado a la gestión pública.
 
 ---
+## Funcionamiento
+
+&lt;br&gt;
+
+- Carga de archivos .pdf y .xlsx: póliza, declaración jurada y registro interno
+
+- Identificación de campos claves
+
+- Comparación de campos
+
+- Notificación al user
+
+- Exploración de los campos
+
+---
+
+## Interfaz
+
+![](imgs/app_polizas1.png)
+
+---
+
 class:inverse, middle
 
-Shiny App: Módulos
+# Shiny App: Módulos
 
 ---
 
@@ -156,17 +176,20 @@ Shiny App: Módulos
 ```
 fileInput(inputId = ns("poliza"), label = "Poliza", accept = ".pdf")
 ```
+--
 
 2) Identificar la aseguradora
+
+ - Existen múltiples aseguradoras con distintos formatos de registro por lo que se realizaron módulos específicos para las más importantes.
+ 
+--
 
 3) Ejecutar el módulo *ad hoc*
 
 ```
 file &lt;- input$poliza
 
-check &lt;- pdftools::pdf_text(file) %&gt;% 
-  paste(collapse = ",") %&gt;% 
-  remover_tildes()
+check &lt;- pdftools::pdf_text(file) %&gt;% limpieza()
 
       if (str_detect(check, "Aseguradora1")) {
 
@@ -186,6 +209,8 @@ check &lt;- pdftools::pdf_text(file) %&gt;%
 &lt;br&gt;
 
 4) Extraer campos de control: regex
+
+- Ejemplo:
 
 ```
   ### datos
@@ -207,9 +232,14 @@ check &lt;- pdftools::pdf_text(file) %&gt;%
 
 5) Armar tabla de salida
 
+- 14 campos
+
 ```
-df_poliza &lt;- tibble(legajo, cuit, designacion_comercial, razon_social,
-categoria, domicilio, cp, suma_num, fecha_inicio_corta, fecha_fin_corta, if_poliza, nombre_asegurado, cuit_mintur, domicilio_mintur)
+df_poliza &lt;- tibble(legajo, cuit, designacion_comercial, 
+razon_social, categoria, domicilio, 
+cp, suma_num, fecha_inicio_corta, 
+fecha_fin_corta, if_poliza, nombre_asegurado, 
+cuit_mintur, domicilio_mintur)
 
 return(df_poliza)
 
@@ -225,13 +255,18 @@ return(df_poliza)
 ```
 fileInput(inputId = ns("djc"), label = "Declaracion Jurada C", accept = ".pdf")
 ```
+--
 
 2) Ejecutar único módulo
 
  - Identificar local virtual vs físico
  - Identificar persona jurídica vs física
 
+--
+
 3) Extraer campos de control: regex
+
+--
 
 4) Armar tabla de salida (+30 campos)
 
@@ -239,15 +274,18 @@ fileInput(inputId = ns("djc"), label = "Declaracion Jurada C", accept = ".pdf")
 
 ## RLM
 
-&lt;br&gt;
+*RLM: Registro Legajo Multipropósito
 
 1) Levantar excel de registro
 
 ```
 fileInput(inputId = ns("rlm"), label = "RLM", accept = c(".xlsx",".xls"))
 ```
+--
 
 2) Filtrar agencia y seleccionar campos
+
+--
 
 3) Armar tabla de salida
 ```
@@ -286,15 +324,36 @@ rlm_df &lt;- reactive({
 #Ejemplo de chequeo
 check_legajo &lt;- df_poliza()$legajo == df_djc()$legajo
 ```
+
 ---
+
+## Póliza vs Declaración Jurada
+
+![](imgs/app_polizas2.png)
+
+---
+## RLM vs Declaración Jurada
+
+![](imgs/app_polizas4.png)
+---
+
+&lt;br&gt;
+
+Además de los chequeos se ofrecen tablas interactivas para explorar los campos
+
+&lt;br&gt;
+
+![](imgs/app_polizas3.png)
+
+---
+
 class:inverse, middle
 
-¡La app funciona!
+#¡La app funciona!
 
-...
+#...
 
-
-Pero, ¿cómo la disponibilizamos?
+#Pero, ¿cómo la disponibilizamos?
 
 ---
 
@@ -318,22 +377,26 @@ Pero, ¿cómo la disponibilizamos?
 
 ### Características
 
-- Encapsulamiento: [DesktopDeployR](https://github.com/wleepang/DesktopDeployR)
+#### - Encapsulamiento: [DesktopDeployR](https://github.com/wleepang/DesktopDeployR)
 
--- No requiere instalaciones (R portable)
+ ##### - No requiere instalaciones (R portable)
 
--- Se comparte un archivo .zip
+ ##### - Se comparte un archivo .zip
 
-- Acceso directo
+--
 
--- El user solo hace doble *click*
+#### - Acceso directo
 
-- Funciona en *Windows*
+ ##### - El user solo hace doble *click*
+
+--
+
+#### - Funciona en *Windows*
 
 ---
 class:inverse, middle
 
-**La app resultó en un proceso mucho más eficiente que el flujo de trabajo manual, reduciendo en tres meses el periódo de procesamiento.**
+## La app resultó en un proceso mucho más eficiente que el flujo de trabajo manual, reduciendo en tres meses el período de procesamiento.
 
 ---
 
