@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Shiny para useRs que no usan R</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Dirección Nacional de Mercados y Estadística" />
+    <script src="latinr2023_files/header-attrs/header-attrs.js"></script>
+    <script src="latinr2023_files/xaringanExtra-progressBar/progress-bar.js"></script>
+    <script src="latinr2023_files/fabric/fabric.min.js"></script>
+    <link href="latinr2023_files/xaringanExtra-scribble/scribble.css" rel="stylesheet" />
+    <script src="latinr2023_files/xaringanExtra-scribble/scribble.js"></script>
+    <script>document.addEventListener('DOMContentLoaded', function() { window.xeScribble = new Scribble({"pen_color":["#FF0000"],"pen_size":3,"eraser_size":30,"palette":[]}) })</script>
+    <link href="latinr2023_files/tile-view/tile-view.css" rel="stylesheet" />
+    <script src="latinr2023_files/tile-view/tile-view.js"></script>
+    <script src="latinr2023_files/xaringanExtra-webcam/webcam.js"></script>
+    <script id="xaringanExtra-webcam-options" type="application/json">{"width":"200","height":"200","margin":"1em"}</script>
+    <link rel="stylesheet" href="footer_header.css" type="text/css" />
+    <link rel="stylesheet" href="dnmye_theme.css" type="text/css" />
+    <link rel="stylesheet" href="col_width.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+
+
+class:inverse, middle
+
+background-image: url(imgs/escudo_mintur_blanco.png)
+background-position: 95% 95%
+background-size: 30%
+
+.pull-left[
+##  LatinR 2022
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+]
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+
+
+
+### Shiny para useRs que no usan R
+
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+
+
+#### Dirección Nacional de Mercados y Estadística&lt;br&gt;Subsecretaría de Desarrollo Estratégico
+
+
+<div>
+<style type="text/css">.xaringan-extra-logo {
+width: 20%;
+height: 20%;
+z-index: 0;
+background-image: url(imgs/escudo_mintur_color.png);
+background-size: contain;
+background-repeat: no-repeat;
+position: absolute;
+top:1em;right:1em;
+}
+</style>
+<script>(function () {
+  let tries = 0
+  function addLogo () {
+    if (typeof slideshow === 'undefined') {
+      tries += 1
+      if (tries < 10) {
+        setTimeout(addLogo, 100)
+      }
+    } else {
+      document.querySelectorAll('.remark-slide-content:not(.title-slide):not(.inverse):not(.hide_logo)')
+        .forEach(function (slide) {
+          const logo = document.createElement('div')
+          logo.classList = 'xaringan-extra-logo'
+          logo.href = null
+          slide.appendChild(logo)
+        })
+    }
+  }
+  document.addEventListener('DOMContentLoaded', addLogo)
+})()</script>
+</div><style>.xe__progress-bar__container {
+  top:0;
+  opacity: 1;
+  position:absolute;
+  right:0;
+  left: 0;
+}
+.xe__progress-bar {
+  height: 0.25em;
+  background-color: #37BBED;
+  width: calc(var(--slide-current) / var(--slide-total) * 100%);
+}
+.remark-visible .xe__progress-bar {
+  animation: xe__progress-bar__wipe 200ms forwards;
+  animation-timing-function: cubic-bezier(.86,0,.07,1);
+}
+@keyframes xe__progress-bar__wipe {
+  0% { width: calc(var(--slide-previous) / var(--slide-total) * 100%); }
+  100% { width: calc(var(--slide-current) / var(--slide-total) * 100%); }
+}</style>
+
+
+
+
+
+---
+layout: true
+
+&lt;div class="my-footer"&gt;&lt;span&gt;DIRECCIÓN NACIONAL DE MERCADOS Y ESTADÍSTICA &lt;a href="https://yvera.tur.ar/sinta"&gt; - &lt;b&gt;www.yvera.tur.ar/sinta&lt;/a&gt;&lt;/b&gt;&lt;/span&gt;&lt;/div&gt; 
+
+---
+
+![](imgs/utdt/roceta.png)
+---
+
+## App
+
+&lt;br&gt;
+
+### Problemática
+
+- La Dirección Nacional de Agencias de Viajes tiene como función principal registrar y controlar la actividad de las agencias de viajes. El trabajo manual genera demoras excesivas haciendo ineficiente el seguimiento y administración de los trámites.
+
+### Propuesta
+
+- Diseñar una Shiny App que baje el costo de procesamiento de la documentación y acelere la gestión de control necesaria.
+
+- Utilizable por users sin conocimiento de R.
+
+- *Software* basado en código abierto, libre y gratuito aplicado a la gestión pública.
+
+---
+class:inverse, middle
+
+Shiny App: Módulos
+
+---
+
+## Póliza
+
+&lt;br&gt;
+
+1) Levantar el PDF
+
+```
+fileInput(inputId = ns("poliza"), label = "Poliza", accept = ".pdf")
+```
+
+2) Identificar la aseguradora
+
+3) Ejecutar el módulo *ad hoc*
+
+```
+file &lt;- input$poliza
+
+check &lt;- pdftools::pdf_text(file) %&gt;% 
+  paste(collapse = ",") %&gt;% 
+  remover_tildes()
+
+      if (str_detect(check, "Aseguradora1")) {
+
+        source("modules/poliza_aseguradora1.R", encoding = "UTF-8")
+
+        poliza_df &lt;- poliza_aseguradora1(file$datapath)
+
+      } else if (...){
+        ...
+      }
+    
+```
+---
+
+## Módulo póliza
+
+&lt;br&gt;
+
+4) Extraer campos de control: regex
+
+```
+  ### datos
+  datos_asegurado &lt;- str_extract(poliza, "(?&lt;=asegura a:).*(?=obligado a efectuarle:)")
+
+  ### nombre
+  nombre_asegurado &lt;- str_extract(datos_asegurado, ".*(?=CUIT)")
+  
+  ### codigo postal
+  patron_cp &lt;- "(?&lt;=CP\\().{4,8}(?=\\))"
+  cp &lt;- str_extract(datos_asegurado, patron_cp)
+  
+```
+---
+
+## Módulo póliza
+
+&lt;br&gt;
+
+5) Armar tabla de salida
+
+```
+df_poliza &lt;- tibble(legajo, cuit, designacion_comercial, razon_social,
+categoria, domicilio, cp, suma_num, fecha_inicio_corta, fecha_fin_corta, if_poliza, nombre_asegurado, cuit_mintur, domicilio_mintur)
+
+return(df_poliza)
+
+```
+---
+
+## Declaración Jurada
+
+&lt;br&gt;
+
+1) Levantar el PDF
+
+```
+fileInput(inputId = ns("djc"), label = "Declaracion Jurada C", accept = ".pdf")
+```
+
+2) Ejecutar único módulo
+
+ - Identificar local virtual vs físico
+ - Identificar persona jurídica vs física
+
+3) Extraer campos de control: regex
+
+4) Armar tabla de salida (+30 campos)
+
+---
+
+## RLM
+
+&lt;br&gt;
+
+1) Levantar excel de registro
+
+```
+fileInput(inputId = ns("rlm"), label = "RLM", accept = c(".xlsx",".xls"))
+```
+
+2) Filtrar agencia y seleccionar campos
+
+3) Armar tabla de salida
+```
+rlm_df &lt;- reactive({
+
+      rlm &lt;- read_excel(file$datapath) %&gt;%
+        janitor::clean_names() %&gt;%
+        filter(legajo == Legajo) %&gt;%
+        select(legajo, categoria, designacion_comercial 
+               razon_social, cuit, apellido, nombre,
+               matricula, prefijo, telefono, mail)
+
+    })
+
+    return(list(data_rlm = reactive(rlm_df())))
+    
+```
+
+---
+
+## Chequeos
+
+&lt;br&gt;
+
+### Pestaña **Pólizas - DD JJ**
+
+- Póliza vs Declaración Jurada
+
+
+### Pestaña **RLM - DD JJ**
+
+- RLM vs Declaración Jurada
+
+
+```
+#Ejemplo de chequeo
+check_legajo &lt;- df_poliza()$legajo == df_djc()$legajo
+```
+---
+class:inverse, middle
+
+¡La app funciona!
+
+...
+
+
+Pero, ¿cómo la disponibilizamos?
+
+---
+
+## De shiny a escritorio
+
+&lt;br&gt;
+
+### Obstáculos
+
+- Users sin conocimiento de R
+
+- Escalabilidad: múltiples users
+
+- Servidor limitado
+
+---
+
+## De shiny a escritorio
+
+&lt;br&gt;
+
+### Características
+
+- Encapsulamiento: [DesktopDeployR](https://github.com/wleepang/DesktopDeployR)
+
+-- No requiere instalaciones (R portable)
+
+-- Se comparte un archivo .zip
+
+- Acceso directo
+
+-- El user solo hace doble *click*
+
+- Funciona en *Windows*
+
+---
+class:inverse, middle
+
+**La app resultó en un proceso mucho más eficiente que el flujo de trabajo manual, reduciendo en tres meses el periódo de procesamiento.**
+
+---
+
+class:inverse, middle
+
+background-image: url(imgs/escudo_mintur_blanco.png)
+background-position: 95% 80%
+background-size: 25%
+
+## Gracias! 
+
+https://www.yvera.tur.ar/sinta/
+
+https://github.com/dnme-minturdep
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"slideNumberFormat": "%current%",
+"highlightStyle": "github",
+"highlightLines": true,
+"ratio": "16:9",
+"countIncrementalSlides": true
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+// add `data-at-shortcutkeys` attribute to <body> to resolve conflicts with JAWS
+// screen reader (see PR #262)
+(function(d) {
+  let res = {};
+  d.querySelectorAll('.remark-help-content table tr').forEach(tr => {
+    const t = tr.querySelector('td:nth-child(2)').innerText;
+    tr.querySelectorAll('td:first-child .key').forEach(key => {
+      const k = key.innerText;
+      if (/^[a-z]$/.test(k)) res[k] = t;  // must be a single letter (key)
+    });
+  });
+  d.body.setAttribute('data-at-shortcutkeys', JSON.stringify(res));
+})(document);
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
