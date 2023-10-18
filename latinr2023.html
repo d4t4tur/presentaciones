@@ -29,7 +29,7 @@ background-position: 95% 95%
 background-size: 30%
 
 .pull-left[
-##  LatinR 2022
+##  LatinR 2023
 &lt;br&gt;
 &lt;br&gt;
 &lt;br&gt;
@@ -123,18 +123,24 @@ layout: true
 
 ![](imgs/utdt/roceta.png)
 ---
+### 🔗 [Conociendo a las estrellas del universo R](https://ropensci.org/es/blog/2022/11/23/r-universe-stars-1-es/)
 
+ ![](imgs/ropensci_tuq.png)
+
+---
 ## App
 
 ### Problemática
 
 - La Dirección Nacional de Agencias de Viajes tiene como función principal registrar y controlar la actividad de las agencias de viajes. El trabajo manual genera demoras excesivas haciendo ineficiente el seguimiento y administración de los trámites.
 
+--
+
 ### Propuesta
 
-- Diseñar una Shiny App que baje el costo de procesamiento de la documentación y acelere la gestión de control necesaria.
+- Diseñar una `Shiny App` que baje el costo de procesamiento de la documentación y acelere la gestión de control necesaria.
 
-- Utilizable por users sin conocimiento de R.
+- Utilizable por users sin conocimiento de `R`.
 
 - *Software* basado en código abierto, libre y gratuito aplicado a la gestión pública.
 
@@ -143,7 +149,7 @@ layout: true
 
 &lt;br&gt;
 
-- Carga de archivos .pdf y .xlsx: póliza, declaración jurada y registro interno
+- Carga de archivos `.pdf` y `.xlsx`: póliza, declaración jurada y registro interno
 
 - Identificación de campos claves
 
@@ -163,7 +169,7 @@ layout: true
 
 class:inverse, middle
 
-# Shiny App: Módulos
+#` Shiny App`: Módulos
 
 ---
 
@@ -208,7 +214,7 @@ check &lt;- pdftools::pdf_text(file) %&gt;% limpieza()
 
 &lt;br&gt;
 
-4) Extraer campos de control: regex
+4) Extraer campos de control: `regex`
 
 - Ejemplo:
 
@@ -264,7 +270,7 @@ fileInput(inputId = ns("djc"), label = "Declaracion Jurada C", accept = ".pdf")
 
 --
 
-3) Extraer campos de control: regex
+3) Extraer campos de control: `regex`
 
 --
 
@@ -353,6 +359,8 @@ class:inverse, middle
 
 #...
 
+--
+
 #Pero, ¿cómo la disponibilizamos?
 
 ---
@@ -365,7 +373,11 @@ class:inverse, middle
 
 - Users sin conocimiento de R
 
+--
+
 - Escalabilidad: múltiples users
+
+--
 
 - Servidor limitado
 
@@ -377,26 +389,26 @@ class:inverse, middle
 
 ### Características
 
-#### - Encapsulamiento: [DesktopDeployR](https://github.com/wleepang/DesktopDeployR)
+#### Encapsulamiento: [`DesktopDeployR`](https://github.com/wleepang/DesktopDeployR)
 
- ##### - No requiere instalaciones (R portable)
+ ##### - No requiere instalaciones (`R` portable)
 
- ##### - Se comparte un archivo .zip
-
---
-
-#### - Acceso directo
-
- ##### - El user solo hace doble *click*
+ ##### - Se comparte un archivo `.zip`
 
 --
 
-#### - Funciona en *Windows*
+#### Acceso directo
+
+ ##### - El user descomprime el archivo y solo hace doble *click* en el ejecutable
+
+--
+
+####  Funciona (solo) en *Windows*
 
 ---
 class:inverse, middle
 
-## La app resultó en un proceso mucho más eficiente que el flujo de trabajo manual, reduciendo en tres meses el período de procesamiento.
+## La app resultó en un proceso mucho más eficiente que el flujo de trabajo manual, reduciendo en tres meses el período de procesamiento!!!
 
 ---
 
