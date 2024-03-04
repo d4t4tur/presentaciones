@@ -316,7 +316,6 @@ knitr::include_graphics("imgs/portal_datos_abiertos.png")
 - `Turismo interno, turismo internacional, sector hotelero, transporte aéreo, transporte terrestre, crucerismo marítimo, turismo de naturaleza...`
 
  -   `Operativos estadísticos`
- -   `Operativos estadísticos + microdatos`
  -   `Registros administrativos`
 ---
 
