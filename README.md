@@ -263,4 +263,8 @@ _163º Asamblea Ordinaria del Consejo Federal de Turismo, Paraná, Entre Ríos._
 ## Documento Técnico #6: [Ciencia de Datos para el Turismo](https://armonizacion.yvera.tur.ar/capacitaciones.html#ciencia-de-datos-para-el-turismo)
 
 
+## OpenDataWeek - Datos Abiertos
 
+### [Estadísticas públicas y datos abiertos sobre Turismo en la Argentina](https://d4t4tur.github.io/presentaciones/presentacion_opendataweek.html)
+
+Cenctro Cultural de la Ciencia, 6 de marzo de 2024
