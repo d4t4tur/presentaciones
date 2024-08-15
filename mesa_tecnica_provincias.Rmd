@@ -1,0 +1,210 @@
+---
+title: "Sistema de Información Turística de la Argentina (SINTA)"
+author:  "Dirección Nacional de Mercados y Estadística"
+output:
+  xaringan::moon_reader:
+    seal: false
+    css: "dnmye_theme.css"
+    nature:
+      slideNumberFormat: "%current%"
+      highlightStyle: github
+      highlightLines: true
+      ratio: 16:9
+      countIncrementalSlides: true
+---
+
+class:inverse, middle
+
+background-image: url(https://tableros.yvera.tur.ar/recursos/logos_institucionales/sec_turismo_blanco.png)
+background-position: 95% 95%
+background-size: 30%
+
+# Mesa Técnica de Estadísticas Provinciales de Turismo
+
+## Sistema de Información Turística de la Argentina
+
+<br>
+
+### 28 de agosto de 2024
+
+<br>
+<br>
+<br>
+
+### Dirección Nacional de Mercados y Estadística
+
+---
+
+```{r include=FALSE}
+knitr::opts_chunk$set(echo = F, message = F, warning = F, fig.align = "center", out.width = "90%")
+```
+
+[https://www.yvera.tur.ar/sinta/](https://www.yvera.tur.ar/sinta/)
+
+```{r}
+knitr::include_graphics("imgs/mesa_tecnica/sinta_web.png")
+```
+
+---
+
+[https://www.yvera.tur.ar/sinta/informe](https://www.yvera.tur.ar/sinta/informe)
+
+```{r}
+knitr::include_graphics("imgs/mesa_tecnica/sinta_informes.png")
+```
+
+---
+
+[https://armonizacion.yvera.tur.ar/](https://armonizacion.yvera.tur.ar/)
+
+```{r}
+knitr::include_graphics("imgs/mesa_tecnica/sinta_armonizacion.png")
+```
+
+---
+
+[http://datos.yvera.gob.ar/](http://datos.yvera.gob.ar/)
+
+```{r}
+knitr::include_graphics("imgs/mesa_tecnica/sinta_datosabiertos.png")
+```
+
+---
+
+[https://tableros.yvera.tur.ar/](https://tableros.yvera.tur.ar/)
+
+```{r}
+knitr::include_graphics("imgs/mesa_tecnica/sinta_tableros.png")
+```
+
+---
+
+[https://biblioteca.yvera.tur.ar/](https://biblioteca.yvera.tur.ar/)
+
+```{r}
+knitr::include_graphics("imgs/mesa_tecnica/sinta_biblioteca.png")
+```
+
+---
+
+[https://bitacora.yvera.tur.ar/](https://bitacora.yvera.tur.ar/)
+
+```{r}
+knitr::include_graphics("imgs/mesa_tecnica/sinta_bitacora.png")
+```
+
+---
+
+[calendario.yvera.tur.ar](calendario.yvera.tur.ar)
+
+```{r}
+knitr::include_graphics("imgs/mesa_tecnica/sinta_calendario.png")
+```
+
+---
+ 
+<br>
+ 
+```{r}
+knitr::include_graphics("imgs/mesa_tecnica/sinta_bot.png")
+```
+
+---
+
+class: inverse center middle
+
+# Novedades
+
+---
+
+# Monitor Provincial de Turismo
+
+*En progreso*
+
+<br>
+
+Nuevo tablero para la visualización de los principales indicadores turísticos con un enfoque provincial.
+
+<br>
+
+- Turismo interno
+
+- Turismo Internacional
+
+- Alojamiento
+
+- Conectividad aérea y terrestre
+
+- Empleo
+
+---
+
+```{r}
+knitr::include_graphics("imgs/mesa_tecnica/monitor_resumen.png")
+```
+
+---
+
+```{r}
+knitr::include_graphics("imgs/mesa_tecnica/monitor_alojamiento.png")
+```
+
+---
+
+```{r}
+knitr::include_graphics("imgs/mesa_tecnica/monitor_areas.png")
+```
+
+---
+
+```{r}
+knitr::include_graphics("imgs/mesa_tecnica/monitor_empleo.png")
+```
+
+---
+
+```{r}
+knitr::include_graphics("imgs/mesa_tecnica/monitor_aereo.png")
+```
+
+---
+
+```{r}
+knitr::include_graphics("imgs/mesa_tecnica/monitor_terrestre.png")
+```
+
+---
+
+### Conectividad terrestre
+
+Los datos de conectividad terrestre refieren a servicios interurbanos de ómnibus de media y larga distancia registrados por la Comisión Nacional de Regulación del Transporte (CNRT).
+
+En el tablero se pueden consultar los datos de manera desagregada y, además, se incluyen servicios de turismo.
+
+```{r out.width="70%"}
+knitr::include_graphics("imgs/mesa_tecnica/tablero_cnrt.png")
+```
+
+---
+
+<br>
+
+Por ejemplo, podemos ver cuántos pasajeros arribaron a la provincia de Mendoza durante el fin de semana largo del 20 de junio por localidad.
+
+<br>
+
+```{r out.width="80%"}
+knitr::include_graphics("imgs/mesa_tecnica/tablero_cnrt_consulta.png")
+```
+
+---
+
+<br>
+ 
+También podemos consultar esta información en el tablero de conectividad aérea.
+
+<br>
+
+```{r out.width="80%"}
+knitr::include_graphics("imgs/mesa_tecnica/tablero_aereo.png")
+```
