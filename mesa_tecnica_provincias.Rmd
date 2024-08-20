@@ -121,25 +121,28 @@ class: inverse center middle
 
 *En progreso*
 
-<br>
+Nuevo tablero para la visualización de los principales indicadores turísticos con un enfoque provincial en base a fuentes de datos nacionales:
 
-Nuevo tablero para la visualización de los principales indicadores turísticos con un enfoque provincial.
 
-<br>
+#### Turismo interno (EVyTH)
 
-- Turismo interno
+#### Turismo Internacional (ETI + DNM)
 
-- Turismo Internacional
+#### Alojamiento (PUNA)
 
-- Alojamiento
+#### Visitas a áreas protegidas (APN)
 
-- Conectividad aérea y terrestre
+#### Conectividad aérea y terrestre (ANAC + CNRT)
 
-- Empleo
+#### Empleo (CEP XXI)
+
+--
+
+*Posibilidad de sumar fuentes provinciales y redirigir a sus sitios*
 
 ---
 
-```{r}
+```{r out.width="120%"}
 knitr::include_graphics("imgs/mesa_tecnica/monitor_resumen.png")
 ```
 
@@ -179,9 +182,7 @@ knitr::include_graphics("imgs/mesa_tecnica/monitor_terrestre.png")
 
 Los datos de conectividad terrestre refieren a servicios interurbanos de ómnibus de media y larga distancia registrados por la Comisión Nacional de Regulación del Transporte (CNRT).
 
-En el tablero se pueden consultar los datos de manera desagregada y, además, se incluyen servicios de turismo.
-
-```{r out.width="70%"}
+```{r out.width="80%"}
 knitr::include_graphics("imgs/mesa_tecnica/tablero_cnrt.png")
 ```
 
@@ -189,22 +190,23 @@ knitr::include_graphics("imgs/mesa_tecnica/tablero_cnrt.png")
 
 <br>
 
-Por ejemplo, podemos ver cuántos pasajeros arribaron a la provincia de Mendoza durante el fin de semana largo del 20 de junio por localidad.
+En el tablero se pueden consultar los datos de manera desagregada, incluyendo servicios de turismo. Por ejemplo, podemos ver cuántos pasajeros arribaron a la provincia de Mendoza durante el fin de semana largo del 20 de junio por localidad.
+
 
 <br>
 
-```{r out.width="80%"}
+```{r out.width="90%"}
 knitr::include_graphics("imgs/mesa_tecnica/tablero_cnrt_consulta.png")
 ```
 
 ---
 
-<br>
+### Conectividad aérea
  
-También podemos consultar esta información en el tablero de conectividad aérea.
+Además, podemos consultar esta misma información para el sector aerocomercial en el tablero de conectividad aérea (en base a datos de ANAC).
 
 <br>
 
-```{r out.width="80%"}
+```{r out.width="90%"}
 knitr::include_graphics("imgs/mesa_tecnica/tablero_aereo.png")
 ```
