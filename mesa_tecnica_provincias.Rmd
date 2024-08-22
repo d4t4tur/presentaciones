@@ -49,7 +49,7 @@ knitr::include_graphics("imgs/mesa_tecnica/sinta_web.png")
 
 [https://www.yvera.tur.ar/sinta/informe](https://www.yvera.tur.ar/sinta/informe)
 
-```{r}
+```{r out.width = "110%"}
 knitr::include_graphics("imgs/mesa_tecnica/sinta_informes.png")
 ```
 
@@ -57,7 +57,7 @@ knitr::include_graphics("imgs/mesa_tecnica/sinta_informes.png")
 
 [https://armonizacion.yvera.tur.ar/](https://armonizacion.yvera.tur.ar/)
 
-```{r}
+```{r out.width = "110%"}
 knitr::include_graphics("imgs/mesa_tecnica/sinta_armonizacion.png")
 ```
 
@@ -65,7 +65,7 @@ knitr::include_graphics("imgs/mesa_tecnica/sinta_armonizacion.png")
 
 [http://datos.yvera.gob.ar/](http://datos.yvera.gob.ar/)
 
-```{r}
+```{r out.width = "110%"}
 knitr::include_graphics("imgs/mesa_tecnica/sinta_datosabiertos.png")
 ```
 
@@ -73,7 +73,7 @@ knitr::include_graphics("imgs/mesa_tecnica/sinta_datosabiertos.png")
 
 [https://tableros.yvera.tur.ar/](https://tableros.yvera.tur.ar/)
 
-```{r}
+```{r out.width = "110%"}
 knitr::include_graphics("imgs/mesa_tecnica/sinta_tableros.png")
 ```
 
@@ -81,7 +81,7 @@ knitr::include_graphics("imgs/mesa_tecnica/sinta_tableros.png")
 
 [https://biblioteca.yvera.tur.ar/](https://biblioteca.yvera.tur.ar/)
 
-```{r}
+```{r out.width = "110%"}
 knitr::include_graphics("imgs/mesa_tecnica/sinta_biblioteca.png")
 ```
 
@@ -89,7 +89,7 @@ knitr::include_graphics("imgs/mesa_tecnica/sinta_biblioteca.png")
 
 [https://bitacora.yvera.tur.ar/](https://bitacora.yvera.tur.ar/)
 
-```{r}
+```{r out.width = "110%"}
 knitr::include_graphics("imgs/mesa_tecnica/sinta_bitacora.png")
 ```
 
@@ -97,7 +97,7 @@ knitr::include_graphics("imgs/mesa_tecnica/sinta_bitacora.png")
 
 [calendario.yvera.tur.ar](calendario.yvera.tur.ar)
 
-```{r}
+```{r out.width = "110%"}
 knitr::include_graphics("imgs/mesa_tecnica/sinta_calendario.png")
 ```
 
@@ -105,7 +105,7 @@ knitr::include_graphics("imgs/mesa_tecnica/sinta_calendario.png")
  
 <br>
  
-```{r}
+```{r out.width = "110%"}
 knitr::include_graphics("imgs/mesa_tecnica/sinta_bot.png")
 ```
 
@@ -114,6 +114,17 @@ knitr::include_graphics("imgs/mesa_tecnica/sinta_bot.png")
 class: inverse center middle
 
 # Novedades
+
+---
+
+#### ¡El SINTA llegó al G20! 🎉
+
+https://tourism4sdgs.org/g20india/
+
+
+```{r}
+knitr::include_graphics("imgs/mesa_tecnica/onu_sinta.png")
+```
 
 ---
 
@@ -144,6 +155,12 @@ Nuevo tablero para la visualización de los principales indicadores turísticos 
 
 ```{r out.width="120%"}
 knitr::include_graphics("imgs/mesa_tecnica/monitor_resumen.png")
+```
+
+---
+
+```{r}
+knitr::include_graphics("imgs/mesa_tecnica/monitor_internacional.png")
 ```
 
 ---
