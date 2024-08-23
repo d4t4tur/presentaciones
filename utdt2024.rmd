@@ -146,7 +146,7 @@ layout: true
 <br>
 <br>
 
-```{r fig.align='center'}
+```{r out.width="120%" ,fig.align='center'}
 knitr::include_graphics("imgs/utdt/turistas_internos.PNG")
 ```
 
@@ -411,4 +411,4 @@ class: inverse center middle
 ## ¡Muchas gracias!
 ## DNMyE
 
-## estadisticas@turismo.gob.ar
+## estadistica@turismo.gob.ar
