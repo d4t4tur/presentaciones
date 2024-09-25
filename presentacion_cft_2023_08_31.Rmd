@@ -16,7 +16,7 @@ output:
 class:inverse, middle
 
 background-image: url(https://tableros.yvera.tur.ar/recursos/logos_institucionales/escudo_mdtyd_blanco.png)
-background-position: 95% 95%
+background-position: 95% 90%
 background-size: 30%
 
 ####  163º Asamblea Ordinaria del Consejo Federal de Turismo, Paraná, Entre Ríos.
