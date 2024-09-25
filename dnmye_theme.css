@@ -18,18 +18,18 @@
  *  Version: 0.4.2
  *
  * ------------------------------------------------------- */
-@import url(https://fonts.googleapis.com/css?family=Roboto&display=swap);
-@import url(https://fonts.googleapis.com/css?family=Encode+Sans&display=swap);
+@import url(https://fonts.googleapis.com/css?family=Montserrat&display=swap);
+@import url(https://fonts.googleapis.com/css?family=Lora&display=swap);
 @import url(https://fonts.googleapis.com/css?family=IBM+Plex+Mono&display=swap);
 
 
 :root {
   /* Fonts */
-  --text-font-family: Roboto;
+  --text-font-family: Montserrat;
   --text-font-is-google: 1;
   --text-font-family-fallback: -apple-system, BlinkMacSystemFont, avenir next, avenir, helvetica neue, helvetica, Ubuntu, roboto, noto, segoe ui, arial;
   --text-font-base: sans-serif;
-  --header-font-family: 'Encode Sans';
+  --header-font-family: Lora;
   --header-font-is-google: 1;
   --header-font-family-fallback: Georgia, serif;
   --code-font-family: 'IBM Plex Mono';
@@ -141,7 +141,7 @@ a, a > code {
 }
 .title-slide {
   background-color: var(--title-slide-background-color);
-  background-image: url("escudo_mintur_blanco.png");
+  background-image: url("sec_turismo_blanco.png");
   background-size: 200px;
   background-position: 95% 5%;
 }
