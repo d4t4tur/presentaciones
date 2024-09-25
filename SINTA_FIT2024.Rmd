@@ -33,7 +33,7 @@ background-size: 30%
 
 
 
-## Sistema de Información Turística de la Argentina (SINTA)
+## Entendiendo el turismo a través de los datos: un recorrido por el SINTA
 
 <br>
 <br>
@@ -232,8 +232,6 @@ knitr::include_graphics("https://tableros.yvera.tur.ar//recursos/logos_instituci
 ---
 ![](imgs/fit/sinta_9.png)
 ---
-![](imgs/sintia1.png)
----
 ![](imgs/sintia2.png)
 ---
 ![](imgs/sintia3.png)
@@ -241,7 +239,7 @@ knitr::include_graphics("https://tableros.yvera.tur.ar//recursos/logos_instituci
 
 class: middle
 
-### Algunas aplicaciones prácticas
+### Algunas aplicaciones prácticas del **SINTA**
 
 
 ---
@@ -385,6 +383,16 @@ class: middle
 
 ```{r echo=FALSE, out.width='100%'}
 knitr::include_graphics("imgs/tablero_puna.png")
+```
+---
+
+<br>
+<br>
+
+**Tablero Encuesta de Ocupación Hotelera (EOH):** https://www.tableros.yvera.tur.ar/tablero_eoh
+
+```{r echo=FALSE, out.width='100%'}
+knitr::include_graphics("imgs/tablero_eoh.png")
 ```
 
 ---
