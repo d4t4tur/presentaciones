@@ -253,29 +253,24 @@ class: middle
 -   ¿Cuánto `empleo` genera la actividad turística en nuestro país?
 
 <br>
-<br>
 
 -   ¿Qué actividad es la principal en cuanto a generación de `puestos de trabajo`? 
 
-<br>
 <br>
 
 
 -   ¿Qué porcentaje de `trabajo no registrado` hay en la actividad turística?
 
 <br>
-<br>
 
 
 -   ¿El `impacto económico del turismo` en nuestro país lo genera principalmente el turismo interno o los turistas extranjeros? 
 
 <br>
-<br>
 
 
 -   ¿Cuál es la participación de la actividad turistica en la economía en general?
 
-<br>
 <br>
 
 
@@ -343,23 +338,18 @@ class: middle
 ### Aplicaciones prácticas
 
 <br>
-<br>
-<br>
 
 -   ¿Cómo se distribuyen los `alojamientos turísticos` en la Argentina?
 
-<br>
 <br>
 
 -   ¿Cuál es la `categoría` de alojamiento principal con mayor cantidad de plazas? 
 
 <br>
-<br>
 
 
 -   ¿En Corrientes, qué localidad es la que concentra la mayor cantidad de `establecimientos`?
 
-<br>
 <br>
 
 
@@ -367,10 +357,21 @@ class: middle
 
 
 <br>
+
+
+-   ¿Cuál es el promedio de `ingreso por habitación disponible (revpar)`? ¿Y por `habitación ocupada (ADR)`?
+
+---
+
+<br>
 <br>
 
+**Tablero PUNA:** https://www.tableros.yvera.tur.ar/puna
 
--   ¿Cuál es el promedio de `ingreso por habitación disponible (revpar)`? ¿Y por habitación ocupada `(ADR)`?
+
+```{r echo=FALSE, out.width='100%'}
+knitr::include_graphics("imgs/tableros3 -puna.png")
+```
 
 ---
 
@@ -384,8 +385,21 @@ class: middle
 ```{r echo=FALSE, out.width='100%'}
 knitr::include_graphics("imgs/tablero_puna.png")
 ```
+
 ---
 
+<br>
+<br>
+
+**Tablero PUNA:** https://www.tableros.yvera.tur.ar/puna
+
+
+
+```{r echo=FALSE, out.width='100%'}
+knitr::include_graphics("imgs/tableros3 -puna-filtro.png")
+```
+
+---
 <br>
 <br>
 
@@ -435,29 +449,18 @@ class: middle
 
 
 <br>
-<br>
 
--   ¿Qué destinos presentan mayor/menor `conectividad` para el desarrollo del turismo??
-
+- ¿Cuáles son las `principales aerolíneas` utilizadas por los brasileños para venir a Argentina?
 
 <br>
-<br>
 
--   ¿¿Cuáles son los principales `corredores turísticos` o rutas??
-
-
-<br>
-<br>
-
--   ¿Qué `aerolíneas` tiene mayores tasas de ocupación?
+-   ¿Cuáles son los `principales destinos` según el transporte terrestre (ómnibus)?
 
 
-<br>
 <br>
 
 -   ¿Qué características tiene el `turismo de cruceros` en nuestro país?
 
-<br>
 <br>
 
 -   ¿Qué `área protegida` recibe mayor cantidad de visitantes?
@@ -471,6 +474,18 @@ class: middle
 
 ```{r echo=FALSE, out.width='100%'}
 knitr::include_graphics("imgs/tablero_conectividad.png")
+```
+
+---
+
+<br>
+<br>
+
+**Tablero de conectividad aérea:** https://www.tableros.yvera.tur.ar/conectividad
+
+
+```{r echo=FALSE, out.width='100%'}
+knitr::include_graphics("imgs/tablero-conectividad-filtro.png")
 ```
 
 ---
