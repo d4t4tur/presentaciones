@@ -24,14 +24,7 @@ background-size: 30%
 <br>
 <br>
 <br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-
-
+  
 
 ## Entendiendo el turismo a través de los datos: un recorrido por el SINTA
 
@@ -80,6 +73,7 @@ style_mono_light(outfile = "dnmye_theme.css", # CSS FILE
                   header_font_google = google_font('Lora'),
                   text_font_google   = google_font('Montserrat'),
                   code_font_google   = google_font('IBM Plex Mono'),
+                 text_font_size = '25px',
                  # COLORES 
                  base_color = "#252C4F",
                  code_inline_color = dnmye_colores("rosa"), 
@@ -247,45 +241,28 @@ class: middle
 ### Aplicaciones prácticas
 
 <br>
-<br>
-<br>
 
 -   ¿Cuánto `empleo` genera la actividad turística en nuestro país?
 
-<br>
-
 -   ¿Qué actividad es la principal en cuanto a generación de `puestos de trabajo`? 
-
-<br>
 
 
 -   ¿Qué porcentaje de `trabajo no registrado` hay en la actividad turística?
 
-<br>
-
 
 -   ¿El `impacto económico del turismo` en nuestro país lo genera principalmente el turismo interno o los turistas extranjeros? 
 
-<br>
 
-
--   ¿Cuál es la participación de la actividad turistica en la economía en general?
-
-<br>
-
-
--   ¿Qué cantidad de mujeres se emplean en turismo? 
-
+-   ¿Cuál es la participación de las `mujeres` en el empleo del sector? 
 
 ---
 
-<br>
 <br>
 
 **CUENTA SATELITE DE TURISMO:** https://www.yvera.tur.ar/sinta/informe/info/cuenta-satelite-de-turismo
 
 
-```{r echo=FALSE, out.width='60%'}
+```{r echo=FALSE, out.width='45%'}
 knitr::include_graphics("imgs/SINTA_cst.png")
 ```
 
@@ -302,11 +279,12 @@ knitr::include_graphics("imgs/CST_site.png")
 ```{r echo=FALSE, out.width='100%'}
 knitr::include_graphics("imgs/empleo_cst.png")
 ```
+
+-   El sector turístico generó, en 2022, `1,2 millones` de puestos de trabajo
+
+-   La actividad de `restaurantes` es la principial generadora de empleo
+
 ---
-
-<br>
-<br>
-
 
 **TABLEROS Y REPORTES: empleo registrado en turismo** https://tableros.yvera.tur.ar/empleo.html
 
@@ -325,6 +303,12 @@ knitr::include_graphics("imgs/puestos_genero.png")
 knitr::include_graphics("imgs/puestos_rct.png")
 ```
 ]
+
+-   En los últimos años, la `participación de las mujeres` en el empleo turístico se incrementó significativamente: superó el 42% en el último año
+
+-   Existen diferencias entre las `distintas ramas turísticas`
+
+
 ---
 
 
@@ -341,33 +325,19 @@ class: middle
 
 -   ¿Cómo se distribuyen los `alojamientos turísticos` en la Argentina?
 
-<br>
 
--   ¿Cuál es la `categoría` de alojamiento principal con mayor cantidad de plazas? 
+-   ¿Cuál es la `categoría` de alojamiento con mayor cantidad de plazas? 
 
-<br>
+-   ¿En la provincia de Corrientes, qué localidad es la que concentra la mayor cantidad de `establecimientos`?
 
-
--   ¿En Corrientes, qué localidad es la que concentra la mayor cantidad de `establecimientos`?
-
-<br>
-
-
--   ¿Qué `porcentaje de ocupación` tienen los hoteles de esa ciudad? ¿Y durante los fines de semana? 
-
-
-<br>
+-   ¿Qué `porcentaje de ocupación` tienen los hoteles de la ciudad de Corrientes? ¿Y durante los fines de semana? 
 
 
 -   ¿Cuál es el promedio de `ingreso por habitación disponible (revpar)`? ¿Y por `habitación ocupada (ADR)`?
 
 ---
 
-<br>
-<br>
-
 **Tablero PUNA:** https://www.tableros.yvera.tur.ar/puna
-
 
 ```{r echo=FALSE, out.width='100%'}
 knitr::include_graphics("imgs/tableros3 -puna.png")
@@ -375,11 +345,7 @@ knitr::include_graphics("imgs/tableros3 -puna.png")
 
 ---
 
-<br>
-<br>
-
 **Tablero PUNA:** https://www.tableros.yvera.tur.ar/puna
-
 
 
 ```{r echo=FALSE, out.width='100%'}
@@ -388,11 +354,7 @@ knitr::include_graphics("imgs/tablero_puna.png")
 
 ---
 
-<br>
-<br>
-
 **Tablero PUNA:** https://www.tableros.yvera.tur.ar/puna
-
 
 
 ```{r echo=FALSE, out.width='100%'}
@@ -400,21 +362,14 @@ knitr::include_graphics("imgs/tableros3 -puna-filtro.png")
 ```
 
 ---
-<br>
-<br>
 
 **Tablero PUNA:** https://www.tableros.yvera.tur.ar/puna
-
-
 
 ```{r echo=FALSE, out.width='100%'}
 knitr::include_graphics("imgs/ejemplo_puna.png")
 ```
 
 ---
-
-<br>
-<br>
 
 **Tablero Encuesta de Ocupación Hotelera (EOH):** https://www.tableros.yvera.tur.ar/tablero_eoh
 
@@ -423,9 +378,6 @@ knitr::include_graphics("imgs/tablero_eoh.png")
 ```
 
 ---
-
-<br>
-<br>
 
 **Tablero Encuesta de Ocupación Hotelera (EOH):** https://www.tableros.yvera.tur.ar/tablero_eoh
 
@@ -445,29 +397,21 @@ class: middle
 
 ### Aplicaciones prácticas
 
--   ¿Cuál es el flujo de `transporte aéreo y terrestre` en nuestro país?
-
-
 <br>
+
+-   ¿Cuál es el flujo de `transporte aéreo y terrestre` en nuestro país?
 
 - ¿Cuáles son las `principales aerolíneas` utilizadas por los brasileños para venir a Argentina?
 
-<br>
 
 -   ¿Cuáles son los `principales destinos` según el transporte terrestre (ómnibus)?
 
-
-<br>
-
 -   ¿Qué características tiene el `turismo de cruceros` en nuestro país?
 
-<br>
-
 -   ¿Qué `área protegida` recibe mayor cantidad de visitantes?
+
 ---
 
-<br>
-<br>
 
 **Tablero de conectividad aérea:** https://www.tableros.yvera.tur.ar/conectividad
 
@@ -478,8 +422,6 @@ knitr::include_graphics("imgs/tablero_conectividad.png")
 
 ---
 
-<br>
-<br>
 
 **Tablero de conectividad aérea:** https://www.tableros.yvera.tur.ar/conectividad
 
@@ -490,9 +432,6 @@ knitr::include_graphics("imgs/tablero-conectividad-filtro.png")
 
 ---
 
-<br>
-<br>
-
 **Tablero de conectividad aérea:** https://www.tableros.yvera.tur.ar/conectividad
 
 
@@ -502,9 +441,6 @@ knitr::include_graphics("imgs/tablero_conectividad_2.png")
 
 ---
 
-<br>
-<br>
-
 **Tablero de conectividad terrestre:** https://www.tableros.yvera.tur.ar/conectividad_terrestre
 
 
@@ -513,8 +449,13 @@ knitr::include_graphics("imgs/tablero_conectividad_terrestre.png")
 ```
 ---
 
-<br>
-<br>
+**Tablero de conectividad terrestre:** https://www.tableros.yvera.tur.ar/conectividad_terrestre
+
+```{r echo=FALSE, out.width='100%'}
+knitr::include_graphics("imgs/cnrt_ejemplo.png")
+```
+
+---
 
 **Tablero de crucerismo marítimo:** https://www.tableros.yvera.tur.ar/crucerismo
 
@@ -525,15 +466,20 @@ knitr::include_graphics("imgs/tablero_crucerismo.png")
 ---
 
 
-
-<br>
-<br>
-
 **Tablero de áreas naturales protegidas:** https://www.tableros.yvera.tur.ar/ablero_areas_protegidas/
 
 
 ```{r echo=FALSE, out.width='100%'}
 knitr::include_graphics("imgs/tablero_areas.png")
+```
+
+---
+
+**Tablero de áreas naturales protegidas:** https://www.tableros.yvera.tur.ar/ablero_areas_protegidas/
+
+
+```{r echo=FALSE, out.width='100%'}
+knitr::include_graphics("imgs/tablero_areas_ejemplo.png")
 ```
 
 ---
@@ -569,8 +515,26 @@ knitr::include_graphics("imgs/sinta_logo_negro.png")
 ---
 class: inverse center middle
 
+
+<br>
+<br>
+
+
+
+## ¡Muchas gracias!
+
+<br>
+<br>
+
+Contacto: estadistica@turismo.gob.ar
+
+---
+
+class: inverse center middle
+
 ```{r echo = FALSE , out.width='50%'}
 knitr::include_graphics("imgs/sec_turismo_blanco.png")
 
 ```
+
 
