@@ -436,7 +436,7 @@ knitr::include_graphics("imgs/tablero-conectividad-filtro.png")
 
 
 ```{r echo=FALSE, out.width='100%'}
-knitr::include_graphics("imgs/tablero_conectividad_2.png")
+knitr::include_graphics("imgs/tablero_conectividad_viz.png")
 ```
 
 ---
