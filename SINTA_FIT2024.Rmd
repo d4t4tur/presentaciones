@@ -511,8 +511,53 @@ knitr::include_graphics("imgs/sinta_logo_negro.png")
 ### 🌐 [yvera.tur.ar/_SINTA_](www.yvera.tur.ar/sinta)
 
 
+---
+
+## El SINTA en números
+
+
+- 8 secciones
+
+- 13 tableros interactivos
+
+- Más de 40 documentos de trabajo y manuales metodológicos
+
+- 16 datasets y 154 recursos en datos abiertos
+
+- Más de 1600 series accesibles via API
+
+- Más de 60 entradas en bitácora
+
+- 1 repositorio público de código abierto
 
 ---
+
+## Visitantes del SINTA
+
+Septiembre 2024 - Tableros y reportes
+
+```{r echo=FALSE, out.width='60%'}
+knitr::include_graphics("imgs/sinta_users.png")
+```
+
+---
+
+## Visitantes del SINTA
+
+```{r echo=FALSE, out.width='90%'}
+knitr::include_graphics("imgs/sinta_users_origen.png")
+```
+
+---
+
+## El SINTA en el G20
+
+```{r echo=FALSE, out.width='80%'}
+knitr::include_graphics("imgs/mesa_tecnica/onu_sinta.png")
+```
+
+---
+
 class: inverse center middle
 
 
