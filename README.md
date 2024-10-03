@@ -26,6 +26,11 @@ Repositorio que contiene [código fuente](https://github.com/d4t4tur/presentacio
   - [Armonización Estadística](https://github.com/d4t4tur/presentaciones/#armonizacion) 
 
 # Presentaciones institucionales 2024
+
+## [¿Qué dicen los datos del turismo? Análisis de la conectividad aérea en Argentina <br> para la toma de decisiones](https://d4t4tur.github.io/presentaciones/utdt2024.html#1)
+
+**Clínica de Datos de la Universidad Torcuato di Tella, Ciudad Autónoma de Buenos Aires (24 de agosto de 2024)**
+
 ## [Entendiendo el turismo a través de los datos: un recorrido por el SINTA](https://d4t4tur.github.io/presentaciones/SINTA_FIT2024.html#1)
 
 **Feria Internacional de Turismo - FIT, Ciudad Autónoma de Buenos Aires (1 de octubre de 2024)**
