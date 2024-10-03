@@ -31,9 +31,9 @@ Repositorio que contiene [código fuente](https://github.com/d4t4tur/presentacio
 
 **Clínica de Datos de la Universidad Torcuato di Tella, Ciudad Autónoma de Buenos Aires (24 de agosto de 2024)**
 
-## [Entendiendo el turismo a través de los datos: un recorrido por el SINTA](https://d4t4tur.github.io/presentaciones/SINTA_FIT2024.html#1)
-
 [Nota de prensa](https://www.argentina.gob.ar/noticias/la-subsecretaria-de-turismo-participo-del-simposio-de-datos-de-la-universidad-torcuato-di)
+
+## [Entendiendo el turismo a través de los datos: un recorrido por el SINTA](https://d4t4tur.github.io/presentaciones/SINTA_FIT2024.html#1)
 
 **Feria Internacional de Turismo - FIT, Ciudad Autónoma de Buenos Aires (1 de octubre de 2024)**
 
