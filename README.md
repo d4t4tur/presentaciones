@@ -14,14 +14,21 @@ Repositorio que contiene [código fuente](https://github.com/d4t4tur/presentacio
 # Indíce 
 
 * **Presentaciones Institucionales**
-  - [2023](https://github.com/d4t4tur/presentaciones#2023)
-  - [2022](https://github.com/d4t4tur/presentaciones#2022)
-  - [2021](https://github.com/d4t4tur/presentaciones#2021)
+  - [2024](https://github.com/d4t4tur/presentaciones#presentaciones-institucionales-2024)
+  - [2023](https://github.com/d4t4tur/presentaciones#presentaciones-institucionales-2023)
+  - [2022](https://github.com/d4t4tur/presentaciones#presentaciones-institucionales-2022)
+  - [2021](https://github.com/d4t4tur/presentaciones#presentaciones-institucionales-2021)
+  
 
 * **Ciclos, cursos y reuniones periódicas**
   - [Consejo Federal de Turismo](https://github.com/d4t4tur/presentaciones#consejo-federal-de-turismo---comisi%C3%B3n-de-estad%C3%ADsticas-y-big-data---reuniones)
   - [Clases Abiertas](https://github.com/d4t4tur/presentaciones/#clases-abiertas)
   - [Armonización Estadística](https://github.com/d4t4tur/presentaciones/#armonizacion) 
+
+# Presentaciones institucionales 2024
+## [Entendiendo el turismo a través de los datos: un recorrido por el SINTA](https://d4t4tur.github.io/presentaciones/SINTA_FIT2024.html#1)
+
+**Feria Internacional de Turismo - FIT, Ciudad Autónoma de Buenos Aires (1 de octubre de 2024)**
 
 # Presentaciones Institucionales 2023
 ## 📌 [Cuenta Satélite de Turismo Argentina (CST-A)](https://d4t4tur.github.io/presentaciones/clase2_unlp_cst.html)
