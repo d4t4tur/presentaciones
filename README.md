@@ -27,6 +27,12 @@ Repositorio que contiene [código fuente](https://github.com/d4t4tur/presentacio
 
 # Presentaciones institucionales 2024
 
+## OpenDataWeek - Datos Abiertos
+
+### [Estadísticas públicas y datos abiertos sobre Turismo en la Argentina](https://d4t4tur.github.io/presentaciones/presentacion_opendataweek.html)
+
+Cenctro Cultural de la Ciencia, 6 de marzo de 2024
+
 ## [¿Qué dicen los datos del turismo? Análisis de la conectividad aérea en Argentina <br> para la toma de decisiones](https://d4t4tur.github.io/presentaciones/utdt2024.html#1)
 
 **Clínica de Datos de la Universidad Torcuato di Tella, Ciudad Autónoma de Buenos Aires (24 de agosto de 2024)**
@@ -277,8 +283,4 @@ _163º Asamblea Ordinaria del Consejo Federal de Turismo, Paraná, Entre Ríos._
 ## Documento Técnico #6: [Ciencia de Datos para el Turismo](https://armonizacion.yvera.tur.ar/capacitaciones.html#ciencia-de-datos-para-el-turismo)
 
 
-## OpenDataWeek - Datos Abiertos
 
-### [Estadísticas públicas y datos abiertos sobre Turismo en la Argentina](https://d4t4tur.github.io/presentaciones/presentacion_opendataweek.html)
-
-Cenctro Cultural de la Ciencia, 6 de marzo de 2024
